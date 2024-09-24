@@ -75,7 +75,7 @@ int Sword::step(const df::EventStep *p_e)
   // Make a trail from last position to current.
 
 #ifdef CLIENT
-  create_trail(getPosition(), m_old_position);
+  create_trail(getPosition(), m_old_position, m_color);
 #endif
 
   // Check if line intersects any Fruit objects.

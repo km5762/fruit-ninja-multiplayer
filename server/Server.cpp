@@ -66,7 +66,7 @@ void Server::data(const df::EventNetwork *p_e)
 
 void Server::accept(const df::EventNetwork *p_e)
 {
-    Sword *sword = new Sword(static_cast<df::Color>(p_e->getSocketIndex()));
+    Sword *sword = new Sword(static_cast<df::Color>(p_e->getSocketIndex() + 1));
     sword->setId(100 + p_e->getSocketIndex());
     this->swords.push_back(sword);
 }

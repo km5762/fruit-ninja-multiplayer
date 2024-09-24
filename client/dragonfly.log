@@ -1,729 +1,1185 @@
-19:32:44    0 ****************************************************
-19:32:44    0 ** Dragonfly version 4.20 **
-19:32:44    0 ** Game engine started **
-19:32:44    0 ****************************************************
-19:32:44    0 LogManager::setLogLevel(): log level 10
-19:32:44    0 Fruit Ninja (v1.1)
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 1
-19:32:44    0 	       Width: 42
-19:32:44    0 	      Height: 7
-19:32:44    0 	    Slowdown: 0
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: White
-19:32:44    0 RM::loadSprite(): Sprite 'fruit-splash' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 1
-19:32:44    0 	       Width: 42
-19:32:44    0 	      Height: 7
-19:32:44    0 	    Slowdown: 0
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: White
-19:32:44    0 RM::loadSprite(): Sprite 'ninja-splash' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 4
-19:32:44    0 	       Width: 5
-19:32:44    0 	      Height: 4
-19:32:44    0 	    Slowdown: 4
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: Green
-19:32:44    0 RM::loadSprite(): Sprite 'pear' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 RM::loadRobustSprite(): transparency is 'space'
-19:32:44    0 	      Frames: 2
-19:32:44    0 	       Width: 6
-19:32:44    0 	      Height: 5
-19:32:44    0 	    Slowdown: 7
-19:32:44    0 	Transparency: ' '
-19:32:44    0 	       Color: Magenta
-19:32:44    0 RM::loadSprite(): Sprite 'grapes' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 4
-19:32:44    0 	       Width: 5
-19:32:44    0 	      Height: 3
-19:32:44    0 	    Slowdown: 3
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: Red
-19:32:44    0 RM::loadSprite(): Sprite 'apple' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 2
-19:32:44    0 	       Width: 6
-19:32:44    0 	      Height: 3
-19:32:44    0 	    Slowdown: 3
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: Yellow
-19:32:44    0 RM::loadSprite(): Sprite 'banana' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 RM::loadRobustSprite(): transparency is 'space'
-19:32:44    0 	      Frames: 2
-19:32:44    0 	       Width: 6
-19:32:44    0 	      Height: 5
-19:32:44    0 	    Slowdown: 7
-19:32:44    0 	Transparency: ' '
-19:32:44    0 	       Color: Cyan
-19:32:44    0 RM::loadSprite(): Sprite 'blueberries' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 12
-19:32:44    0 	       Width: 36
-19:32:44    0 	      Height: 5
-19:32:44    0 	    Slowdown: 0
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: White
-19:32:44    0 RM::loadSprite(): Sprite 'kudos' loaded.
-19:32:44    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-19:32:44    0 RM::loadSprite(): assuming robust sprite file format.
-19:32:44    0 	      Frames: 12
-19:32:44    0 	       Width: 54
-19:32:44    0 	      Height: 5
-19:32:44    0 	    Slowdown: 15
-19:32:44    0 	Transparency: '#'
-19:32:44    0 	       Color: White
-19:32:44    0 RM::loadSprite(): Sprite 'gameover' loaded.
-19:32:44    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'impact' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'beep' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-19:32:44    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-19:32:44    0 splash(): Started.
-19:32:44    0 GameManager::run(): starting game loop
-19:32:45   22 GameManager::run(): end of game loop
-19:32:45   22 splash(): Finished.
-19:32:45   22 GameManager::run(): starting game loop
-19:32:45    0 RM::getSprite(): Looking for sprite 'fruit-splash'.
-19:32:45    0 RM::getSprite(): Looking for sprite 'banana'.
-19:32:45    0 RM::getSound(): Looking for sound 'impact'.
-19:32:45    0 Sound::play(): Playing sound.
-19:32:45   25 GameManager::run(): end of game loop
-19:32:45   25 GameManager::run(): starting game loop
-19:32:48   63 ServerEntry::callback(): host: 127.0.0.1
-19:32:48   63 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-19:32:48   63 NetworkManager::connect(): Connection established.
-19:32:48   65 Message type 0
-19:32:48   65 ID: 100
-19:32:48   65 object type len: 5
-19:32:48   65 type: Sword
-19:32:48   66 Message type 0
-19:32:48   66 ID: 100
-19:32:48   66 object type len: 5
-19:32:48   66 type: Sword
-19:32:48   67 Message type 0
-19:32:48   67 ID: 100
-19:32:48   67 object type len: 5
-19:32:48   67 type: Sword
-19:32:48   68 Message type 0
-19:32:48   68 ID: 100
-19:32:48   68 object type len: 5
-19:32:48   68 type: Sword
-19:32:48   69 Message type 0
-19:32:48   69 ID: 100
-19:32:48   69 object type len: 5
-19:32:48   69 type: Sword
-19:32:48   70 Message type 0
-19:32:48   70 ID: 100
-19:32:48   70 object type len: 5
-19:32:48   70 type: Sword
-19:32:48   71 Message type 0
-19:32:48   71 ID: 100
-19:32:48   71 object type len: 5
-19:32:48   71 type: Sword
-19:32:48   72 Message type 0
-19:32:48   72 ID: 100
-19:32:48   72 object type len: 5
-19:32:48   72 type: Sword
-19:32:48   73 Message type 0
-19:32:48   73 ID: 100
-19:32:48   73 object type len: 5
-19:32:48   73 type: Sword
-19:32:48   74 Message type 0
-19:32:48   74 ID: 100
-19:32:48   74 object type len: 5
-19:32:48   74 type: Sword
-19:32:48   75 Message type 0
-19:32:48   75 ID: 100
-19:32:48   75 object type len: 5
-19:32:48   75 type: Sword
-19:32:48   76 Message type 0
-19:32:48   76 ID: 100
-19:32:48   76 object type len: 5
-19:32:48   76 type: Sword
-19:32:48   77 Message type 0
-19:32:48   77 ID: 100
-19:32:48   77 object type len: 5
-19:32:48   77 type: Sword
-19:32:48   78 Message type 0
-19:32:48   78 ID: 100
-19:32:48   78 object type len: 5
-19:32:48   78 type: Sword
-19:32:48   79 Message type 0
-19:32:48   79 ID: 100
-19:32:48   79 object type len: 5
-19:32:48   79 type: Sword
-19:32:48   80 Message type 0
-19:32:48   80 ID: 100
-19:32:48   80 object type len: 5
-19:32:48   80 type: Sword
-19:32:48   81 Message type 0
-19:32:48   81 ID: 100
-19:32:48   81 object type len: 5
-19:32:48   81 type: Sword
-19:32:48   82 Message type 0
-19:32:48   82 ID: 100
-19:32:48   82 object type len: 5
-19:32:48   82 type: Sword
-19:32:48   83 Message type 0
-19:32:48   83 ID: 100
-19:32:48   83 object type len: 5
-19:32:48   83 type: Sword
-19:32:48   84 Message type 0
-19:32:48   84 ID: 100
-19:32:48   84 object type len: 5
-19:32:48   84 type: Sword
-19:32:48   85 Message type 0
-19:32:48   85 ID: 100
-19:32:48   85 object type len: 5
-19:32:48   85 type: Sword
-19:32:48   86 Message type 0
-19:32:48   86 ID: 100
-19:32:48   86 object type len: 5
-19:32:48   86 type: Sword
-19:32:48   87 Message type 0
-19:32:48   87 ID: 100
-19:32:48   87 object type len: 5
-19:32:48   87 type: Sword
-19:32:48   88 Message type 0
-19:32:48   88 ID: 100
-19:32:48   88 object type len: 5
-19:32:48   88 type: Sword
-19:32:48   89 Message type 0
-19:32:48   89 ID: 100
-19:32:48   89 object type len: 5
-19:32:48   89 type: Sword
-19:32:48   90 Message type 0
-19:32:48   90 ID: 100
-19:32:48   90 object type len: 5
-19:32:48   90 type: Sword
-19:32:48   91 Message type 0
-19:32:48   91 ID: 100
-19:32:48   91 object type len: 5
-19:32:48   91 type: Sword
-19:32:48   92 Message type 0
-19:32:48   92 ID: 100
-19:32:48   92 object type len: 5
-19:32:48   92 type: Sword
-19:32:49   93 RM::getSound(): Looking for sound 'swipe-5'.
-19:32:49   93 Sound::play(): Playing sound.
-19:32:49   93 Message type 0
-19:32:49   93 ID: 100
-19:32:49   93 object type len: 5
-19:32:49   93 type: Sword
-19:32:49   94 RM::getSprite(): Looking for sprite 'pear'.
-19:32:49   94 Message type 0
-19:32:49   94 ID: 100
-19:32:49   94 object type len: 5
-19:32:49   94 type: Sword
-19:32:49   95 Message type 0
-19:32:49   95 ID: 100
-19:32:49   95 object type len: 5
-19:32:49   95 type: Sword
-19:32:49   96 Message type 0
-19:32:49   96 ID: 100
-19:32:49   96 object type len: 5
-19:32:49   96 type: Sword
-19:32:49   97 Message type 0
-19:32:49   97 ID: 100
-19:32:49   97 object type len: 5
-19:32:49   97 type: Sword
-19:32:49   98 Message type 0
-19:32:49   98 ID: 100
-19:32:49   98 object type len: 5
-19:32:49   98 type: Sword
-19:32:49   99 Message type 0
-19:32:49   99 ID: 100
-19:32:49   99 object type len: 5
-19:32:49   99 type: Sword
-19:32:49  100 Message type 0
-19:32:49  100 ID: 100
-19:32:49  100 object type len: 5
-19:32:49  100 type: Sword
-19:32:49  101 Message type 0
-19:32:49  101 ID: 100
-19:32:49  101 object type len: 5
-19:32:49  101 type: Sword
-19:32:49  102 Message type 0
-19:32:49  102 ID: 100
-19:32:49  102 object type len: 5
-19:32:49  102 type: Sword
-19:32:49  103 Message type 0
-19:32:49  103 ID: 100
-19:32:49  103 object type len: 5
-19:32:49  103 type: Sword
-19:32:49  104 Message type 0
-19:32:49  104 ID: 100
-19:32:49  104 object type len: 5
-19:32:49  104 type: Sword
-19:32:49  105 Message type 0
-19:32:49  105 ID: 100
-19:32:49  105 object type len: 5
-19:32:49  105 type: Sword
-19:32:49  106 Message type 0
-19:32:49  106 ID: 100
-19:32:49  106 object type len: 5
-19:32:49  106 type: Sword
-19:32:49  107 Message type 0
-19:32:49  107 ID: 100
-19:32:49  107 object type len: 5
-19:32:49  107 type: Sword
-19:32:49  108 Message type 0
-19:32:49  108 ID: 100
-19:32:49  108 object type len: 5
-19:32:49  108 type: Sword
-19:32:49  109 Message type 0
-19:32:49  109 ID: 100
-19:32:49  109 object type len: 5
-19:32:49  109 type: Sword
-19:32:49  110 Message type 0
-19:32:49  110 ID: 100
-19:32:49  110 object type len: 5
-19:32:49  110 type: Sword
-19:32:49  111 Message type 0
-19:32:49  111 ID: 100
-19:32:49  111 object type len: 5
-19:32:49  111 type: Sword
-19:32:49  112 Message type 0
-19:32:49  112 ID: 100
-19:32:49  112 object type len: 5
-19:32:49  112 type: Sword
-19:32:49  113 Message type 0
-19:32:49  113 ID: 100
-19:32:49  113 object type len: 5
-19:32:49  113 type: Sword
-19:32:49  114 Message type 0
-19:32:49  114 ID: 100
-19:32:49  114 object type len: 5
-19:32:49  114 type: Sword
-19:32:49  115 Message type 0
-19:32:49  115 ID: 100
-19:32:49  115 object type len: 5
-19:32:49  115 type: Sword
-19:32:49  116 Message type 0
-19:32:49  116 ID: 100
-19:32:49  116 object type len: 5
-19:32:49  116 type: Sword
-19:32:49  117 Message type 0
-19:32:49  117 ID: 100
-19:32:49  117 object type len: 5
-19:32:49  117 type: Sword
-19:32:49  118 Message type 0
-19:32:49  118 ID: 100
-19:32:49  118 object type len: 5
-19:32:49  118 type: Sword
-19:32:49  119 Message type 0
-19:32:49  119 ID: 100
-19:32:49  119 object type len: 5
-19:32:49  119 type: Sword
-19:32:49  120 Message type 0
-19:32:49  120 ID: 100
-19:32:49  120 object type len: 5
-19:32:49  120 type: Sword
-19:32:49  121 Message type 0
-19:32:49  121 ID: 100
-19:32:49  121 object type len: 5
-19:32:49  121 type: Sword
-19:32:49  122 Message type 0
-19:32:49  122 ID: 100
-19:32:49  122 object type len: 5
-19:32:49  122 type: Sword
-19:32:50  123 Message type 0
-19:32:50  123 ID: 100
-19:32:50  123 object type len: 5
-19:32:50  123 type: Sword
-19:32:50  124 Message type 0
-19:32:50  124 ID: 100
-19:32:50  124 object type len: 5
-19:32:50  124 type: Sword
-19:32:50  125 RM::getSprite(): Looking for sprite 'pear'.
-19:32:50  125 Message type 0
-19:32:50  125 ID: 100
-19:32:50  125 object type len: 5
-19:32:50  125 type: Sword
-19:32:50  126 Message type 0
-19:32:50  126 ID: 100
-19:32:50  126 object type len: 5
-19:32:50  126 type: Sword
-19:32:50  127 Message type 0
-19:32:50  127 ID: 100
-19:32:50  127 object type len: 5
-19:32:50  127 type: Sword
-19:32:50  128 Message type 0
-19:32:50  128 ID: 100
-19:32:50  128 object type len: 5
-19:32:50  128 type: Sword
-19:32:50  129 Message type 0
-19:32:50  129 ID: 100
-19:32:50  129 object type len: 5
-19:32:50  129 type: Sword
-19:32:50  130 Message type 0
-19:32:50  130 ID: 100
-19:32:50  130 object type len: 5
-19:32:50  130 type: Sword
-19:32:50  131 Message type 0
-19:32:50  131 ID: 100
-19:32:50  131 object type len: 5
-19:32:50  131 type: Sword
-19:32:50  132 Message type 0
-19:32:50  132 ID: 100
-19:32:50  132 object type len: 5
-19:32:50  132 type: Sword
-19:32:50  133 Message type 0
-19:32:50  133 ID: 100
-19:32:50  133 object type len: 5
-19:32:50  133 type: Sword
-19:32:50  134 Message type 0
-19:32:50  134 ID: 100
-19:32:50  134 object type len: 5
-19:32:50  134 type: Sword
-19:32:50  135 Message type 0
-19:32:50  135 ID: 100
-19:32:50  135 object type len: 5
-19:32:50  135 type: Sword
-19:32:50  136 Message type 0
-19:32:50  136 ID: 100
-19:32:50  136 object type len: 5
-19:32:50  136 type: Sword
-19:32:50  137 Message type 0
-19:32:50  137 ID: 100
-19:32:50  137 object type len: 5
-19:32:50  137 type: Sword
-19:32:50  138 Message type 0
-19:32:50  138 ID: 100
-19:32:50  138 object type len: 5
-19:32:50  138 type: Sword
-19:32:50  139 Message type 0
-19:32:50  139 ID: 100
-19:32:50  139 object type len: 5
-19:32:50  139 type: Sword
-19:32:50  140 Message type 0
-19:32:50  140 ID: 100
-19:32:50  140 object type len: 5
-19:32:50  140 type: Sword
-19:32:50  141 Message type 0
-19:32:50  141 ID: 100
-19:32:50  141 object type len: 5
-19:32:50  141 type: Sword
-19:32:50  142 Message type 0
-19:32:50  142 ID: 100
-19:32:50  142 object type len: 5
-19:32:50  142 type: Sword
-19:32:50  143 Message type 0
-19:32:50  143 ID: 100
-19:32:50  143 object type len: 5
-19:32:50  143 type: Sword
-19:32:50  144 Message type 0
-19:32:50  144 ID: 100
-19:32:50  144 object type len: 5
-19:32:50  144 type: Sword
-19:32:50  145 Message type 0
-19:32:50  145 ID: 100
-19:32:50  145 object type len: 5
-19:32:50  145 type: Sword
-19:32:50  146 Message type 0
-19:32:50  146 ID: 100
-19:32:50  146 object type len: 5
-19:32:50  146 type: Sword
-19:32:50  147 Message type 0
-19:32:50  147 ID: 100
-19:32:50  147 object type len: 5
-19:32:50  147 type: Sword
-19:32:50  148 Message type 0
-19:32:50  148 ID: 100
-19:32:50  148 object type len: 5
-19:32:50  148 type: Sword
-19:32:50  149 Message type 0
-19:32:50  149 ID: 100
-19:32:50  149 object type len: 5
-19:32:50  149 type: Sword
-19:32:50  150 Message type 0
-19:32:50  150 ID: 100
-19:32:50  150 object type len: 5
-19:32:50  150 type: Sword
-19:32:50  151 Message type 0
-19:32:50  151 ID: 100
-19:32:50  151 object type len: 5
-19:32:50  151 type: Sword
-19:32:50  152 Message type 0
-19:32:50  152 ID: 100
-19:32:50  152 object type len: 5
-19:32:50  152 type: Sword
-19:32:51  153 Message type 0
-19:32:51  153 ID: 100
-19:32:51  153 object type len: 5
-19:32:51  153 type: Sword
-19:32:51  154 Message type 0
-19:32:51  154 ID: 100
-19:32:51  154 object type len: 5
-19:32:51  154 type: Sword
-19:32:51  155 Message type 0
-19:32:51  155 ID: 100
-19:32:51  155 object type len: 5
-19:32:51  155 type: Sword
-19:32:51  156 RM::getSprite(): Looking for sprite 'pear'.
-19:32:51  156 Message type 0
-19:32:51  156 ID: 100
-19:32:51  156 object type len: 5
-19:32:51  156 type: Sword
-19:32:51  157 Message type 0
-19:32:51  157 ID: 100
-19:32:51  157 object type len: 5
-19:32:51  157 type: Sword
-19:32:51  158 Message type 0
-19:32:51  158 ID: 100
-19:32:51  158 object type len: 5
-19:32:51  158 type: Sword
-19:32:51  159 Message type 0
-19:32:51  159 ID: 100
-19:32:51  159 object type len: 5
-19:32:51  159 type: Sword
-19:32:51  160 Message type 0
-19:32:51  160 ID: 100
-19:32:51  160 object type len: 5
-19:32:51  160 type: Sword
-19:32:51  161 Message type 0
-19:32:51  161 ID: 100
-19:32:51  161 object type len: 5
-19:32:51  161 type: Sword
-19:32:51  162 Message type 0
-19:32:51  162 ID: 100
-19:32:51  162 object type len: 5
-19:32:51  162 type: Sword
-19:32:51  163 Message type 0
-19:32:51  163 ID: 100
-19:32:51  163 object type len: 5
-19:32:51  163 type: Sword
-19:32:51  164 Message type 0
-19:32:51  164 ID: 100
-19:32:51  164 object type len: 5
-19:32:51  164 type: Sword
-19:32:51  165 Message type 0
-19:32:51  165 ID: 100
-19:32:51  165 object type len: 5
-19:32:51  165 type: Sword
-19:32:51  166 Message type 0
-19:32:51  166 ID: 100
-19:32:51  166 object type len: 5
-19:32:51  166 type: Sword
-19:32:51  167 Message type 0
-19:32:51  167 ID: 100
-19:32:51  167 object type len: 5
-19:32:51  167 type: Sword
-19:32:51  168 Message type 0
-19:32:51  168 ID: 100
-19:32:51  168 object type len: 5
-19:32:51  168 type: Sword
-19:32:51  169 Message type 0
-19:32:51  169 ID: 100
-19:32:51  169 object type len: 5
-19:32:51  169 type: Sword
-19:32:51  170 Message type 0
-19:32:51  170 ID: 100
-19:32:51  170 object type len: 5
-19:32:51  170 type: Sword
-19:32:51  171 Message type 0
-19:32:51  171 ID: 100
-19:32:51  171 object type len: 5
-19:32:51  171 type: Sword
-19:32:51  172 Message type 0
-19:32:51  172 ID: 100
-19:32:51  172 object type len: 5
-19:32:51  172 type: Sword
-19:32:51  173 Message type 0
-19:32:51  173 ID: 100
-19:32:51  173 object type len: 5
-19:32:51  173 type: Sword
-19:32:51  174 Message type 0
-19:32:51  174 ID: 100
-19:32:51  174 object type len: 5
-19:32:51  174 type: Sword
-19:32:51  175 Message type 0
-19:32:51  175 ID: 100
-19:32:51  175 object type len: 5
-19:32:51  175 type: Sword
-19:32:51  176 Message type 0
-19:32:51  176 ID: 100
-19:32:51  176 object type len: 5
-19:32:51  176 type: Sword
-19:32:51  177 Message type 0
-19:32:51  177 ID: 100
-19:32:51  177 object type len: 5
-19:32:51  177 type: Sword
-19:32:51  178 Message type 0
-19:32:51  178 ID: 100
-19:32:51  178 object type len: 5
-19:32:51  178 type: Sword
-19:32:51  179 Message type 0
-19:32:51  179 ID: 100
-19:32:51  179 object type len: 5
-19:32:51  179 type: Sword
-19:32:51  180 Message type 0
-19:32:51  180 ID: 100
-19:32:51  180 object type len: 5
-19:32:51  180 type: Sword
-19:32:51  181 Message type 0
-19:32:51  181 ID: 100
-19:32:51  181 object type len: 5
-19:32:51  181 type: Sword
-19:32:51  182 Message type 0
-19:32:51  182 ID: 100
-19:32:51  182 object type len: 5
-19:32:51  182 type: Sword
-19:32:51  183 Message type 0
-19:32:51  183 ID: 100
-19:32:51  183 object type len: 5
-19:32:51  183 type: Sword
-19:32:52  184 Message type 0
-19:32:52  184 ID: 100
-19:32:52  184 object type len: 5
-19:32:52  184 type: Sword
-19:32:52  185 Message type 0
-19:32:52  185 ID: 100
-19:32:52  185 object type len: 5
-19:32:52  185 type: Sword
-19:32:52  186 Message type 0
-19:32:52  186 ID: 100
-19:32:52  186 object type len: 5
-19:32:52  186 type: Sword
-19:32:52  187 RM::getSprite(): Looking for sprite 'pear'.
-19:32:52  187 Message type 0
-19:32:52  187 ID: 100
-19:32:52  187 object type len: 5
-19:32:52  187 type: Sword
-19:32:52  188 Message type 0
-19:32:52  188 ID: 100
-19:32:52  188 object type len: 5
-19:32:52  188 type: Sword
-19:32:52  189 Message type 0
-19:32:52  189 ID: 100
-19:32:52  189 object type len: 5
-19:32:52  189 type: Sword
-19:32:52  190 Message type 0
-19:32:52  190 ID: 100
-19:32:52  190 object type len: 5
-19:32:52  190 type: Sword
-19:32:52  191 Message type 0
-19:32:52  191 ID: 100
-19:32:52  191 object type len: 5
-19:32:52  191 type: Sword
-19:32:52  192 Message type 0
-19:32:52  192 ID: 100
-19:32:52  192 object type len: 5
-19:32:52  192 type: Sword
-19:32:52  193 Message type 0
-19:32:52  193 ID: 100
-19:32:52  193 object type len: 5
-19:32:52  193 type: Sword
-19:32:52  194 Message type 0
-19:32:52  194 ID: 100
-19:32:52  194 object type len: 5
-19:32:52  194 type: Sword
-19:32:52  195 Message type 0
-19:32:52  195 ID: 100
-19:32:52  195 object type len: 5
-19:32:52  195 type: Sword
-19:32:52  196 Message type 0
-19:32:52  196 ID: 100
-19:32:52  196 object type len: 5
-19:32:52  196 type: Sword
-19:32:52  197 Message type 0
-19:32:52  197 ID: 100
-19:32:52  197 object type len: 5
-19:32:52  197 type: Sword
-19:32:52  198 Message type 0
-19:32:52  198 ID: 100
-19:32:52  198 object type len: 5
-19:32:52  198 type: Sword
-19:32:52  199 Message type 0
-19:32:52  199 ID: 100
-19:32:52  199 object type len: 5
-19:32:52  199 type: Sword
-19:32:52  200 Message type 0
-19:32:52  200 ID: 100
-19:32:52  200 object type len: 5
-19:32:52  200 type: Sword
-19:32:52  201 InputManager::getInput(): Window close event. Setting game over.
-19:32:52  201 Message type 0
-19:32:52  201 ID: 100
-19:32:52  201 object type len: 5
-19:32:52  201 type: Sword
-19:32:52  202 GameManager::run(): end of game loop
-19:32:52  202 PathManager::shutDown(): successfully stopped.
-19:32:52  202 Path manager stopped
-19:32:52  202 WorldManager::shutDown(): Successfully stopped.
-19:32:52  202 World manager stopped
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 Music::stop(): Stopping music.
-19:32:52  202 RM::shutDown(): successfully stopped.
-19:32:52  202 Resource manager stopped
-19:32:52  202 NetworkManager::shutDown(): successfully stopped.
-19:32:52  202 Network manager stopped
-19:32:52  202 InputManager::shutDown(): Keyboard repeat enabled.
-19:32:52  202 InputManager::shutDown(): successfully stopped.
-19:32:52  202 Input manager stopped
-19:32:52  202 DisplayManager::shutDown(): successfully stopped.
-19:32:52  202 Display manager stopped
-19:32:52  202 ****************************************************
-19:32:52  202 ** Game engine stopped **
-19:32:52  202 LogManager::shutDown(): successfully stopped.
+19:43:27    0 ****************************************************
+19:43:27    0 ** Dragonfly version 4.20 **
+19:43:27    0 ** Game engine started **
+19:43:27    0 ****************************************************
+19:43:27    0 LogManager::setLogLevel(): log level 10
+19:43:27    0 Fruit Ninja (v1.1)
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 1
+19:43:27    0 	       Width: 42
+19:43:27    0 	      Height: 7
+19:43:27    0 	    Slowdown: 0
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: White
+19:43:27    0 RM::loadSprite(): Sprite 'fruit-splash' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 1
+19:43:27    0 	       Width: 42
+19:43:27    0 	      Height: 7
+19:43:27    0 	    Slowdown: 0
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: White
+19:43:27    0 RM::loadSprite(): Sprite 'ninja-splash' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 4
+19:43:27    0 	       Width: 5
+19:43:27    0 	      Height: 4
+19:43:27    0 	    Slowdown: 4
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: Green
+19:43:27    0 RM::loadSprite(): Sprite 'pear' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 RM::loadRobustSprite(): transparency is 'space'
+19:43:27    0 	      Frames: 2
+19:43:27    0 	       Width: 6
+19:43:27    0 	      Height: 5
+19:43:27    0 	    Slowdown: 7
+19:43:27    0 	Transparency: ' '
+19:43:27    0 	       Color: Magenta
+19:43:27    0 RM::loadSprite(): Sprite 'grapes' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 4
+19:43:27    0 	       Width: 5
+19:43:27    0 	      Height: 3
+19:43:27    0 	    Slowdown: 3
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: Red
+19:43:27    0 RM::loadSprite(): Sprite 'apple' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 2
+19:43:27    0 	       Width: 6
+19:43:27    0 	      Height: 3
+19:43:27    0 	    Slowdown: 3
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: Yellow
+19:43:27    0 RM::loadSprite(): Sprite 'banana' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 RM::loadRobustSprite(): transparency is 'space'
+19:43:27    0 	      Frames: 2
+19:43:27    0 	       Width: 6
+19:43:27    0 	      Height: 5
+19:43:27    0 	    Slowdown: 7
+19:43:27    0 	Transparency: ' '
+19:43:27    0 	       Color: Cyan
+19:43:27    0 RM::loadSprite(): Sprite 'blueberries' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 12
+19:43:27    0 	       Width: 36
+19:43:27    0 	      Height: 5
+19:43:27    0 	    Slowdown: 0
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: White
+19:43:27    0 RM::loadSprite(): Sprite 'kudos' loaded.
+19:43:27    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+19:43:27    0 RM::loadSprite(): assuming robust sprite file format.
+19:43:27    0 	      Frames: 12
+19:43:27    0 	       Width: 54
+19:43:27    0 	      Height: 5
+19:43:27    0 	    Slowdown: 15
+19:43:27    0 	Transparency: '#'
+19:43:27    0 	       Color: White
+19:43:27    0 RM::loadSprite(): Sprite 'gameover' loaded.
+19:43:27    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'impact' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'beep' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+19:43:27    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+19:43:27    0 splash(): Started.
+19:43:27    0 GameManager::run(): starting game loop
+19:43:27    1 GameManager::run(): end of game loop
+19:43:27    1 splash(): Finished.
+19:43:27    1 GameManager::run(): starting game loop
+19:43:27    0 RM::getSprite(): Looking for sprite 'fruit-splash'.
+19:43:27    0 RM::getSprite(): Looking for sprite 'apple'.
+19:43:27    0 RM::getSound(): Looking for sound 'impact'.
+19:43:27    0 Sound::play(): Playing sound.
+19:43:28   30 RM::getSprite(): Looking for sprite 'ninja-splash'.
+19:43:28   30 RM::getSprite(): Looking for sprite 'grapes'.
+19:43:28   30 RM::getSound(): Looking for sound 'impact'.
+19:43:28   30 Sound::play(): Playing sound.
+19:43:30   75 RM::getSound(): Looking for sound 'game-start'.
+19:43:30   75 Sound::play(): Playing sound.
+19:43:30   75 RM::getSound(): Looking for sound 'splat-4'.
+19:43:30   75 Sound::play(): Playing sound.
+19:43:30   75 RM::getSound(): Looking for sound 'splat-1'.
+19:43:30   75 Sound::play(): Playing sound.
+19:43:31   98 GameManager::run(): end of game loop
+19:43:36   98 GameManager::run(): starting game loop
+19:43:40  101 ServerEntry::callback(): host: 127.0.0.1
+19:43:40  101 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+19:43:40  101 NetworkManager::connect(): Error! connect() returned:
+19:43:40  101 	111 - Connection refused
+19:43:46  297 ServerEntry::callback(): host: 127.0.0.1
+19:43:46  297 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+19:43:46  297 NetworkManager::connect(): Connection established.
+19:43:46  297 Message type 0
+19:43:46  297 ID: 100
+19:43:46  297 object type len: 5
+19:43:46  297 type: Sword
+19:43:46  297 GameManager::run(): Warning! Used all available network time.
+19:43:46  298 Message type 0
+19:43:46  298 ID: 100
+19:43:46  298 object type len: 5
+19:43:46  298 type: Sword
+19:43:46  299 Message type 0
+19:43:46  299 ID: 100
+19:43:46  299 object type len: 5
+19:43:46  299 type: Sword
+19:43:46  300 Message type 0
+19:43:46  300 ID: 100
+19:43:46  300 object type len: 5
+19:43:46  300 type: Sword
+19:43:46  301 Message type 0
+19:43:46  301 ID: 100
+19:43:46  301 object type len: 5
+19:43:46  301 type: Sword
+19:43:46  302 Message type 0
+19:43:46  302 ID: 100
+19:43:46  302 object type len: 5
+19:43:46  302 type: Sword
+19:43:46  303 Message type 0
+19:43:46  303 ID: 100
+19:43:46  303 object type len: 5
+19:43:46  303 type: Sword
+19:43:47  304 Message type 0
+19:43:47  304 ID: 100
+19:43:47  304 object type len: 5
+19:43:47  304 type: Sword
+19:43:47  305 Message type 0
+19:43:47  305 ID: 100
+19:43:47  305 object type len: 5
+19:43:47  305 type: Sword
+19:43:47  306 Message type 0
+19:43:47  306 ID: 100
+19:43:47  306 object type len: 5
+19:43:47  306 type: Sword
+19:43:47  307 Message type 0
+19:43:47  307 ID: 100
+19:43:47  307 object type len: 5
+19:43:47  307 type: Sword
+19:43:47  308 Message type 0
+19:43:47  308 ID: 100
+19:43:47  308 object type len: 5
+19:43:47  308 type: Sword
+19:43:47  309 Message type 0
+19:43:47  309 ID: 100
+19:43:47  309 object type len: 5
+19:43:47  309 type: Sword
+19:43:47  310 Message type 0
+19:43:47  310 ID: 100
+19:43:47  310 object type len: 5
+19:43:47  310 type: Sword
+19:43:47  311 Message type 0
+19:43:47  311 ID: 100
+19:43:47  311 object type len: 5
+19:43:47  311 type: Sword
+19:43:47  312 Message type 0
+19:43:47  312 ID: 100
+19:43:47  312 object type len: 5
+19:43:47  312 type: Sword
+19:43:47  313 Message type 0
+19:43:47  313 ID: 100
+19:43:47  313 object type len: 5
+19:43:47  313 type: Sword
+19:43:47  314 Message type 0
+19:43:47  314 ID: 100
+19:43:47  314 object type len: 5
+19:43:47  314 type: Sword
+19:43:47  315 Message type 0
+19:43:47  315 ID: 100
+19:43:47  315 object type len: 5
+19:43:47  315 type: Sword
+19:43:47  316 Message type 0
+19:43:47  316 ID: 100
+19:43:47  316 object type len: 5
+19:43:47  316 type: Sword
+19:43:47  317 Message type 0
+19:43:47  317 ID: 100
+19:43:47  317 object type len: 5
+19:43:47  317 type: Sword
+19:43:47  318 Message type 0
+19:43:47  318 ID: 100
+19:43:47  318 object type len: 5
+19:43:47  318 type: Sword
+19:43:47  319 RM::getSound(): Looking for sound 'swipe-5'.
+19:43:47  319 Sound::play(): Playing sound.
+19:43:47  319 Message type 0
+19:43:47  319 ID: 100
+19:43:47  319 object type len: 5
+19:43:47  319 type: Sword
+19:43:47  320 Message type 0
+19:43:47  320 ID: 100
+19:43:47  320 object type len: 5
+19:43:47  320 type: Sword
+19:43:47  321 Message type 0
+19:43:47  321 ID: 100
+19:43:47  321 object type len: 5
+19:43:47  321 type: Sword
+19:43:47  322 Message type 0
+19:43:47  322 ID: 100
+19:43:47  322 object type len: 5
+19:43:47  322 type: Sword
+19:43:47  323 Message type 0
+19:43:47  323 ID: 100
+19:43:47  323 object type len: 5
+19:43:47  323 type: Sword
+19:43:47  324 Message type 0
+19:43:47  324 ID: 100
+19:43:47  324 object type len: 5
+19:43:47  324 type: Sword
+19:43:47  325 Message type 0
+19:43:47  325 ID: 100
+19:43:47  325 object type len: 5
+19:43:47  325 type: Sword
+19:43:47  326 Message type 0
+19:43:47  326 ID: 100
+19:43:47  326 object type len: 5
+19:43:47  326 type: Sword
+19:43:47  327 Message type 0
+19:43:47  327 ID: 100
+19:43:47  327 object type len: 5
+19:43:47  327 type: Sword
+19:43:47  328 RM::getSprite(): Looking for sprite 'grapes'.
+19:43:47  328 Message type 0
+19:43:47  328 ID: 100
+19:43:47  328 object type len: 5
+19:43:47  328 type: Sword
+19:43:47  329 Message type 0
+19:43:47  329 ID: 100
+19:43:47  329 object type len: 5
+19:43:47  329 type: Sword
+19:43:47  330 Message type 0
+19:43:47  330 ID: 100
+19:43:47  330 object type len: 5
+19:43:47  330 type: Sword
+19:43:47  331 Message type 0
+19:43:47  331 ID: 100
+19:43:47  331 object type len: 5
+19:43:47  331 type: Sword
+19:43:47  332 Message type 0
+19:43:47  332 ID: 100
+19:43:47  332 object type len: 5
+19:43:47  332 type: Sword
+19:43:47  333 Message type 0
+19:43:47  333 ID: 100
+19:43:47  333 object type len: 5
+19:43:47  333 type: Sword
+19:43:47  334 Message type 0
+19:43:47  334 ID: 100
+19:43:47  334 object type len: 5
+19:43:47  334 type: Sword
+19:43:48  335 Message type 0
+19:43:48  335 ID: 100
+19:43:48  335 object type len: 5
+19:43:48  335 type: Sword
+19:43:48  336 Message type 0
+19:43:48  336 ID: 100
+19:43:48  336 object type len: 5
+19:43:48  336 type: Sword
+19:43:48  337 Message type 0
+19:43:48  337 ID: 100
+19:43:48  337 object type len: 5
+19:43:48  337 type: Sword
+19:43:48  338 Message type 0
+19:43:48  338 ID: 100
+19:43:48  338 object type len: 5
+19:43:48  338 type: Sword
+19:43:48  339 Message type 0
+19:43:48  339 ID: 100
+19:43:48  339 object type len: 5
+19:43:48  339 type: Sword
+19:43:48  340 Message type 0
+19:43:48  340 ID: 100
+19:43:48  340 object type len: 5
+19:43:48  340 type: Sword
+19:43:48  341 Message type 0
+19:43:48  341 ID: 100
+19:43:48  341 object type len: 5
+19:43:48  341 type: Sword
+19:43:48  342 Message type 0
+19:43:48  342 ID: 100
+19:43:48  342 object type len: 5
+19:43:48  342 type: Sword
+19:43:48  343 Message type 0
+19:43:48  343 ID: 100
+19:43:48  343 object type len: 5
+19:43:48  343 type: Sword
+19:43:48  344 Message type 0
+19:43:48  344 ID: 100
+19:43:48  344 object type len: 5
+19:43:48  344 type: Sword
+19:43:48  345 Message type 0
+19:43:48  345 ID: 100
+19:43:48  345 object type len: 5
+19:43:48  345 type: Sword
+19:43:48  346 Message type 0
+19:43:48  346 ID: 100
+19:43:48  346 object type len: 5
+19:43:48  346 type: Sword
+19:43:48  347 Message type 0
+19:43:48  347 ID: 100
+19:43:48  347 object type len: 5
+19:43:48  347 type: Sword
+19:43:48  348 Message type 0
+19:43:48  348 ID: 100
+19:43:48  348 object type len: 5
+19:43:48  348 type: Sword
+19:43:48  349 Message type 0
+19:43:48  349 ID: 100
+19:43:48  349 object type len: 5
+19:43:48  349 type: Sword
+19:43:48  350 Message type 0
+19:43:48  350 ID: 100
+19:43:48  350 object type len: 5
+19:43:48  350 type: Sword
+19:43:48  351 Message type 0
+19:43:48  351 ID: 100
+19:43:48  351 object type len: 5
+19:43:48  351 type: Sword
+19:43:48  352 Message type 0
+19:43:48  352 ID: 100
+19:43:48  352 object type len: 5
+19:43:48  352 type: Sword
+19:43:48  353 Message type 0
+19:43:48  353 ID: 100
+19:43:48  353 object type len: 5
+19:43:48  353 type: Sword
+19:43:48  354 Message type 0
+19:43:48  354 ID: 100
+19:43:48  354 object type len: 5
+19:43:48  354 type: Sword
+19:43:48  355 Message type 0
+19:43:48  355 ID: 100
+19:43:48  355 object type len: 5
+19:43:48  355 type: Sword
+19:43:48  356 Message type 0
+19:43:48  356 ID: 100
+19:43:48  356 object type len: 5
+19:43:48  356 type: Sword
+19:43:48  357 Message type 0
+19:43:48  357 ID: 100
+19:43:48  357 object type len: 5
+19:43:48  357 type: Sword
+19:43:48  358 Message type 0
+19:43:48  358 ID: 100
+19:43:48  358 object type len: 5
+19:43:48  358 type: Sword
+19:43:48  359 RM::getSprite(): Looking for sprite 'pear'.
+19:43:48  359 Message type 0
+19:43:48  359 ID: 100
+19:43:48  359 object type len: 5
+19:43:48  359 type: Sword
+19:43:48  360 Message type 0
+19:43:48  360 ID: 100
+19:43:48  360 object type len: 5
+19:43:48  360 type: Sword
+19:43:48  361 Message type 0
+19:43:48  361 ID: 100
+19:43:48  361 object type len: 5
+19:43:48  361 type: Sword
+19:43:48  362 Message type 0
+19:43:48  362 ID: 100
+19:43:48  362 object type len: 5
+19:43:48  362 type: Sword
+19:43:48  363 Message type 0
+19:43:48  363 ID: 100
+19:43:48  363 object type len: 5
+19:43:48  363 type: Sword
+19:43:48  364 Message type 0
+19:43:48  364 ID: 100
+19:43:48  364 object type len: 5
+19:43:48  364 type: Sword
+19:43:49  365 Message type 0
+19:43:49  365 ID: 100
+19:43:49  365 object type len: 5
+19:43:49  365 type: Sword
+19:43:49  366 Message type 0
+19:43:49  366 ID: 100
+19:43:49  366 object type len: 5
+19:43:49  366 type: Sword
+19:43:49  367 Message type 0
+19:43:49  367 ID: 100
+19:43:49  367 object type len: 5
+19:43:49  367 type: Sword
+19:43:49  368 Message type 0
+19:43:49  368 ID: 100
+19:43:49  368 object type len: 5
+19:43:49  368 type: Sword
+19:43:49  369 Message type 0
+19:43:49  369 ID: 100
+19:43:49  369 object type len: 5
+19:43:49  369 type: Sword
+19:43:49  370 Message type 0
+19:43:49  370 ID: 100
+19:43:49  370 object type len: 5
+19:43:49  370 type: Sword
+19:43:49  371 Message type 0
+19:43:49  371 ID: 100
+19:43:49  371 object type len: 5
+19:43:49  371 type: Sword
+19:43:49  372 Message type 0
+19:43:49  372 ID: 100
+19:43:49  372 object type len: 5
+19:43:49  372 type: Sword
+19:43:49  373 Message type 0
+19:43:49  373 ID: 100
+19:43:49  373 object type len: 5
+19:43:49  373 type: Sword
+19:43:49  374 Message type 0
+19:43:49  374 ID: 100
+19:43:49  374 object type len: 5
+19:43:49  374 type: Sword
+19:43:49  375 Message type 0
+19:43:49  375 ID: 100
+19:43:49  375 object type len: 5
+19:43:49  375 type: Sword
+19:43:49  376 Message type 0
+19:43:49  376 ID: 100
+19:43:49  376 object type len: 5
+19:43:49  376 type: Sword
+19:43:49  377 Message type 0
+19:43:49  377 ID: 100
+19:43:49  377 object type len: 5
+19:43:49  377 type: Sword
+19:43:49  378 Message type 0
+19:43:49  378 ID: 100
+19:43:49  378 object type len: 5
+19:43:49  378 type: Sword
+19:43:49  379 Message type 0
+19:43:49  379 ID: 100
+19:43:49  379 object type len: 5
+19:43:49  379 type: Sword
+19:43:49  380 Message type 0
+19:43:49  380 ID: 100
+19:43:49  380 object type len: 5
+19:43:49  380 type: Sword
+19:43:49  381 Message type 0
+19:43:49  381 ID: 100
+19:43:49  381 object type len: 5
+19:43:49  381 type: Sword
+19:43:49  382 Message type 0
+19:43:49  382 ID: 100
+19:43:49  382 object type len: 5
+19:43:49  382 type: Sword
+19:43:49  383 Message type 0
+19:43:49  383 ID: 100
+19:43:49  383 object type len: 5
+19:43:49  383 type: Sword
+19:43:49  384 Message type 0
+19:43:49  384 ID: 100
+19:43:49  384 object type len: 5
+19:43:49  384 type: Sword
+19:43:49  385 Message type 0
+19:43:49  385 ID: 100
+19:43:49  385 object type len: 5
+19:43:49  385 type: Sword
+19:43:49  386 Message type 0
+19:43:49  386 ID: 100
+19:43:49  386 object type len: 5
+19:43:49  386 type: Sword
+19:43:49  387 Message type 0
+19:43:49  387 ID: 100
+19:43:49  387 object type len: 5
+19:43:49  387 type: Sword
+19:43:49  388 Message type 0
+19:43:49  388 ID: 100
+19:43:49  388 object type len: 5
+19:43:49  388 type: Sword
+19:43:49  389 Message type 0
+19:43:49  389 ID: 100
+19:43:49  389 object type len: 5
+19:43:49  389 type: Sword
+19:43:49  390 RM::getSprite(): Looking for sprite 'grapes'.
+19:43:49  390 Message type 0
+19:43:49  390 ID: 100
+19:43:49  390 object type len: 5
+19:43:49  390 type: Sword
+19:43:49  391 Message type 0
+19:43:49  391 ID: 100
+19:43:49  391 object type len: 5
+19:43:49  391 type: Sword
+19:43:49  392 Message type 0
+19:43:49  392 ID: 100
+19:43:49  392 object type len: 5
+19:43:49  392 type: Sword
+19:43:49  393 RM::getSound(): Looking for sound 'swipe-6'.
+19:43:49  393 Sound::play(): Playing sound.
+19:43:49  393 Message type 0
+19:43:49  393 ID: 100
+19:43:49  393 object type len: 5
+19:43:49  393 type: Sword
+19:43:49  394 Message type 0
+19:43:49  394 ID: 100
+19:43:49  394 object type len: 5
+19:43:49  394 type: Sword
+19:43:50  395 Message type 0
+19:43:50  395 ID: 100
+19:43:50  395 object type len: 5
+19:43:50  395 type: Sword
+19:43:50  396 Message type 0
+19:43:50  396 ID: 100
+19:43:50  396 object type len: 5
+19:43:50  396 type: Sword
+19:43:50  397 Message type 0
+19:43:50  397 ID: 100
+19:43:50  397 object type len: 5
+19:43:50  397 type: Sword
+19:43:50  398 Message type 0
+19:43:50  398 ID: 100
+19:43:50  398 object type len: 5
+19:43:50  398 type: Sword
+19:43:50  399 Message type 0
+19:43:50  399 ID: 100
+19:43:50  399 object type len: 5
+19:43:50  399 type: Sword
+19:43:50  400 Message type 0
+19:43:50  400 ID: 100
+19:43:50  400 object type len: 5
+19:43:50  400 type: Sword
+19:43:50  401 Message type 0
+19:43:50  401 ID: 100
+19:43:50  401 object type len: 5
+19:43:50  401 type: Sword
+19:43:50  402 Message type 0
+19:43:50  402 ID: 100
+19:43:50  402 object type len: 5
+19:43:50  402 type: Sword
+19:43:50  403 Message type 0
+19:43:50  403 ID: 100
+19:43:50  403 object type len: 5
+19:43:50  403 type: Sword
+19:43:50  404 Message type 0
+19:43:50  404 ID: 100
+19:43:50  404 object type len: 5
+19:43:50  404 type: Sword
+19:43:50  405 Message type 0
+19:43:50  405 ID: 100
+19:43:50  405 object type len: 5
+19:43:50  405 type: Sword
+19:43:50  406 Message type 0
+19:43:50  406 ID: 100
+19:43:50  406 object type len: 5
+19:43:50  406 type: Sword
+19:43:50  407 Message type 0
+19:43:50  407 ID: 100
+19:43:50  407 object type len: 5
+19:43:50  407 type: Sword
+19:43:50  408 Message type 0
+19:43:50  408 ID: 100
+19:43:50  408 object type len: 5
+19:43:50  408 type: Sword
+19:43:50  409 Message type 0
+19:43:50  409 ID: 100
+19:43:50  409 object type len: 5
+19:43:50  409 type: Sword
+19:43:50  410 Message type 0
+19:43:50  410 ID: 100
+19:43:50  410 object type len: 5
+19:43:50  410 type: Sword
+19:43:50  411 Message type 0
+19:43:50  411 ID: 100
+19:43:50  411 object type len: 5
+19:43:50  411 type: Sword
+19:43:50  412 Message type 0
+19:43:50  412 ID: 100
+19:43:50  412 object type len: 5
+19:43:50  412 type: Sword
+19:43:50  413 Message type 0
+19:43:50  413 ID: 100
+19:43:50  413 object type len: 5
+19:43:50  413 type: Sword
+19:43:50  414 Message type 0
+19:43:50  414 ID: 100
+19:43:50  414 object type len: 5
+19:43:50  414 type: Sword
+19:43:50  415 Message type 0
+19:43:50  415 ID: 100
+19:43:50  415 object type len: 5
+19:43:50  415 type: Sword
+19:43:50  416 Message type 0
+19:43:50  416 ID: 100
+19:43:50  416 object type len: 5
+19:43:50  416 type: Sword
+19:43:50  417 Message type 0
+19:43:50  417 ID: 100
+19:43:50  417 object type len: 5
+19:43:50  417 type: Sword
+19:43:50  418 Message type 0
+19:43:50  418 ID: 100
+19:43:50  418 object type len: 5
+19:43:50  418 type: Sword
+19:43:50  419 Message type 0
+19:43:50  419 ID: 100
+19:43:50  419 object type len: 5
+19:43:50  419 type: Sword
+19:43:50  420 Message type 0
+19:43:50  420 ID: 100
+19:43:50  420 object type len: 5
+19:43:50  420 type: Sword
+19:43:50  421 RM::getSprite(): Looking for sprite 'grapes'.
+19:43:50  421 Message type 0
+19:43:50  421 ID: 100
+19:43:50  421 object type len: 5
+19:43:50  421 type: Sword
+19:43:50  422 Message type 0
+19:43:50  422 ID: 100
+19:43:50  422 object type len: 5
+19:43:50  422 type: Sword
+19:43:50  423 Message type 0
+19:43:50  423 ID: 100
+19:43:50  423 object type len: 5
+19:43:50  423 type: Sword
+19:43:50  424 Message type 0
+19:43:50  424 ID: 100
+19:43:50  424 object type len: 5
+19:43:50  424 type: Sword
+19:43:51  425 Message type 0
+19:43:51  425 ID: 100
+19:43:51  425 object type len: 5
+19:43:51  425 type: Sword
+19:43:51  426 Message type 0
+19:43:51  426 ID: 100
+19:43:51  426 object type len: 5
+19:43:51  426 type: Sword
+19:43:51  427 Message type 0
+19:43:51  427 ID: 100
+19:43:51  427 object type len: 5
+19:43:51  427 type: Sword
+19:43:51  428 Message type 0
+19:43:51  428 ID: 100
+19:43:51  428 object type len: 5
+19:43:51  428 type: Sword
+19:43:51  429 Message type 0
+19:43:51  429 ID: 100
+19:43:51  429 object type len: 5
+19:43:51  429 type: Sword
+19:43:51  430 Message type 0
+19:43:51  430 ID: 100
+19:43:51  430 object type len: 5
+19:43:51  430 type: Sword
+19:43:51  431 Message type 0
+19:43:51  431 ID: 100
+19:43:51  431 object type len: 5
+19:43:51  431 type: Sword
+19:43:51  432 Message type 0
+19:43:51  432 ID: 100
+19:43:51  432 object type len: 5
+19:43:51  432 type: Sword
+19:43:51  433 Message type 0
+19:43:51  433 ID: 100
+19:43:51  433 object type len: 5
+19:43:51  433 type: Sword
+19:43:51  434 Message type 0
+19:43:51  434 ID: 100
+19:43:51  434 object type len: 5
+19:43:51  434 type: Sword
+19:43:51  435 Message type 0
+19:43:51  435 ID: 100
+19:43:51  435 object type len: 5
+19:43:51  435 type: Sword
+19:43:51  436 Message type 0
+19:43:51  436 ID: 100
+19:43:51  436 object type len: 5
+19:43:51  436 type: Sword
+19:43:51  437 Message type 0
+19:43:51  437 ID: 100
+19:43:51  437 object type len: 5
+19:43:51  437 type: Sword
+19:43:51  438 Message type 0
+19:43:51  438 ID: 100
+19:43:51  438 object type len: 5
+19:43:51  438 type: Sword
+19:43:51  439 Message type 0
+19:43:51  439 ID: 100
+19:43:51  439 object type len: 5
+19:43:51  439 type: Sword
+19:43:51  440 RM::getSound(): Looking for sound 'swipe-5'.
+19:43:51  440 Sound::play(): Playing sound.
+19:43:51  440 Message type 0
+19:43:51  440 ID: 100
+19:43:51  440 object type len: 5
+19:43:51  440 type: Sword
+19:43:51  441 Message type 0
+19:43:51  441 ID: 100
+19:43:51  441 object type len: 5
+19:43:51  441 type: Sword
+19:43:51  442 Message type 0
+19:43:51  442 ID: 100
+19:43:51  442 object type len: 5
+19:43:51  442 type: Sword
+19:43:51  443 RM::getSound(): Looking for sound 'swipe-3'.
+19:43:51  443 Sound::play(): Playing sound.
+19:43:51  443 Message type 0
+19:43:51  443 ID: 100
+19:43:51  443 object type len: 5
+19:43:51  443 type: Sword
+19:43:51  444 Message type 0
+19:43:51  444 ID: 100
+19:43:51  444 object type len: 5
+19:43:51  444 type: Sword
+19:43:51  445 Message type 0
+19:43:51  445 ID: 100
+19:43:51  445 object type len: 5
+19:43:51  445 type: Sword
+19:43:51  446 Message type 0
+19:43:51  446 ID: 100
+19:43:51  446 object type len: 5
+19:43:51  446 type: Sword
+19:43:51  447 Message type 0
+19:43:51  447 ID: 100
+19:43:51  447 object type len: 5
+19:43:51  447 type: Sword
+19:43:51  448 Message type 0
+19:43:51  448 ID: 100
+19:43:51  448 object type len: 5
+19:43:51  448 type: Sword
+19:43:51  449 Message type 0
+19:43:51  449 ID: 100
+19:43:51  449 object type len: 5
+19:43:51  449 type: Sword
+19:43:51  450 Message type 0
+19:43:51  450 ID: 100
+19:43:51  450 object type len: 5
+19:43:51  450 type: Sword
+19:43:51  451 Message type 0
+19:43:51  451 ID: 100
+19:43:51  451 object type len: 5
+19:43:51  451 type: Sword
+19:43:51  452 RM::getSprite(): Looking for sprite 'pear'.
+19:43:51  452 Message type 0
+19:43:51  452 ID: 100
+19:43:51  452 object type len: 5
+19:43:51  452 type: Sword
+19:43:51  453 Message type 0
+19:43:51  453 ID: 100
+19:43:51  453 object type len: 5
+19:43:51  453 type: Sword
+19:43:51  454 Message type 0
+19:43:51  454 ID: 100
+19:43:51  454 object type len: 5
+19:43:51  454 type: Sword
+19:43:51  455 Message type 0
+19:43:51  455 ID: 100
+19:43:51  455 object type len: 5
+19:43:51  455 type: Sword
+19:43:52  456 Message type 0
+19:43:52  456 ID: 100
+19:43:52  456 object type len: 5
+19:43:52  456 type: Sword
+19:43:52  457 Message type 0
+19:43:52  457 ID: 100
+19:43:52  457 object type len: 5
+19:43:52  457 type: Sword
+19:43:52  458 Message type 0
+19:43:52  458 ID: 100
+19:43:52  458 object type len: 5
+19:43:52  458 type: Sword
+19:43:52  459 Message type 0
+19:43:52  459 ID: 100
+19:43:52  459 object type len: 5
+19:43:52  459 type: Sword
+19:43:52  460 Message type 0
+19:43:52  460 ID: 100
+19:43:52  460 object type len: 5
+19:43:52  460 type: Sword
+19:43:52  461 Message type 0
+19:43:52  461 ID: 100
+19:43:52  461 object type len: 5
+19:43:52  461 type: Sword
+19:43:52  462 Message type 0
+19:43:52  462 ID: 100
+19:43:52  462 object type len: 5
+19:43:52  462 type: Sword
+19:43:52  463 RM::getSound(): Looking for sound 'swipe-6'.
+19:43:52  463 Sound::play(): Playing sound.
+19:43:52  463 Message type 0
+19:43:52  463 ID: 100
+19:43:52  463 object type len: 5
+19:43:52  463 type: Sword
+19:43:52  464 Message type 0
+19:43:52  464 ID: 100
+19:43:52  464 object type len: 5
+19:43:52  464 type: Sword
+19:43:52  465 Message type 0
+19:43:52  465 ID: 100
+19:43:52  465 object type len: 5
+19:43:52  465 type: Sword
+19:43:52  466 Message type 0
+19:43:52  466 ID: 100
+19:43:52  466 object type len: 5
+19:43:52  466 type: Sword
+19:43:52  467 Message type 0
+19:43:52  467 ID: 100
+19:43:52  467 object type len: 5
+19:43:52  467 type: Sword
+19:43:52  468 Message type 0
+19:43:52  468 ID: 100
+19:43:52  468 object type len: 5
+19:43:52  468 type: Sword
+19:43:52  469 Message type 0
+19:43:52  469 ID: 100
+19:43:52  469 object type len: 5
+19:43:52  469 type: Sword
+19:43:52  470 Message type 0
+19:43:52  470 ID: 100
+19:43:52  470 object type len: 5
+19:43:52  470 type: Sword
+19:43:52  471 Message type 0
+19:43:52  471 ID: 100
+19:43:52  471 object type len: 5
+19:43:52  471 type: Sword
+19:43:52  472 Message type 0
+19:43:52  472 ID: 100
+19:43:52  472 object type len: 5
+19:43:52  472 type: Sword
+19:43:52  473 Message type 0
+19:43:52  473 ID: 100
+19:43:52  473 object type len: 5
+19:43:52  473 type: Sword
+19:43:52  474 Message type 0
+19:43:52  474 ID: 100
+19:43:52  474 object type len: 5
+19:43:52  474 type: Sword
+19:43:52  475 Message type 0
+19:43:52  475 ID: 100
+19:43:52  475 object type len: 5
+19:43:52  475 type: Sword
+19:43:52  476 Message type 0
+19:43:52  476 ID: 100
+19:43:52  476 object type len: 5
+19:43:52  476 type: Sword
+19:43:52  477 Message type 0
+19:43:52  477 ID: 100
+19:43:52  477 object type len: 5
+19:43:52  477 type: Sword
+19:43:52  478 Message type 0
+19:43:52  478 ID: 100
+19:43:52  478 object type len: 5
+19:43:52  478 type: Sword
+19:43:52  479 Message type 0
+19:43:52  479 ID: 100
+19:43:52  479 object type len: 5
+19:43:52  479 type: Sword
+19:43:52  480 Message type 0
+19:43:52  480 ID: 100
+19:43:52  480 object type len: 5
+19:43:52  480 type: Sword
+19:43:52  481 Message type 0
+19:43:52  481 ID: 100
+19:43:52  481 object type len: 5
+19:43:52  481 type: Sword
+19:43:52  482 Message type 0
+19:43:52  482 ID: 100
+19:43:52  482 object type len: 5
+19:43:52  482 type: Sword
+19:43:52  483 RM::getSprite(): Looking for sprite 'pear'.
+19:43:52  483 Message type 0
+19:43:52  483 ID: 100
+19:43:52  483 object type len: 5
+19:43:52  483 type: Sword
+19:43:52  484 Message type 0
+19:43:52  484 ID: 100
+19:43:52  484 object type len: 5
+19:43:52  484 type: Sword
+19:43:52  485 Message type 0
+19:43:52  485 ID: 100
+19:43:52  485 object type len: 5
+19:43:52  485 type: Sword
+19:43:53  486 Message type 0
+19:43:53  486 ID: 100
+19:43:53  486 object type len: 5
+19:43:53  486 type: Sword
+19:43:53  487 Message type 0
+19:43:53  487 ID: 100
+19:43:53  487 object type len: 5
+19:43:53  487 type: Sword
+19:43:53  488 Message type 0
+19:43:53  488 ID: 100
+19:43:53  488 object type len: 5
+19:43:53  488 type: Sword
+19:43:53  489 Message type 0
+19:43:53  489 ID: 100
+19:43:53  489 object type len: 5
+19:43:53  489 type: Sword
+19:43:53  490 Message type 0
+19:43:53  490 ID: 100
+19:43:53  490 object type len: 5
+19:43:53  490 type: Sword
+19:43:53  491 RM::getSound(): Looking for sound 'swipe-6'.
+19:43:53  491 Sound::play(): Playing sound.
+19:43:53  491 Message type 0
+19:43:53  491 ID: 100
+19:43:53  491 object type len: 5
+19:43:53  491 type: Sword
+19:43:53  492 Message type 0
+19:43:53  492 ID: 100
+19:43:53  492 object type len: 5
+19:43:53  492 type: Sword
+19:43:53  493 Message type 0
+19:43:53  493 ID: 100
+19:43:53  493 object type len: 5
+19:43:53  493 type: Sword
+19:43:53  494 Message type 0
+19:43:53  494 ID: 100
+19:43:53  494 object type len: 5
+19:43:53  494 type: Sword
+19:43:53  495 Message type 0
+19:43:53  495 ID: 100
+19:43:53  495 object type len: 5
+19:43:53  495 type: Sword
+19:43:53  496 Message type 0
+19:43:53  496 ID: 100
+19:43:53  496 object type len: 5
+19:43:53  496 type: Sword
+19:43:53  497 Message type 0
+19:43:53  497 ID: 100
+19:43:53  497 object type len: 5
+19:43:53  497 type: Sword
+19:43:53  498 Message type 0
+19:43:53  498 ID: 100
+19:43:53  498 object type len: 5
+19:43:53  498 type: Sword
+19:43:53  499 Message type 0
+19:43:53  499 ID: 100
+19:43:53  499 object type len: 5
+19:43:53  499 type: Sword
+19:43:53  500 Message type 0
+19:43:53  500 ID: 100
+19:43:53  500 object type len: 5
+19:43:53  500 type: Sword
+19:43:53  501 Message type 0
+19:43:53  501 ID: 100
+19:43:53  501 object type len: 5
+19:43:53  501 type: Sword
+19:43:53  502 Message type 0
+19:43:53  502 ID: 100
+19:43:53  502 object type len: 5
+19:43:53  502 type: Sword
+19:43:53  503 Message type 0
+19:43:53  503 ID: 100
+19:43:53  503 object type len: 5
+19:43:53  503 type: Sword
+19:43:53  504 Message type 0
+19:43:53  504 ID: 100
+19:43:53  504 object type len: 5
+19:43:53  504 type: Sword
+19:43:53  505 Message type 0
+19:43:53  505 ID: 100
+19:43:53  505 object type len: 5
+19:43:53  505 type: Sword
+19:43:53  506 Message type 0
+19:43:53  506 ID: 100
+19:43:53  506 object type len: 5
+19:43:53  506 type: Sword
+19:43:53  507 Message type 0
+19:43:53  507 ID: 100
+19:43:53  507 object type len: 5
+19:43:53  507 type: Sword
+19:43:53  508 Message type 0
+19:43:53  508 ID: 100
+19:43:53  508 object type len: 5
+19:43:53  508 type: Sword
+19:43:53  509 Message type 0
+19:43:53  509 ID: 100
+19:43:53  509 object type len: 5
+19:43:53  509 type: Sword
+19:43:53  510 Message type 0
+19:43:53  510 ID: 100
+19:43:53  510 object type len: 5
+19:43:53  510 type: Sword
+19:43:53  511 Message type 0
+19:43:53  511 ID: 100
+19:43:53  511 object type len: 5
+19:43:53  511 type: Sword
+19:43:53  512 Message type 0
+19:43:53  512 ID: 100
+19:43:53  512 object type len: 5
+19:43:53  512 type: Sword
+19:43:53  513 Message type 0
+19:43:53  513 ID: 100
+19:43:53  513 object type len: 5
+19:43:53  513 type: Sword
+19:43:53  514 RM::getSprite(): Looking for sprite 'grapes'.
+19:43:53  514 Message type 0
+19:43:53  514 ID: 100
+19:43:53  514 object type len: 5
+19:43:53  514 type: Sword
+19:43:53  515 Message type 0
+19:43:53  515 ID: 100
+19:43:53  515 object type len: 5
+19:43:53  515 type: Sword
+19:43:54  516 Message type 0
+19:43:54  516 ID: 100
+19:43:54  516 object type len: 5
+19:43:54  516 type: Sword
+19:43:54  517 Message type 0
+19:43:54  517 ID: 100
+19:43:54  517 object type len: 5
+19:43:54  517 type: Sword
+19:43:54  518 Message type 0
+19:43:54  518 ID: 100
+19:43:54  518 object type len: 5
+19:43:54  518 type: Sword
+19:43:54  519 Message type 0
+19:43:54  519 ID: 100
+19:43:54  519 object type len: 5
+19:43:54  519 type: Sword
+19:43:54  520 Message type 0
+19:43:54  520 ID: 100
+19:43:54  520 object type len: 5
+19:43:54  520 type: Sword
+19:43:54  521 Message type 0
+19:43:54  521 ID: 100
+19:43:54  521 object type len: 5
+19:43:54  521 type: Sword
+19:43:54  522 Message type 0
+19:43:54  522 ID: 100
+19:43:54  522 object type len: 5
+19:43:54  522 type: Sword
+19:43:54  523 Message type 0
+19:43:54  523 ID: 100
+19:43:54  523 object type len: 5
+19:43:54  523 type: Sword
+19:43:54  524 Message type 0
+19:43:54  524 ID: 100
+19:43:54  524 object type len: 5
+19:43:54  524 type: Sword
+19:43:54  525 Message type 0
+19:43:54  525 ID: 100
+19:43:54  525 object type len: 5
+19:43:54  525 type: Sword
+19:43:54  526 Message type 0
+19:43:54  526 ID: 100
+19:43:54  526 object type len: 5
+19:43:54  526 type: Sword
+19:43:54  527 Message type 0
+19:43:54  527 ID: 100
+19:43:54  527 object type len: 5
+19:43:54  527 type: Sword
+19:43:54  528 Message type 0
+19:43:54  528 ID: 100
+19:43:54  528 object type len: 5
+19:43:54  528 type: Sword
+19:43:54  529 Message type 0
+19:43:54  529 ID: 100
+19:43:54  529 object type len: 5
+19:43:54  529 type: Sword
+19:43:54  530 Message type 0
+19:43:54  530 ID: 100
+19:43:54  530 object type len: 5
+19:43:54  530 type: Sword
+19:43:54  531 Message type 0
+19:43:54  531 ID: 100
+19:43:54  531 object type len: 5
+19:43:54  531 type: Sword
+19:43:54  532 Message type 0
+19:43:54  532 ID: 100
+19:43:54  532 object type len: 5
+19:43:54  532 type: Sword
+19:43:54  533 Message type 0
+19:43:54  533 ID: 100
+19:43:54  533 object type len: 5
+19:43:54  533 type: Sword
+19:43:54  534 Message type 0
+19:43:54  534 ID: 100
+19:43:54  534 object type len: 5
+19:43:54  534 type: Sword
+19:43:54  535 Message type 0
+19:43:54  535 ID: 100
+19:43:54  535 object type len: 5
+19:43:54  535 type: Sword
+19:43:54  536 Message type 0
+19:43:54  536 ID: 100
+19:43:54  536 object type len: 5
+19:43:54  536 type: Sword
+19:43:54  537 Message type 0
+19:43:54  537 ID: 100
+19:43:54  537 object type len: 5
+19:43:54  537 type: Sword
+19:43:54  538 Message type 0
+19:43:54  538 ID: 100
+19:43:54  538 object type len: 5
+19:43:54  538 type: Sword
+19:43:54  539 Message type 0
+19:43:54  539 ID: 100
+19:43:54  539 object type len: 5
+19:43:54  539 type: Sword
+19:43:54  540 InputManager::getInput(): Window close event. Setting game over.
+19:43:54  540 Message type 0
+19:43:54  540 ID: 100
+19:43:54  540 object type len: 5
+19:43:54  540 type: Sword
+19:43:54  541 GameManager::run(): end of game loop
+19:43:54  541 PathManager::shutDown(): successfully stopped.
+19:43:54  541 Path manager stopped
+19:43:54  541 WorldManager::shutDown(): Successfully stopped.
+19:43:54  541 World manager stopped
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 Music::stop(): Stopping music.
+19:43:54  541 RM::shutDown(): successfully stopped.
+19:43:54  541 Resource manager stopped
+19:43:54  541 NetworkManager::shutDown(): successfully stopped.
+19:43:54  541 Network manager stopped
+19:43:54  541 InputManager::shutDown(): Keyboard repeat enabled.
+19:43:54  541 InputManager::shutDown(): successfully stopped.
+19:43:54  541 Input manager stopped
+19:43:54  541 DisplayManager::shutDown(): successfully stopped.
+19:43:54  541 Display manager stopped
+19:43:54  541 ****************************************************
+19:43:54  541 ** Game engine stopped **
+19:43:54  541 LogManager::shutDown(): successfully stopped.

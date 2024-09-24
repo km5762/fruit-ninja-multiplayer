@@ -84,13 +84,12 @@ void splash(void)
 
 ///////////////////////////////////////////////
 // Create trail from p1 to p2.
-void create_trail(df::Vector p1, df::Vector p2)
+void create_trail(df::Vector p1, df::Vector p2, df::Color color)
 {
 
   const float size = 2;
   const int age = 20;
   const int opacity = 255;
-  const df::Color color = df::CYAN;
   unsigned char r, g, b;
   df::colorToRGB(color, r, g, b);
 
