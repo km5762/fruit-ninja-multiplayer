@@ -1,0 +1,70 @@
+19:59:27    0 ****************************************************
+19:59:27    0 ** Dragonfly version 4.20 **
+19:59:27    0 ** Game engine started **
+19:59:27    0 ****************************************************
+19:59:28    0 Fruit Ninja (v1.1)
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+19:59:28    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'impact' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'beep' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+19:59:28    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+19:59:28    0 GameManager::run(): starting game loop
+19:59:29   37 GameManager::run(): end of game loop
+19:59:29   37 GameManager::run(): starting game loop
+19:59:30   43 GameManager::run(): end of game loop
+19:59:30   43 GameManager::run(): starting game loop
+19:59:34  115 ServerEntry::callback(): host: 127.0.0.1
+19:59:34  115 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
+19:59:34  115 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+19:59:34  115 NetworkManager::connect(): Error! connect() returned:
+19:59:34  115 	111 - Connection refused
+19:59:37  210 ServerEntry::callback(): host: 127.0.0.1
+19:59:37  210 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
+19:59:37  210 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+19:59:37  210 NetworkManager::connect(): Error! connect() returned:
+19:59:37  210 	111 - Connection refused
+19:59:40  293 ServerEntry::callback(): host: qw
+19:59:40  293 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
+19:59:40  293 NetworkManager::connect(): Connecting to qw, port 9876.
+19:59:40  293 NetworkManager::connect(): Error! getaddrinfo() returned:
+19:59:40  293 	0 - Success
+19:59:42  351 InputManager::getInput(): Window close event. Setting game over.
+19:59:42  352 GameManager::run(): end of game loop
+19:59:42  352 Path manager stopped
+19:59:42  352 World manager stopped
+19:59:42  352 Resource manager stopped
+19:59:42  352 Input manager stopped
+19:59:42  352 Display manager stopped
+19:59:42  352 ****************************************************
+19:59:42  352 ** Game engine stopped **
