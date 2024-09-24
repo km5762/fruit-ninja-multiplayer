@@ -2,6 +2,8 @@
 #include <string>
 #include <vector>
 
+#include "Serializable.h"
+
 // types of messages
 enum class MessageType
 {
@@ -13,13 +15,13 @@ enum class MessageType
 };
 
 // A utility struct for serializing/deserializing messages in yak
-struct Message
+struct Message : public Serializable
 {
     MessageType type;
-    std::vector<std::byte> body; // the actual message contents
+    std::string body; // the actual message contents
 
-    Message(MessageType type, std::vector<std::byte> &contents);
-    Message();                           // default construction (used in deserialization)
-    std::vector<std::byte> serialize();  // serialize to a vector of bytes
-    void deserialize(std::byte *buffer); // deserialize from a pointer to a buffer of bytes
+    Message(MessageType type, std::string &body);
+    Message(); // default construction (used in deserialization)
+    void serialize(std::stringstream &ss) override;
+    void deserialize(std::stringstream &ss) override;
 };

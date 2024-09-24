@@ -1,70 +1,1680 @@
-19:59:27    0 ****************************************************
-19:59:27    0 ** Dragonfly version 4.20 **
-19:59:27    0 ** Game engine started **
-19:59:27    0 ****************************************************
-19:59:28    0 Fruit Ninja (v1.1)
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-19:59:28    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-19:59:28    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'impact' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'beep' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-19:59:28    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-19:59:28    0 GameManager::run(): starting game loop
-19:59:29   37 GameManager::run(): end of game loop
-19:59:29   37 GameManager::run(): starting game loop
-19:59:30   43 GameManager::run(): end of game loop
-19:59:30   43 GameManager::run(): starting game loop
-19:59:34  115 ServerEntry::callback(): host: 127.0.0.1
-19:59:34  115 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
-19:59:34  115 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-19:59:34  115 NetworkManager::connect(): Error! connect() returned:
-19:59:34  115 	111 - Connection refused
-19:59:37  210 ServerEntry::callback(): host: 127.0.0.1
-19:59:37  210 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
-19:59:37  210 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-19:59:37  210 NetworkManager::connect(): Error! connect() returned:
-19:59:37  210 	111 - Connection refused
-19:59:40  293 ServerEntry::callback(): host: qw
-19:59:40  293 NetworkManager::connect(): Warning! Networking is not enabled in the Dragonfly configuration file.
-19:59:40  293 NetworkManager::connect(): Connecting to qw, port 9876.
-19:59:40  293 NetworkManager::connect(): Error! getaddrinfo() returned:
-19:59:40  293 	0 - Success
-19:59:42  351 InputManager::getInput(): Window close event. Setting game over.
-19:59:42  352 GameManager::run(): end of game loop
-19:59:42  352 Path manager stopped
-19:59:42  352 World manager stopped
-19:59:42  352 Resource manager stopped
-19:59:42  352 Input manager stopped
-19:59:42  352 Display manager stopped
-19:59:42  352 ****************************************************
-19:59:42  352 ** Game engine stopped **
+17:12:30    0 ****************************************************
+17:12:30    0 ** Dragonfly version 4.20 **
+17:12:30    0 ** Game engine started **
+17:12:30    0 ****************************************************
+17:12:30    0 LogManager::setLogLevel(): log level 10
+17:12:30    0 Fruit Ninja (v1.1)
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 1
+17:12:30    0 	       Width: 42
+17:12:30    0 	      Height: 7
+17:12:30    0 	    Slowdown: 0
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: White
+17:12:30    0 RM::loadSprite(): Sprite 'fruit-splash' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 1
+17:12:30    0 	       Width: 42
+17:12:30    0 	      Height: 7
+17:12:30    0 	    Slowdown: 0
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: White
+17:12:30    0 RM::loadSprite(): Sprite 'ninja-splash' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 4
+17:12:30    0 	       Width: 5
+17:12:30    0 	      Height: 4
+17:12:30    0 	    Slowdown: 4
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: Green
+17:12:30    0 RM::loadSprite(): Sprite 'pear' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 RM::loadRobustSprite(): transparency is 'space'
+17:12:30    0 	      Frames: 2
+17:12:30    0 	       Width: 6
+17:12:30    0 	      Height: 5
+17:12:30    0 	    Slowdown: 7
+17:12:30    0 	Transparency: ' '
+17:12:30    0 	       Color: Magenta
+17:12:30    0 RM::loadSprite(): Sprite 'grapes' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 4
+17:12:30    0 	       Width: 5
+17:12:30    0 	      Height: 3
+17:12:30    0 	    Slowdown: 3
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: Red
+17:12:30    0 RM::loadSprite(): Sprite 'apple' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 2
+17:12:30    0 	       Width: 6
+17:12:30    0 	      Height: 3
+17:12:30    0 	    Slowdown: 3
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: Yellow
+17:12:30    0 RM::loadSprite(): Sprite 'banana' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 RM::loadRobustSprite(): transparency is 'space'
+17:12:30    0 	      Frames: 2
+17:12:30    0 	       Width: 6
+17:12:30    0 	      Height: 5
+17:12:30    0 	    Slowdown: 7
+17:12:30    0 	Transparency: ' '
+17:12:30    0 	       Color: Cyan
+17:12:30    0 RM::loadSprite(): Sprite 'blueberries' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 12
+17:12:30    0 	       Width: 36
+17:12:30    0 	      Height: 5
+17:12:30    0 	    Slowdown: 0
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: White
+17:12:30    0 RM::loadSprite(): Sprite 'kudos' loaded.
+17:12:30    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+17:12:30    0 RM::loadSprite(): assuming robust sprite file format.
+17:12:30    0 	      Frames: 12
+17:12:30    0 	       Width: 54
+17:12:30    0 	      Height: 5
+17:12:30    0 	    Slowdown: 15
+17:12:30    0 	Transparency: '#'
+17:12:30    0 	       Color: White
+17:12:30    0 RM::loadSprite(): Sprite 'gameover' loaded.
+17:12:30    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'impact' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'beep' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+17:12:30    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+17:12:30    0 splash(): Started.
+17:12:30    0 GameManager::run(): starting game loop
+17:12:32   52 GameManager::run(): end of game loop
+17:12:32   52 splash(): Finished.
+17:12:32   52 GameManager::run(): starting game loop
+17:12:32    0 RM::getSprite(): Looking for sprite 'fruit-splash'.
+17:12:32    0 RM::getSprite(): Looking for sprite 'grapes'.
+17:12:32    0 RM::getSound(): Looking for sound 'impact'.
+17:12:32    0 Sound::play(): Playing sound.
+17:12:33   30 RM::getSprite(): Looking for sprite 'ninja-splash'.
+17:12:33   30 RM::getSprite(): Looking for sprite 'apple'.
+17:12:33   30 RM::getSound(): Looking for sound 'impact'.
+17:12:33   30 Sound::play(): Playing sound.
+17:12:35   75 RM::getSound(): Looking for sound 'game-start'.
+17:12:35   75 Sound::play(): Playing sound.
+17:12:35   75 RM::getSound(): Looking for sound 'splat-1'.
+17:12:35   75 Sound::play(): Playing sound.
+17:12:35   75 RM::getSound(): Looking for sound 'splat-4'.
+17:12:35   75 Sound::play(): Playing sound.
+17:12:36  110 GameManager::run(): end of game loop
+17:12:36  110 GameManager::run(): starting game loop
+17:12:38   73 ServerEntry::callback(): host: 127.0.0.1
+17:12:38   73 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+17:12:38   73 NetworkManager::connect(): Connection established.
+17:12:38   75 Message type 0
+17:12:38   75 ID: 100
+17:12:38   75 object type len: 5
+17:12:38   75 type: Sword
+17:12:38   75 Creating new object
+17:12:38   76 CLIENT
+17:12:38   76 Message type 0
+17:12:38   76 ID: 100
+17:12:38   76 object type len: 5
+17:12:38   76 type: Sword
+17:12:38   76 Object found
+17:12:38   77 CLIENT
+17:12:38   77 Message type 0
+17:12:38   77 ID: 100
+17:12:38   77 object type len: 5
+17:12:38   77 type: Sword
+17:12:38   77 Object found
+17:12:38   78 CLIENT
+17:12:38   78 Message type 0
+17:12:38   78 ID: 100
+17:12:38   78 object type len: 5
+17:12:38   78 type: Sword
+17:12:38   78 Object found
+17:12:38   79 CLIENT
+17:12:38   79 Message type 0
+17:12:38   79 ID: 100
+17:12:38   79 object type len: 5
+17:12:38   79 type: Sword
+17:12:38   79 Object found
+17:12:38   80 CLIENT
+17:12:38   80 Message type 0
+17:12:38   80 ID: 100
+17:12:38   80 object type len: 5
+17:12:38   80 type: Sword
+17:12:38   80 Object found
+17:12:38   81 CLIENT
+17:12:38   81 Message type 0
+17:12:38   81 ID: 100
+17:12:38   81 object type len: 5
+17:12:38   81 type: Sword
+17:12:38   81 Object found
+17:12:38   82 CLIENT
+17:12:38   82 Message type 0
+17:12:38   82 ID: 100
+17:12:38   82 object type len: 5
+17:12:38   82 type: Sword
+17:12:38   82 Object found
+17:12:38   83 CLIENT
+17:12:38   83 Message type 0
+17:12:38   83 ID: 100
+17:12:38   83 object type len: 5
+17:12:38   83 type: Sword
+17:12:38   83 Object found
+17:12:38   84 CLIENT
+17:12:38   84 Message type 0
+17:12:38   84 ID: 100
+17:12:38   84 object type len: 5
+17:12:38   84 type: Sword
+17:12:38   84 Object found
+17:12:38   85 CLIENT
+17:12:38   85 Message type 0
+17:12:38   85 ID: 100
+17:12:38   85 object type len: 5
+17:12:38   85 type: Sword
+17:12:38   85 Object found
+17:12:39   86 CLIENT
+17:12:39   86 Message type 0
+17:12:39   86 ID: 100
+17:12:39   86 object type len: 5
+17:12:39   86 type: Sword
+17:12:39   86 Object found
+17:12:39   87 CLIENT
+17:12:39   87 Message type 0
+17:12:39   87 ID: 100
+17:12:39   87 object type len: 5
+17:12:39   87 type: Sword
+17:12:39   87 Object found
+17:12:39   88 CLIENT
+17:12:39   88 Message type 0
+17:12:39   88 ID: 100
+17:12:39   88 object type len: 5
+17:12:39   88 type: Sword
+17:12:39   88 Object found
+17:12:39   89 CLIENT
+17:12:39   89 Message type 0
+17:12:39   89 ID: 100
+17:12:39   89 object type len: 5
+17:12:39   89 type: Sword
+17:12:39   89 Object found
+17:12:39   90 CLIENT
+17:12:39   90 Message type 0
+17:12:39   90 ID: 100
+17:12:39   90 object type len: 5
+17:12:39   90 type: Sword
+17:12:39   90 Object found
+17:12:39   91 CLIENT
+17:12:39   91 Message type 0
+17:12:39   91 ID: 100
+17:12:39   91 object type len: 5
+17:12:39   91 type: Sword
+17:12:39   91 Object found
+17:12:39   92 CLIENT
+17:12:39   92 Message type 0
+17:12:39   92 ID: 100
+17:12:39   92 object type len: 5
+17:12:39   92 type: Sword
+17:12:39   92 Object found
+17:12:39   93 CLIENT
+17:12:39   93 Message type 0
+17:12:39   93 ID: 100
+17:12:39   93 object type len: 5
+17:12:39   93 type: Sword
+17:12:39   93 Object found
+17:12:39   94 CLIENT
+17:12:39   94 Message type 0
+17:12:39   94 ID: 100
+17:12:39   94 object type len: 5
+17:12:39   94 type: Sword
+17:12:39   94 Object found
+17:12:39   95 CLIENT
+17:12:39   95 Message type 0
+17:12:39   95 ID: 100
+17:12:39   95 object type len: 5
+17:12:39   95 type: Sword
+17:12:39   95 Object found
+17:12:39   96 CLIENT
+17:12:39   96 Message type 0
+17:12:39   96 ID: 100
+17:12:39   96 object type len: 5
+17:12:39   96 type: Sword
+17:12:39   96 Object found
+17:12:39   97 CLIENT
+17:12:39   97 Message type 0
+17:12:39   97 ID: 100
+17:12:39   97 object type len: 5
+17:12:39   97 type: Sword
+17:12:39   97 Object found
+17:12:39   98 CLIENT
+17:12:39   98 Message type 0
+17:12:39   98 ID: 100
+17:12:39   98 object type len: 5
+17:12:39   98 type: Sword
+17:12:39   98 Object found
+17:12:39   99 CLIENT
+17:12:39   99 Message type 0
+17:12:39   99 ID: 100
+17:12:39   99 object type len: 5
+17:12:39   99 type: Sword
+17:12:39   99 Object found
+17:12:39  100 CLIENT
+17:12:39  100 Message type 0
+17:12:39  100 ID: 100
+17:12:39  100 object type len: 5
+17:12:39  100 type: Sword
+17:12:39  100 Object found
+17:12:39  101 CLIENT
+17:12:39  101 Message type 0
+17:12:39  101 ID: 100
+17:12:39  101 object type len: 5
+17:12:39  101 type: Sword
+17:12:39  101 Object found
+17:12:39  102 CLIENT
+17:12:39  102 Message type 0
+17:12:39  102 ID: 100
+17:12:39  102 object type len: 5
+17:12:39  102 type: Sword
+17:12:39  102 Object found
+17:12:39  103 CLIENT
+17:12:39  103 Message type 0
+17:12:39  103 ID: 100
+17:12:39  103 object type len: 5
+17:12:39  103 type: Sword
+17:12:39  103 Object found
+17:12:39  104 RM::getSprite(): Looking for sprite 'pear'.
+17:12:39  104 CLIENT
+17:12:39  104 Message type 0
+17:12:39  104 ID: 100
+17:12:39  104 object type len: 5
+17:12:39  104 type: Sword
+17:12:39  104 Object found
+17:12:39  105 CLIENT
+17:12:39  105 Message type 0
+17:12:39  105 ID: 100
+17:12:39  105 object type len: 5
+17:12:39  105 type: Sword
+17:12:39  105 Object found
+17:12:39  106 CLIENT
+17:12:39  106 Message type 0
+17:12:39  106 ID: 100
+17:12:39  106 object type len: 5
+17:12:39  106 type: Sword
+17:12:39  106 Object found
+17:12:39  107 CLIENT
+17:12:39  107 Message type 0
+17:12:39  107 ID: 100
+17:12:39  107 object type len: 5
+17:12:39  107 type: Sword
+17:12:39  107 Object found
+17:12:39  108 CLIENT
+17:12:39  108 Message type 0
+17:12:39  108 ID: 100
+17:12:39  108 object type len: 5
+17:12:39  108 type: Sword
+17:12:39  108 Object found
+17:12:39  109 CLIENT
+17:12:39  109 Message type 0
+17:12:39  109 ID: 100
+17:12:39  109 object type len: 5
+17:12:39  109 type: Sword
+17:12:39  109 Object found
+17:12:39  110 CLIENT
+17:12:39  110 Message type 0
+17:12:39  110 ID: 100
+17:12:39  110 object type len: 5
+17:12:39  110 type: Sword
+17:12:39  110 Object found
+17:12:39  111 CLIENT
+17:12:39  111 Message type 0
+17:12:39  111 ID: 100
+17:12:39  111 object type len: 5
+17:12:39  111 type: Sword
+17:12:39  111 Object found
+17:12:39  112 CLIENT
+17:12:39  112 Message type 0
+17:12:39  112 ID: 100
+17:12:39  112 object type len: 5
+17:12:39  112 type: Sword
+17:12:39  112 Object found
+17:12:39  113 CLIENT
+17:12:39  113 Message type 0
+17:12:39  113 ID: 100
+17:12:39  113 object type len: 5
+17:12:39  113 type: Sword
+17:12:39  113 Object found
+17:12:39  114 CLIENT
+17:12:39  114 Message type 0
+17:12:39  114 ID: 100
+17:12:39  114 object type len: 5
+17:12:39  114 type: Sword
+17:12:39  114 Object found
+17:12:39  115 CLIENT
+17:12:39  115 Message type 0
+17:12:39  115 ID: 100
+17:12:39  115 object type len: 5
+17:12:39  115 type: Sword
+17:12:39  115 Object found
+17:12:40  116 CLIENT
+17:12:40  116 Message type 0
+17:12:40  116 ID: 100
+17:12:40  116 object type len: 5
+17:12:40  116 type: Sword
+17:12:40  116 Object found
+17:12:40  117 CLIENT
+17:12:40  117 Message type 0
+17:12:40  117 ID: 100
+17:12:40  117 object type len: 5
+17:12:40  117 type: Sword
+17:12:40  117 Object found
+17:12:40  118 CLIENT
+17:12:40  118 Message type 0
+17:12:40  118 ID: 100
+17:12:40  118 object type len: 5
+17:12:40  118 type: Sword
+17:12:40  118 Object found
+17:12:40  119 CLIENT
+17:12:40  119 Message type 0
+17:12:40  119 ID: 100
+17:12:40  119 object type len: 5
+17:12:40  119 type: Sword
+17:12:40  119 Object found
+17:12:40  120 CLIENT
+17:12:40  120 Message type 0
+17:12:40  120 ID: 100
+17:12:40  120 object type len: 5
+17:12:40  120 type: Sword
+17:12:40  120 Object found
+17:12:40  121 CLIENT
+17:12:40  121 Message type 0
+17:12:40  121 ID: 100
+17:12:40  121 object type len: 5
+17:12:40  121 type: Sword
+17:12:40  121 Object found
+17:12:40  122 CLIENT
+17:12:40  122 Message type 0
+17:12:40  122 ID: 100
+17:12:40  122 object type len: 5
+17:12:40  122 type: Sword
+17:12:40  122 Object found
+17:12:40  123 CLIENT
+17:12:40  123 Message type 0
+17:12:40  123 ID: 100
+17:12:40  123 object type len: 5
+17:12:40  123 type: Sword
+17:12:40  123 Object found
+17:12:40  124 CLIENT
+17:12:40  124 Message type 0
+17:12:40  124 ID: 100
+17:12:40  124 object type len: 5
+17:12:40  124 type: Sword
+17:12:40  124 Object found
+17:12:40  125 CLIENT
+17:12:40  125 Message type 0
+17:12:40  125 ID: 100
+17:12:40  125 object type len: 5
+17:12:40  125 type: Sword
+17:12:40  125 Object found
+17:12:40  126 CLIENT
+17:12:40  126 Message type 0
+17:12:40  126 ID: 100
+17:12:40  126 object type len: 5
+17:12:40  126 type: Sword
+17:12:40  126 Object found
+17:12:40  127 CLIENT
+17:12:40  127 Message type 0
+17:12:40  127 ID: 100
+17:12:40  127 object type len: 5
+17:12:40  127 type: Sword
+17:12:40  127 Object found
+17:12:40  128 CLIENT
+17:12:40  128 Message type 0
+17:12:40  128 ID: 100
+17:12:40  128 object type len: 5
+17:12:40  128 type: Sword
+17:12:40  128 Object found
+17:12:40  129 CLIENT
+17:12:40  129 Message type 0
+17:12:40  129 ID: 100
+17:12:40  129 object type len: 5
+17:12:40  129 type: Sword
+17:12:40  129 Object found
+17:12:40  130 CLIENT
+17:12:40  130 Message type 0
+17:12:40  130 ID: 100
+17:12:40  130 object type len: 5
+17:12:40  130 type: Sword
+17:12:40  130 Object found
+17:12:40  131 CLIENT
+17:12:40  131 Message type 0
+17:12:40  131 ID: 100
+17:12:40  131 object type len: 5
+17:12:40  131 type: Sword
+17:12:40  131 Object found
+17:12:40  132 CLIENT
+17:12:40  132 Message type 0
+17:12:40  132 ID: 100
+17:12:40  132 object type len: 5
+17:12:40  132 type: Sword
+17:12:40  132 Object found
+17:12:40  133 CLIENT
+17:12:40  133 Message type 0
+17:12:40  133 ID: 100
+17:12:40  133 object type len: 5
+17:12:40  133 type: Sword
+17:12:40  133 Object found
+17:12:40  134 CLIENT
+17:12:40  134 Message type 0
+17:12:40  134 ID: 100
+17:12:40  134 object type len: 5
+17:12:40  134 type: Sword
+17:12:40  134 Object found
+17:12:40  135 RM::getSprite(): Looking for sprite 'pear'.
+17:12:40  135 CLIENT
+17:12:40  135 Message type 0
+17:12:40  135 ID: 100
+17:12:40  135 object type len: 5
+17:12:40  135 type: Sword
+17:12:40  135 Object found
+17:12:40  136 CLIENT
+17:12:40  136 Message type 0
+17:12:40  136 ID: 100
+17:12:40  136 object type len: 5
+17:12:40  136 type: Sword
+17:12:40  136 Object found
+17:12:40  137 CLIENT
+17:12:40  137 Message type 0
+17:12:40  137 ID: 100
+17:12:40  137 object type len: 5
+17:12:40  137 type: Sword
+17:12:40  137 Object found
+17:12:40  138 CLIENT
+17:12:40  138 Message type 0
+17:12:40  138 ID: 100
+17:12:40  138 object type len: 5
+17:12:40  138 type: Sword
+17:12:40  138 Object found
+17:12:40  139 CLIENT
+17:12:40  139 Message type 0
+17:12:40  139 ID: 100
+17:12:40  139 object type len: 5
+17:12:40  139 type: Sword
+17:12:40  139 Object found
+17:12:40  140 CLIENT
+17:12:40  140 Message type 0
+17:12:40  140 ID: 100
+17:12:40  140 object type len: 5
+17:12:40  140 type: Sword
+17:12:40  140 Object found
+17:12:40  141 CLIENT
+17:12:40  141 Message type 0
+17:12:40  141 ID: 100
+17:12:40  141 object type len: 5
+17:12:40  141 type: Sword
+17:12:40  141 Object found
+17:12:40  142 CLIENT
+17:12:40  142 Message type 0
+17:12:40  142 ID: 100
+17:12:40  142 object type len: 5
+17:12:40  142 type: Sword
+17:12:40  142 Object found
+17:12:40  143 CLIENT
+17:12:40  143 Message type 0
+17:12:40  143 ID: 100
+17:12:40  143 object type len: 5
+17:12:40  143 type: Sword
+17:12:40  143 Object found
+17:12:40  144 CLIENT
+17:12:40  144 Message type 0
+17:12:40  144 ID: 100
+17:12:40  144 object type len: 5
+17:12:40  144 type: Sword
+17:12:40  144 Object found
+17:12:40  145 CLIENT
+17:12:40  145 Message type 0
+17:12:40  145 ID: 100
+17:12:40  145 object type len: 5
+17:12:40  145 type: Sword
+17:12:40  145 Object found
+17:12:41  146 CLIENT
+17:12:41  146 Message type 0
+17:12:41  146 ID: 100
+17:12:41  146 object type len: 5
+17:12:41  146 type: Sword
+17:12:41  146 Object found
+17:12:41  147 CLIENT
+17:12:41  147 Message type 0
+17:12:41  147 ID: 100
+17:12:41  147 object type len: 5
+17:12:41  147 type: Sword
+17:12:41  147 Object found
+17:12:41  148 CLIENT
+17:12:41  148 Message type 0
+17:12:41  148 ID: 100
+17:12:41  148 object type len: 5
+17:12:41  148 type: Sword
+17:12:41  148 Object found
+17:12:41  149 CLIENT
+17:12:41  149 Message type 0
+17:12:41  149 ID: 100
+17:12:41  149 object type len: 5
+17:12:41  149 type: Sword
+17:12:41  149 Object found
+17:12:41  150 CLIENT
+17:12:41  150 Message type 0
+17:12:41  150 ID: 100
+17:12:41  150 object type len: 5
+17:12:41  150 type: Sword
+17:12:41  150 Object found
+17:12:41  151 CLIENT
+17:12:41  151 Message type 0
+17:12:41  151 ID: 100
+17:12:41  151 object type len: 5
+17:12:41  151 type: Sword
+17:12:41  151 Object found
+17:12:41  152 CLIENT
+17:12:41  152 Message type 0
+17:12:41  152 ID: 100
+17:12:41  152 object type len: 5
+17:12:41  152 type: Sword
+17:12:41  152 Object found
+17:12:41  153 CLIENT
+17:12:41  153 Message type 0
+17:12:41  153 ID: 100
+17:12:41  153 object type len: 5
+17:12:41  153 type: Sword
+17:12:41  153 Object found
+17:12:41  154 CLIENT
+17:12:41  154 Message type 0
+17:12:41  154 ID: 100
+17:12:41  154 object type len: 5
+17:12:41  154 type: Sword
+17:12:41  154 Object found
+17:12:41  155 CLIENT
+17:12:41  155 Message type 0
+17:12:41  155 ID: 100
+17:12:41  155 object type len: 5
+17:12:41  155 type: Sword
+17:12:41  155 Object found
+17:12:41  156 CLIENT
+17:12:41  156 Message type 0
+17:12:41  156 ID: 100
+17:12:41  156 object type len: 5
+17:12:41  156 type: Sword
+17:12:41  156 Object found
+17:12:41  157 CLIENT
+17:12:41  157 Message type 0
+17:12:41  157 ID: 100
+17:12:41  157 object type len: 5
+17:12:41  157 type: Sword
+17:12:41  157 Object found
+17:12:41  158 CLIENT
+17:12:41  158 Message type 0
+17:12:41  158 ID: 100
+17:12:41  158 object type len: 5
+17:12:41  158 type: Sword
+17:12:41  158 Object found
+17:12:41  159 CLIENT
+17:12:41  159 Message type 0
+17:12:41  159 ID: 100
+17:12:41  159 object type len: 5
+17:12:41  159 type: Sword
+17:12:41  159 Object found
+17:12:41  160 CLIENT
+17:12:41  160 Message type 0
+17:12:41  160 ID: 100
+17:12:41  160 object type len: 5
+17:12:41  160 type: Sword
+17:12:41  160 Object found
+17:12:41  161 CLIENT
+17:12:41  161 Message type 0
+17:12:41  161 ID: 100
+17:12:41  161 object type len: 5
+17:12:41  161 type: Sword
+17:12:41  161 Object found
+17:12:41  162 CLIENT
+17:12:41  162 Message type 0
+17:12:41  162 ID: 100
+17:12:41  162 object type len: 5
+17:12:41  162 type: Sword
+17:12:41  162 Object found
+17:12:41  163 CLIENT
+17:12:41  163 Message type 0
+17:12:41  163 ID: 100
+17:12:41  163 object type len: 5
+17:12:41  163 type: Sword
+17:12:41  163 Object found
+17:12:41  164 CLIENT
+17:12:41  164 Message type 0
+17:12:41  164 ID: 100
+17:12:41  164 object type len: 5
+17:12:41  164 type: Sword
+17:12:41  164 Object found
+17:12:41  165 CLIENT
+17:12:41  165 Message type 0
+17:12:41  165 ID: 100
+17:12:41  165 object type len: 5
+17:12:41  165 type: Sword
+17:12:41  165 Object found
+17:12:41  166 RM::getSprite(): Looking for sprite 'pear'.
+17:12:41  166 CLIENT
+17:12:41  166 Message type 0
+17:12:41  166 ID: 100
+17:12:41  166 object type len: 5
+17:12:41  166 type: Sword
+17:12:41  166 Object found
+17:12:41  167 CLIENT
+17:12:41  167 Message type 0
+17:12:41  167 ID: 100
+17:12:41  167 object type len: 5
+17:12:41  167 type: Sword
+17:12:41  167 Object found
+17:12:41  168 CLIENT
+17:12:41  168 Message type 0
+17:12:41  168 ID: 100
+17:12:41  168 object type len: 5
+17:12:41  168 type: Sword
+17:12:41  168 Object found
+17:12:41  169 CLIENT
+17:12:41  169 Message type 0
+17:12:41  169 ID: 100
+17:12:41  169 object type len: 5
+17:12:41  169 type: Sword
+17:12:41  169 Object found
+17:12:41  170 CLIENT
+17:12:41  170 Message type 0
+17:12:41  170 ID: 100
+17:12:41  170 object type len: 5
+17:12:41  170 type: Sword
+17:12:41  170 Object found
+17:12:41  171 CLIENT
+17:12:41  171 Message type 0
+17:12:41  171 ID: 100
+17:12:41  171 object type len: 5
+17:12:41  171 type: Sword
+17:12:41  171 Object found
+17:12:41  172 CLIENT
+17:12:41  172 Message type 0
+17:12:41  172 ID: 100
+17:12:41  172 object type len: 5
+17:12:41  172 type: Sword
+17:12:41  172 Object found
+17:12:41  173 CLIENT
+17:12:41  173 Message type 0
+17:12:41  173 ID: 100
+17:12:41  173 object type len: 5
+17:12:41  173 type: Sword
+17:12:41  173 Object found
+17:12:41  174 CLIENT
+17:12:41  174 Message type 0
+17:12:41  174 ID: 100
+17:12:41  174 object type len: 5
+17:12:41  174 type: Sword
+17:12:41  174 Object found
+17:12:41  175 CLIENT
+17:12:41  175 Message type 0
+17:12:41  175 ID: 100
+17:12:41  175 object type len: 5
+17:12:41  175 type: Sword
+17:12:41  175 Object found
+17:12:41  176 CLIENT
+17:12:41  176 Message type 0
+17:12:41  176 ID: 100
+17:12:41  176 object type len: 5
+17:12:41  176 type: Sword
+17:12:41  176 Object found
+17:12:42  177 CLIENT
+17:12:42  177 Message type 0
+17:12:42  177 ID: 100
+17:12:42  177 object type len: 5
+17:12:42  177 type: Sword
+17:12:42  177 Object found
+17:12:42  178 CLIENT
+17:12:42  178 Message type 0
+17:12:42  178 ID: 100
+17:12:42  178 object type len: 5
+17:12:42  178 type: Sword
+17:12:42  178 Object found
+17:12:42  179 CLIENT
+17:12:42  179 Message type 0
+17:12:42  179 ID: 100
+17:12:42  179 object type len: 5
+17:12:42  179 type: Sword
+17:12:42  179 Object found
+17:12:42  180 CLIENT
+17:12:42  180 Message type 0
+17:12:42  180 ID: 100
+17:12:42  180 object type len: 5
+17:12:42  180 type: Sword
+17:12:42  180 Object found
+17:12:42  181 CLIENT
+17:12:42  181 Message type 0
+17:12:42  181 ID: 100
+17:12:42  181 object type len: 5
+17:12:42  181 type: Sword
+17:12:42  181 Object found
+17:12:42  182 CLIENT
+17:12:42  182 Message type 0
+17:12:42  182 ID: 100
+17:12:42  182 object type len: 5
+17:12:42  182 type: Sword
+17:12:42  182 Object found
+17:12:42  183 CLIENT
+17:12:42  183 Message type 0
+17:12:42  183 ID: 100
+17:12:42  183 object type len: 5
+17:12:42  183 type: Sword
+17:12:42  183 Object found
+17:12:42  184 CLIENT
+17:12:42  184 Message type 0
+17:12:42  184 ID: 100
+17:12:42  184 object type len: 5
+17:12:42  184 type: Sword
+17:12:42  184 Object found
+17:12:42  185 CLIENT
+17:12:42  185 Message type 0
+17:12:42  185 ID: 100
+17:12:42  185 object type len: 5
+17:12:42  185 type: Sword
+17:12:42  185 Object found
+17:12:42  186 CLIENT
+17:12:42  186 Message type 0
+17:12:42  186 ID: 100
+17:12:42  186 object type len: 5
+17:12:42  186 type: Sword
+17:12:42  186 Object found
+17:12:42  187 CLIENT
+17:12:42  187 Message type 0
+17:12:42  187 ID: 100
+17:12:42  187 object type len: 5
+17:12:42  187 type: Sword
+17:12:42  187 Object found
+17:12:42  188 CLIENT
+17:12:42  188 Message type 0
+17:12:42  188 ID: 100
+17:12:42  188 object type len: 5
+17:12:42  188 type: Sword
+17:12:42  188 Object found
+17:12:42  189 CLIENT
+17:12:42  189 Message type 0
+17:12:42  189 ID: 100
+17:12:42  189 object type len: 5
+17:12:42  189 type: Sword
+17:12:42  189 Object found
+17:12:42  190 CLIENT
+17:12:42  190 Message type 0
+17:12:42  190 ID: 100
+17:12:42  190 object type len: 5
+17:12:42  190 type: Sword
+17:12:42  190 Object found
+17:12:42  191 CLIENT
+17:12:42  191 Message type 0
+17:12:42  191 ID: 100
+17:12:42  191 object type len: 5
+17:12:42  191 type: Sword
+17:12:42  191 Object found
+17:12:42  192 CLIENT
+17:12:42  192 Message type 0
+17:12:42  192 ID: 100
+17:12:42  192 object type len: 5
+17:12:42  192 type: Sword
+17:12:42  192 Object found
+17:12:42  193 CLIENT
+17:12:42  193 Message type 0
+17:12:42  193 ID: 100
+17:12:42  193 object type len: 5
+17:12:42  193 type: Sword
+17:12:42  193 Object found
+17:12:42  194 CLIENT
+17:12:42  194 Message type 0
+17:12:42  194 ID: 100
+17:12:42  194 object type len: 5
+17:12:42  194 type: Sword
+17:12:42  194 Object found
+17:12:42  195 CLIENT
+17:12:42  195 Message type 0
+17:12:42  195 ID: 100
+17:12:42  195 object type len: 5
+17:12:42  195 type: Sword
+17:12:42  195 Object found
+17:12:42  196 CLIENT
+17:12:42  196 Message type 0
+17:12:42  196 ID: 100
+17:12:42  196 object type len: 5
+17:12:42  196 type: Sword
+17:12:42  196 Object found
+17:12:42  197 RM::getSprite(): Looking for sprite 'grapes'.
+17:12:42  197 CLIENT
+17:12:42  197 Message type 0
+17:12:42  197 ID: 100
+17:12:42  197 object type len: 5
+17:12:42  197 type: Sword
+17:12:42  197 Object found
+17:12:42  198 CLIENT
+17:12:42  198 Message type 0
+17:12:42  198 ID: 100
+17:12:42  198 object type len: 5
+17:12:42  198 type: Sword
+17:12:42  198 Object found
+17:12:42  199 CLIENT
+17:12:42  199 Message type 0
+17:12:42  199 ID: 100
+17:12:42  199 object type len: 5
+17:12:42  199 type: Sword
+17:12:42  199 Object found
+17:12:42  200 CLIENT
+17:12:42  200 Message type 0
+17:12:42  200 ID: 100
+17:12:42  200 object type len: 5
+17:12:42  200 type: Sword
+17:12:42  200 Object found
+17:12:42  201 CLIENT
+17:12:42  201 Message type 0
+17:12:42  201 ID: 100
+17:12:42  201 object type len: 5
+17:12:42  201 type: Sword
+17:12:42  201 Object found
+17:12:42  202 CLIENT
+17:12:42  202 Message type 0
+17:12:42  202 ID: 100
+17:12:42  202 object type len: 5
+17:12:42  202 type: Sword
+17:12:42  202 Object found
+17:12:42  203 CLIENT
+17:12:42  203 Message type 0
+17:12:42  203 ID: 100
+17:12:42  203 object type len: 5
+17:12:42  203 type: Sword
+17:12:42  203 Object found
+17:12:42  204 CLIENT
+17:12:42  204 Message type 0
+17:12:42  204 ID: 100
+17:12:42  204 object type len: 5
+17:12:42  204 type: Sword
+17:12:42  204 Object found
+17:12:42  205 CLIENT
+17:12:42  205 Message type 0
+17:12:42  205 ID: 100
+17:12:42  205 object type len: 5
+17:12:42  205 type: Sword
+17:12:42  205 Object found
+17:12:42  206 CLIENT
+17:12:42  206 Message type 0
+17:12:42  206 ID: 100
+17:12:42  206 object type len: 5
+17:12:42  206 type: Sword
+17:12:42  206 Object found
+17:12:43  207 CLIENT
+17:12:43  207 Message type 0
+17:12:43  207 ID: 100
+17:12:43  207 object type len: 5
+17:12:43  207 type: Sword
+17:12:43  207 Object found
+17:12:43  208 CLIENT
+17:12:43  208 Message type 0
+17:12:43  208 ID: 100
+17:12:43  208 object type len: 5
+17:12:43  208 type: Sword
+17:12:43  208 Object found
+17:12:43  209 CLIENT
+17:12:43  209 Message type 0
+17:12:43  209 ID: 100
+17:12:43  209 object type len: 5
+17:12:43  209 type: Sword
+17:12:43  209 Object found
+17:12:43  210 CLIENT
+17:12:43  210 Message type 0
+17:12:43  210 ID: 100
+17:12:43  210 object type len: 5
+17:12:43  210 type: Sword
+17:12:43  210 Object found
+17:12:43  211 CLIENT
+17:12:43  211 Message type 0
+17:12:43  211 ID: 100
+17:12:43  211 object type len: 5
+17:12:43  211 type: Sword
+17:12:43  211 Object found
+17:12:43  212 CLIENT
+17:12:43  212 Message type 0
+17:12:43  212 ID: 100
+17:12:43  212 object type len: 5
+17:12:43  212 type: Sword
+17:12:43  212 Object found
+17:12:43  213 CLIENT
+17:12:43  213 Message type 0
+17:12:43  213 ID: 100
+17:12:43  213 object type len: 5
+17:12:43  213 type: Sword
+17:12:43  213 Object found
+17:12:43  214 CLIENT
+17:12:43  214 Message type 0
+17:12:43  214 ID: 100
+17:12:43  214 object type len: 5
+17:12:43  214 type: Sword
+17:12:43  214 Object found
+17:12:43  215 CLIENT
+17:12:43  215 Message type 0
+17:12:43  215 ID: 100
+17:12:43  215 object type len: 5
+17:12:43  215 type: Sword
+17:12:43  215 Object found
+17:12:43  216 CLIENT
+17:12:43  216 Message type 0
+17:12:43  216 ID: 100
+17:12:43  216 object type len: 5
+17:12:43  216 type: Sword
+17:12:43  216 Object found
+17:12:43  217 CLIENT
+17:12:43  217 Message type 0
+17:12:43  217 ID: 100
+17:12:43  217 object type len: 5
+17:12:43  217 type: Sword
+17:12:43  217 Object found
+17:12:43  218 CLIENT
+17:12:43  218 Message type 0
+17:12:43  218 ID: 100
+17:12:43  218 object type len: 5
+17:12:43  218 type: Sword
+17:12:43  218 Object found
+17:12:43  219 CLIENT
+17:12:43  219 Message type 0
+17:12:43  219 ID: 100
+17:12:43  219 object type len: 5
+17:12:43  219 type: Sword
+17:12:43  219 Object found
+17:12:43  220 CLIENT
+17:12:43  220 Message type 0
+17:12:43  220 ID: 100
+17:12:43  220 object type len: 5
+17:12:43  220 type: Sword
+17:12:43  220 Object found
+17:12:43  221 CLIENT
+17:12:43  221 Message type 0
+17:12:43  221 ID: 100
+17:12:43  221 object type len: 5
+17:12:43  221 type: Sword
+17:12:43  221 Object found
+17:12:43  222 CLIENT
+17:12:43  222 Message type 0
+17:12:43  222 ID: 100
+17:12:43  222 object type len: 5
+17:12:43  222 type: Sword
+17:12:43  222 Object found
+17:12:43  223 CLIENT
+17:12:43  223 Message type 0
+17:12:43  223 ID: 100
+17:12:43  223 object type len: 5
+17:12:43  223 type: Sword
+17:12:43  223 Object found
+17:12:43  224 CLIENT
+17:12:43  224 Message type 0
+17:12:43  224 ID: 100
+17:12:43  224 object type len: 5
+17:12:43  224 type: Sword
+17:12:43  224 Object found
+17:12:43  225 CLIENT
+17:12:43  225 Message type 0
+17:12:43  225 ID: 100
+17:12:43  225 object type len: 5
+17:12:43  225 type: Sword
+17:12:43  225 Object found
+17:12:43  226 CLIENT
+17:12:43  226 Message type 0
+17:12:43  226 ID: 100
+17:12:43  226 object type len: 5
+17:12:43  226 type: Sword
+17:12:43  226 Object found
+17:12:43  227 CLIENT
+17:12:43  227 Message type 0
+17:12:43  227 ID: 100
+17:12:43  227 object type len: 5
+17:12:43  227 type: Sword
+17:12:43  227 Object found
+17:12:43  228 RM::getSprite(): Looking for sprite 'grapes'.
+17:12:43  228 CLIENT
+17:12:43  228 Message type 0
+17:12:43  228 ID: 100
+17:12:43  228 object type len: 5
+17:12:43  228 type: Sword
+17:12:43  228 Object found
+17:12:43  229 CLIENT
+17:12:43  229 Message type 0
+17:12:43  229 ID: 100
+17:12:43  229 object type len: 5
+17:12:43  229 type: Sword
+17:12:43  229 Object found
+17:12:43  230 CLIENT
+17:12:43  230 Message type 0
+17:12:43  230 ID: 100
+17:12:43  230 object type len: 5
+17:12:43  230 type: Sword
+17:12:43  230 Object found
+17:12:43  231 CLIENT
+17:12:43  231 Message type 0
+17:12:43  231 ID: 100
+17:12:43  231 object type len: 5
+17:12:43  231 type: Sword
+17:12:43  231 Object found
+17:12:43  232 CLIENT
+17:12:43  232 Message type 0
+17:12:43  232 ID: 100
+17:12:43  232 object type len: 5
+17:12:43  232 type: Sword
+17:12:43  232 Object found
+17:12:43  233 CLIENT
+17:12:43  233 Message type 0
+17:12:43  233 ID: 100
+17:12:43  233 object type len: 5
+17:12:43  233 type: Sword
+17:12:43  233 Object found
+17:12:43  234 CLIENT
+17:12:43  234 Message type 0
+17:12:43  234 ID: 100
+17:12:43  234 object type len: 5
+17:12:43  234 type: Sword
+17:12:43  234 Object found
+17:12:43  235 CLIENT
+17:12:43  235 Message type 0
+17:12:43  235 ID: 100
+17:12:43  235 object type len: 5
+17:12:43  235 type: Sword
+17:12:43  235 Object found
+17:12:43  236 CLIENT
+17:12:43  236 Message type 0
+17:12:43  236 ID: 100
+17:12:43  236 object type len: 5
+17:12:43  236 type: Sword
+17:12:43  236 Object found
+17:12:44  237 CLIENT
+17:12:44  237 Message type 0
+17:12:44  237 ID: 100
+17:12:44  237 object type len: 5
+17:12:44  237 type: Sword
+17:12:44  237 Object found
+17:12:44  238 CLIENT
+17:12:44  238 Message type 0
+17:12:44  238 ID: 100
+17:12:44  238 object type len: 5
+17:12:44  238 type: Sword
+17:12:44  238 Object found
+17:12:44  239 CLIENT
+17:12:44  239 Message type 0
+17:12:44  239 ID: 100
+17:12:44  239 object type len: 5
+17:12:44  239 type: Sword
+17:12:44  239 Object found
+17:12:44  240 CLIENT
+17:12:44  240 Message type 0
+17:12:44  240 ID: 100
+17:12:44  240 object type len: 5
+17:12:44  240 type: Sword
+17:12:44  240 Object found
+17:12:44  241 CLIENT
+17:12:44  241 Message type 0
+17:12:44  241 ID: 100
+17:12:44  241 object type len: 5
+17:12:44  241 type: Sword
+17:12:44  241 Object found
+17:12:44  242 CLIENT
+17:12:44  242 Message type 0
+17:12:44  242 ID: 100
+17:12:44  242 object type len: 5
+17:12:44  242 type: Sword
+17:12:44  242 Object found
+17:12:44  243 CLIENT
+17:12:44  243 Message type 0
+17:12:44  243 ID: 100
+17:12:44  243 object type len: 5
+17:12:44  243 type: Sword
+17:12:44  243 Object found
+17:12:44  244 CLIENT
+17:12:44  244 Message type 0
+17:12:44  244 ID: 100
+17:12:44  244 object type len: 5
+17:12:44  244 type: Sword
+17:12:44  244 Object found
+17:12:44  245 CLIENT
+17:12:44  245 Message type 0
+17:12:44  245 ID: 100
+17:12:44  245 object type len: 5
+17:12:44  245 type: Sword
+17:12:44  245 Object found
+17:12:44  246 CLIENT
+17:12:44  246 Message type 0
+17:12:44  246 ID: 100
+17:12:44  246 object type len: 5
+17:12:44  246 type: Sword
+17:12:44  246 Object found
+17:12:44  247 CLIENT
+17:12:44  247 Message type 0
+17:12:44  247 ID: 100
+17:12:44  247 object type len: 5
+17:12:44  247 type: Sword
+17:12:44  247 Object found
+17:12:44  248 CLIENT
+17:12:44  248 Message type 0
+17:12:44  248 ID: 100
+17:12:44  248 object type len: 5
+17:12:44  248 type: Sword
+17:12:44  248 Object found
+17:12:44  249 CLIENT
+17:12:44  249 Message type 0
+17:12:44  249 ID: 100
+17:12:44  249 object type len: 5
+17:12:44  249 type: Sword
+17:12:44  249 Object found
+17:12:44  250 CLIENT
+17:12:44  250 Message type 0
+17:12:44  250 ID: 100
+17:12:44  250 object type len: 5
+17:12:44  250 type: Sword
+17:12:44  250 Object found
+17:12:44  251 CLIENT
+17:12:44  251 Message type 0
+17:12:44  251 ID: 100
+17:12:44  251 object type len: 5
+17:12:44  251 type: Sword
+17:12:44  251 Object found
+17:12:44  252 CLIENT
+17:12:44  252 Message type 0
+17:12:44  252 ID: 100
+17:12:44  252 object type len: 5
+17:12:44  252 type: Sword
+17:12:44  252 Object found
+17:12:44  253 CLIENT
+17:12:44  253 Message type 0
+17:12:44  253 ID: 100
+17:12:44  253 object type len: 5
+17:12:44  253 type: Sword
+17:12:44  253 Object found
+17:12:44  254 CLIENT
+17:12:44  254 Message type 0
+17:12:44  254 ID: 100
+17:12:44  254 object type len: 5
+17:12:44  254 type: Sword
+17:12:44  254 Object found
+17:12:44  255 CLIENT
+17:12:44  255 Message type 0
+17:12:44  255 ID: 100
+17:12:44  255 object type len: 5
+17:12:44  255 type: Sword
+17:12:44  255 Object found
+17:12:44  256 CLIENT
+17:12:44  256 Message type 0
+17:12:44  256 ID: 100
+17:12:44  256 object type len: 5
+17:12:44  256 type: Sword
+17:12:44  256 Object found
+17:12:44  257 CLIENT
+17:12:44  257 Message type 0
+17:12:44  257 ID: 100
+17:12:44  257 object type len: 5
+17:12:44  257 type: Sword
+17:12:44  257 Object found
+17:12:44  258 CLIENT
+17:12:44  258 Message type 0
+17:12:44  258 ID: 100
+17:12:44  258 object type len: 5
+17:12:44  258 type: Sword
+17:12:44  258 Object found
+17:12:44  259 RM::getSprite(): Looking for sprite 'pear'.
+17:12:44  259 CLIENT
+17:12:44  259 Message type 0
+17:12:44  259 ID: 100
+17:12:44  259 object type len: 5
+17:12:44  259 type: Sword
+17:12:44  259 Object found
+17:12:44  260 CLIENT
+17:12:44  260 Message type 0
+17:12:44  260 ID: 100
+17:12:44  260 object type len: 5
+17:12:44  260 type: Sword
+17:12:44  260 Object found
+17:12:44  261 CLIENT
+17:12:44  261 Message type 0
+17:12:44  261 ID: 100
+17:12:44  261 object type len: 5
+17:12:44  261 type: Sword
+17:12:44  261 Object found
+17:12:44  262 CLIENT
+17:12:44  262 Message type 0
+17:12:44  262 ID: 100
+17:12:44  262 object type len: 5
+17:12:44  262 type: Sword
+17:12:44  262 Object found
+17:12:44  263 CLIENT
+17:12:44  263 Message type 0
+17:12:44  263 ID: 100
+17:12:44  263 object type len: 5
+17:12:44  263 type: Sword
+17:12:44  263 Object found
+17:12:44  264 CLIENT
+17:12:44  264 Message type 0
+17:12:44  264 ID: 100
+17:12:44  264 object type len: 5
+17:12:44  264 type: Sword
+17:12:44  264 Object found
+17:12:44  265 CLIENT
+17:12:44  265 Message type 0
+17:12:44  265 ID: 100
+17:12:44  265 object type len: 5
+17:12:44  265 type: Sword
+17:12:44  265 Object found
+17:12:44  266 CLIENT
+17:12:44  266 Message type 0
+17:12:44  266 ID: 100
+17:12:44  266 object type len: 5
+17:12:44  266 type: Sword
+17:12:44  266 Object found
+17:12:44  267 CLIENT
+17:12:44  267 Message type 0
+17:12:44  267 ID: 100
+17:12:44  267 object type len: 5
+17:12:44  267 type: Sword
+17:12:44  267 Object found
+17:12:45  268 CLIENT
+17:12:45  268 Message type 0
+17:12:45  268 ID: 100
+17:12:45  268 object type len: 5
+17:12:45  268 type: Sword
+17:12:45  268 Object found
+17:12:45  269 CLIENT
+17:12:45  269 Message type 0
+17:12:45  269 ID: 100
+17:12:45  269 object type len: 5
+17:12:45  269 type: Sword
+17:12:45  269 Object found
+17:12:45  270 CLIENT
+17:12:45  270 Message type 0
+17:12:45  270 ID: 100
+17:12:45  270 object type len: 5
+17:12:45  270 type: Sword
+17:12:45  270 Object found
+17:12:45  271 CLIENT
+17:12:45  271 Message type 0
+17:12:45  271 ID: 100
+17:12:45  271 object type len: 5
+17:12:45  271 type: Sword
+17:12:45  271 Object found
+17:12:45  272 CLIENT
+17:12:45  272 Message type 0
+17:12:45  272 ID: 100
+17:12:45  272 object type len: 5
+17:12:45  272 type: Sword
+17:12:45  272 Object found
+17:12:45  273 CLIENT
+17:12:45  273 Message type 0
+17:12:45  273 ID: 100
+17:12:45  273 object type len: 5
+17:12:45  273 type: Sword
+17:12:45  273 Object found
+17:12:45  274 CLIENT
+17:12:45  274 Message type 0
+17:12:45  274 ID: 100
+17:12:45  274 object type len: 5
+17:12:45  274 type: Sword
+17:12:45  274 Object found
+17:12:45  275 CLIENT
+17:12:45  275 Message type 0
+17:12:45  275 ID: 100
+17:12:45  275 object type len: 5
+17:12:45  275 type: Sword
+17:12:45  275 Object found
+17:12:45  276 CLIENT
+17:12:45  276 Message type 0
+17:12:45  276 ID: 100
+17:12:45  276 object type len: 5
+17:12:45  276 type: Sword
+17:12:45  276 Object found
+17:12:45  277 CLIENT
+17:12:45  277 Message type 0
+17:12:45  277 ID: 100
+17:12:45  277 object type len: 5
+17:12:45  277 type: Sword
+17:12:45  277 Object found
+17:12:45  278 CLIENT
+17:12:45  278 Message type 0
+17:12:45  278 ID: 100
+17:12:45  278 object type len: 5
+17:12:45  278 type: Sword
+17:12:45  278 Object found
+17:12:45  279 CLIENT
+17:12:45  279 Message type 0
+17:12:45  279 ID: 100
+17:12:45  279 object type len: 5
+17:12:45  279 type: Sword
+17:12:45  279 Object found
+17:12:45  280 CLIENT
+17:12:45  280 Message type 0
+17:12:45  280 ID: 100
+17:12:45  280 object type len: 5
+17:12:45  280 type: Sword
+17:12:45  280 Object found
+17:12:45  281 CLIENT
+17:12:45  281 Message type 0
+17:12:45  281 ID: 100
+17:12:45  281 object type len: 5
+17:12:45  281 type: Sword
+17:12:45  281 Object found
+17:12:45  282 CLIENT
+17:12:45  282 Message type 0
+17:12:45  282 ID: 100
+17:12:45  282 object type len: 5
+17:12:45  282 type: Sword
+17:12:45  282 Object found
+17:12:45  283 CLIENT
+17:12:45  283 Message type 0
+17:12:45  283 ID: 100
+17:12:45  283 object type len: 5
+17:12:45  283 type: Sword
+17:12:45  283 Object found
+17:12:45  284 CLIENT
+17:12:45  284 Message type 0
+17:12:45  284 ID: 100
+17:12:45  284 object type len: 5
+17:12:45  284 type: Sword
+17:12:45  284 Object found
+17:12:45  285 CLIENT
+17:12:45  285 Message type 0
+17:12:45  285 ID: 100
+17:12:45  285 object type len: 5
+17:12:45  285 type: Sword
+17:12:45  285 Object found
+17:12:45  286 CLIENT
+17:12:45  286 Message type 0
+17:12:45  286 ID: 100
+17:12:45  286 object type len: 5
+17:12:45  286 type: Sword
+17:12:45  286 Object found
+17:12:45  287 CLIENT
+17:12:45  287 Message type 0
+17:12:45  287 ID: 100
+17:12:45  287 object type len: 5
+17:12:45  287 type: Sword
+17:12:45  287 Object found
+17:12:45  288 CLIENT
+17:12:45  288 Message type 0
+17:12:45  288 ID: 100
+17:12:45  288 object type len: 5
+17:12:45  288 type: Sword
+17:12:45  288 Object found
+17:12:45  289 CLIENT
+17:12:45  289 Message type 0
+17:12:45  289 ID: 100
+17:12:45  289 object type len: 5
+17:12:45  289 type: Sword
+17:12:45  289 Object found
+17:12:45  290 RM::getSprite(): Looking for sprite 'grapes'.
+17:12:45  290 CLIENT
+17:12:45  290 Message type 0
+17:12:45  290 ID: 100
+17:12:45  290 object type len: 5
+17:12:45  290 type: Sword
+17:12:45  290 Object found
+17:12:45  291 CLIENT
+17:12:45  291 Message type 0
+17:12:45  291 ID: 100
+17:12:45  291 object type len: 5
+17:12:45  291 type: Sword
+17:12:45  291 Object found
+17:12:45  292 CLIENT
+17:12:45  292 Message type 0
+17:12:45  292 ID: 100
+17:12:45  292 object type len: 5
+17:12:45  292 type: Sword
+17:12:45  292 Object found
+17:12:45  293 CLIENT
+17:12:45  293 Message type 0
+17:12:45  293 ID: 100
+17:12:45  293 object type len: 5
+17:12:45  293 type: Sword
+17:12:45  293 Object found
+17:12:45  294 CLIENT
+17:12:45  294 Message type 0
+17:12:45  294 ID: 100
+17:12:45  294 object type len: 5
+17:12:45  294 type: Sword
+17:12:45  294 Object found
+17:12:45  295 CLIENT
+17:12:45  295 Message type 0
+17:12:45  295 ID: 100
+17:12:45  295 object type len: 5
+17:12:45  295 type: Sword
+17:12:45  295 Object found
+17:12:45  296 CLIENT
+17:12:45  296 Message type 0
+17:12:45  296 ID: 100
+17:12:45  296 object type len: 5
+17:12:45  296 type: Sword
+17:12:45  296 Object found
+17:12:45  297 CLIENT
+17:12:45  297 Message type 0
+17:12:45  297 ID: 100
+17:12:45  297 object type len: 5
+17:12:45  297 type: Sword
+17:12:45  297 Object found
+17:12:46  298 CLIENT
+17:12:46  298 Message type 0
+17:12:46  298 ID: 100
+17:12:46  298 object type len: 5
+17:12:46  298 type: Sword
+17:12:46  298 Object found
+17:12:46  299 CLIENT
+17:12:46  299 Message type 0
+17:12:46  299 ID: 100
+17:12:46  299 object type len: 5
+17:12:46  299 type: Sword
+17:12:46  299 Object found
+17:12:46  300 CLIENT
+17:12:46  300 Message type 0
+17:12:46  300 ID: 100
+17:12:46  300 object type len: 5
+17:12:46  300 type: Sword
+17:12:46  300 Object found
+17:12:46  301 CLIENT
+17:12:46  301 Message type 0
+17:12:46  301 ID: 100
+17:12:46  301 object type len: 5
+17:12:46  301 type: Sword
+17:12:46  301 Object found
+17:12:46  302 CLIENT
+17:12:46  302 Message type 0
+17:12:46  302 ID: 100
+17:12:46  302 object type len: 5
+17:12:46  302 type: Sword
+17:12:46  302 Object found
+17:12:46  303 CLIENT
+17:12:46  303 Message type 0
+17:12:46  303 ID: 100
+17:12:46  303 object type len: 5
+17:12:46  303 type: Sword
+17:12:46  303 Object found
+17:12:46  304 CLIENT
+17:12:46  304 Message type 0
+17:12:46  304 ID: 100
+17:12:46  304 object type len: 5
+17:12:46  304 type: Sword
+17:12:46  304 Object found
+17:12:46  305 CLIENT
+17:12:46  305 Message type 0
+17:12:46  305 ID: 100
+17:12:46  305 object type len: 5
+17:12:46  305 type: Sword
+17:12:46  305 Object found
+17:12:46  306 CLIENT
+17:12:46  306 Message type 0
+17:12:46  306 ID: 100
+17:12:46  306 object type len: 5
+17:12:46  306 type: Sword
+17:12:46  306 Object found
+17:12:46  307 CLIENT
+17:12:46  307 Message type 0
+17:12:46  307 ID: 100
+17:12:46  307 object type len: 5
+17:12:46  307 type: Sword
+17:12:46  307 Object found
+17:12:46  308 CLIENT
+17:12:46  308 Message type 0
+17:12:46  308 ID: 100
+17:12:46  308 object type len: 5
+17:12:46  308 type: Sword
+17:12:46  308 Object found
+17:12:46  309 CLIENT
+17:12:46  309 Message type 0
+17:12:46  309 ID: 100
+17:12:46  309 object type len: 5
+17:12:46  309 type: Sword
+17:12:46  309 Object found
+17:12:46  310 CLIENT
+17:12:46  310 Message type 0
+17:12:46  310 ID: 100
+17:12:46  310 object type len: 5
+17:12:46  310 type: Sword
+17:12:46  310 Object found
+17:12:46  311 CLIENT
+17:12:46  311 Message type 0
+17:12:46  311 ID: 100
+17:12:46  311 object type len: 5
+17:12:46  311 type: Sword
+17:12:46  311 Object found
+17:12:46  312 CLIENT
+17:12:46  312 Message type 0
+17:12:46  312 ID: 100
+17:12:46  312 object type len: 5
+17:12:46  312 type: Sword
+17:12:46  312 Object found
+17:12:46  313 CLIENT
+17:12:46  313 Message type 0
+17:12:46  313 ID: 100
+17:12:46  313 object type len: 5
+17:12:46  313 type: Sword
+17:12:46  313 Object found
+17:12:46  314 CLIENT
+17:12:46  314 Message type 0
+17:12:46  314 ID: 100
+17:12:46  314 object type len: 5
+17:12:46  314 type: Sword
+17:12:46  314 Object found
+17:12:46  315 CLIENT
+17:12:46  315 Message type 0
+17:12:46  315 ID: 100
+17:12:46  315 object type len: 5
+17:12:46  315 type: Sword
+17:12:46  315 Object found
+17:12:46  316 CLIENT
+17:12:46  316 Message type 0
+17:12:46  316 ID: 100
+17:12:46  316 object type len: 5
+17:12:46  316 type: Sword
+17:12:46  316 Object found
+17:12:46  317 CLIENT
+17:12:46  317 Message type 0
+17:12:46  317 ID: 100
+17:12:46  317 object type len: 5
+17:12:46  317 type: Sword
+17:12:46  317 Object found
+17:12:46  318 CLIENT
+17:12:46  318 Message type 0
+17:12:46  318 ID: 100
+17:12:46  318 object type len: 5
+17:12:46  318 type: Sword
+17:12:46  318 Object found
+17:12:46  319 CLIENT
+17:12:46  319 Message type 0
+17:12:46  319 ID: 100
+17:12:46  319 object type len: 5
+17:12:46  319 type: Sword
+17:12:46  319 Object found
+17:12:46  320 CLIENT
+17:12:46  320 Message type 0
+17:12:46  320 ID: 100
+17:12:46  320 object type len: 5
+17:12:46  320 type: Sword
+17:12:46  320 Object found
+17:12:46  321 RM::getSprite(): Looking for sprite 'pear'.
+17:12:46  321 CLIENT
+17:12:46  321 Message type 0
+17:12:46  321 ID: 100
+17:12:46  321 object type len: 5
+17:12:46  321 type: Sword
+17:12:46  321 Object found
+17:12:46  322 CLIENT
+17:12:46  322 InputManager::getInput(): Window close event. Setting game over.
+17:12:46  322 Message type 0
+17:12:46  322 ID: 100
+17:12:46  322 object type len: 5
+17:12:46  322 type: Sword
+17:12:46  322 Object found
+17:12:46  323 GameManager::run(): end of game loop
+17:12:46  323 PathManager::shutDown(): successfully stopped.
+17:12:46  323 Path manager stopped
+17:12:46  323 WorldManager::shutDown(): Successfully stopped.
+17:12:46  323 World manager stopped
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 Music::stop(): Stopping music.
+17:12:46  323 RM::shutDown(): successfully stopped.
+17:12:46  323 Resource manager stopped
+17:12:46  323 NetworkManager::shutDown(): successfully stopped.
+17:12:46  323 Network manager stopped
+17:12:46  323 InputManager::shutDown(): Keyboard repeat enabled.
+17:12:46  323 InputManager::shutDown(): successfully stopped.
+17:12:46  323 Input manager stopped
+17:12:46  323 DisplayManager::shutDown(): successfully stopped.
+17:12:46  323 Display manager stopped
+17:12:46  323 ****************************************************
+17:12:46  323 ** Game engine stopped **
+17:12:46  323 LogManager::shutDown(): successfully stopped.

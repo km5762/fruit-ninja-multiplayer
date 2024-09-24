@@ -35,25 +35,15 @@ INCDIR= -I$(DF)/include -I$(HOME)/src/SFML/include
 ######
 
 CC= g++
-CFLAGS= -std=c++17 -DCLIENT
+CFLAGS= -std=c++17
 
 GAMESRC= \
-	Fruit.cpp \
-	GameOver.cpp \
-	Grocer.cpp \
-	Kudos.cpp \
-	Points.cpp \
-	Splash.cpp \
+	Server.cpp \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
-	Timer.cpp \
-	ServerEntry.cpp \
-	util.cpp \
-	Client.cpp \
 
-GAME= game.cpp
-EXECUTABLE= fruit-ninja
-
+GAME= main.cpp
+EXECUTABLE= server
 OBJECTS= $(addprefix $(OBJDIR), $(notdir $(GAMESRC:.cpp=.o)))
 OBJDIR = obj/
 

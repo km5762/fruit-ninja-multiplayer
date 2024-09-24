@@ -1,42 +1,74 @@
 #include "Server.h"
-#include "../lib/EventNetwork.h"
-#include "../lib/NetworkManager.h"
+#include "EventNetwork.h"
+#include "NetworkManager.h"
 #include "LogManager.h"
+#include "WorldManager.h"
 
 #include "../shared/Message.h"
 
 #include <vector>
 
-void Server::handleData(const df::EventNetwork *p_e)
+void Server::step(const df::EventStep *p_e)
+{
+    std::stringstream ss;
+    df::ObjectList ol = WM.getAllObjects();
+    for (int i = 0; i < ol.getCount(); i++)
+    {
+        int id = ol[i]->getId();
+        std::string type = ol[i]->getType();
+        // if the object is serializable, serialize it to the string stream
+        if (Serializable *serializable = dynamic_cast<Serializable *>(ol[i]))
+        {
+            ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+            int object_type_len = type.length();
+            ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
+            ss << type;
+            serializable->serialize(ss);
+        }
+    }
+
+    std::string body = ss.str();
+    Message synch_message(MessageType::SYNCHRONIZE, body);
+
+    std::stringstream ms;
+    synch_message.serialize(ms);
+    std::string message = ms.str();
+
+    for (int i = 0; i < NM.getNumConnections(); i++)
+    {
+        NM.send(message.c_str(), message.size(), i);
+    }
+}
+
+void Server::data(const df::EventNetwork *p_e)
 {
     // read the message into buffer
     int bytes = p_e->getBytes();
-    std::vector<std::byte> buffer(bytes);
+    std::vector<char> buffer(bytes);
     NM.receive(buffer.data(), bytes, false, p_e->getSocketIndex());
+
+    std::stringstream ss(std::string(buffer.begin(), buffer.end()));
 
     // deserialize a message on the buffer
     Message message;
-    message.deserialize(buffer.data());
+    message.deserialize(ss);
 
-    LM.writeLog("Server::handleData(): recieved message '%s' on socket #%d", message.contents.c_str(), p_e->getSocketIndex());
+    std::stringstream bs(message.body);
 
-    // if the message is of type EXIT, handle closing the connection
-    if (message.type == MessageType::EXIT)
+    switch (message.type)
     {
-        LM.writeLog("Server::handleData(): closing connection to socket #%d", p_e->getSocketIndex());
-        NM.close(p_e->getSocketIndex());
+    case MessageType::MOUSE_MOVEMENT:
+        df::Vector position;
+        position.deserialize(&bs);
+        swords[p_e->getSocketIndex()]->setPosition(position);
     }
-    // otherwise, send the message to all other connections
-    else
-    {
-        for (int i = 0; i < NM.getNumConnections(); i++)
-        {
-            if (i != p_e->getSocketIndex())
-            {
-                NM.send(buffer.data(), bytes, i);
-            }
-        }
-    }
+}
+
+void Server::accept(const df::EventNetwork *p_e)
+{
+    Sword *sword = new Sword(static_cast<df::Color>(p_e->getSocketIndex()));
+    sword->setId(100 + p_e->getSocketIndex());
+    this->swords.push_back(sword);
 }
 
 Server::Server()
@@ -45,22 +77,31 @@ Server::Server()
     setSolidness(df::SPECTRAL);
     setVisible(false);
     registerInterest(df::NETWORK_EVENT);
-    // set up NM as server
+    registerInterest(df::STEP_EVENT);
     NM.setServer(true);
 }
 
 int Server::eventHandler(const df::Event *p_e)
 {
-    // handle network events
     if (p_e->getType() == df::NETWORK_EVENT)
     {
         df::EventNetwork *event = (df::EventNetwork *)p_e;
-        // only handle data events
         if (event->getLabel() == df::NetworkEventLabel::DATA)
         {
-            this->handleData(event);
+            data(event);
             return 1;
         }
+        else if (event->getLabel() == df::NetworkEventLabel::ACCEPT)
+        {
+            accept(event);
+            return 1;
+        }
+    }
+    else if (p_e->getType() == df::STEP_EVENT)
+    {
+        df::EventStep *event = (df::EventStep *)p_e;
+        step(event);
+        return 1;
     }
     return 0;
 }

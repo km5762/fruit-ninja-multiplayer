@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
     }
 
     // setup logging
-    LM.setLogLevel(1);
+    LM.setLogLevel(10);
     LM.setFlush(true);
     LM.writeLog("Server (v%.1f)", 1.0);
 
