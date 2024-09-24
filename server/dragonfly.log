@@ -1,30 +1,14 @@
-17:12:33    0 ****************************************************
-17:12:33    0 ** Dragonfly version 4.20 **
-17:12:33    0 ** Game engine started **
-17:12:33    0 ****************************************************
-17:12:33    0 LogManager::setLogLevel(): log level 10
-17:12:33    0 Server (v1.0)
-17:12:33    0 NetworkManager::setServer(): Ready for connections on port 9876.
-17:12:33    0 GameManager::run(): starting game loop
-17:12:38  167 NetworkManager::accept(): New connection.
-17:12:46  417 NetworkManager::send(): Error! Return is -1.
-17:12:46  417 	104 - Connection reset by peer
-17:12:46  418 NetworkManager::send(): Error! Return is -1.
-17:12:46  418 	32 - Broken pipe
-17:12:46  418 	socket is closed
-17:12:47  448 doShutDown(): Signal is Interrupt (2). Shutting down.
-17:12:47  448 PathManager::shutDown(): successfully stopped.
-17:12:47  448 Path manager stopped
-17:12:47  448 WorldManager::shutDown(): Successfully stopped.
-17:12:47  448 World manager stopped
-17:12:47  448 RM::shutDown(): successfully stopped.
-17:12:47  448 Resource manager stopped
-17:12:47  448 NetworkManager::shutDown(): successfully stopped.
-17:12:47  448 Network manager stopped
-17:12:47  448 InputManager::shutDown(): successfully stopped.
-17:12:47  448 Input manager stopped
-17:12:47  448 DisplayManager::shutDown(): successfully stopped.
-17:12:47  448 Display manager stopped
-17:12:47  448 ****************************************************
-17:12:47  448 ** Game engine stopped **
-17:12:47  448 LogManager::shutDown(): successfully stopped.
+19:32:42    0 ****************************************************
+19:32:42    0 ** Dragonfly version 4.20 **
+19:32:42    0 ** Game engine started **
+19:32:42    0 ****************************************************
+19:32:42    0 LogManager::setLogLevel(): log level 10
+19:32:42    0 Server (v1.0)
+19:32:42    0 NetworkManager::setServer(): Ready for connections on port 9876.
+19:32:42    0 GameManager::run(): starting game loop
+19:32:48  178 NetworkManager::accept(): New connection.
+19:32:52  317 NetworkManager::send(): Error! Return is -1.
+19:32:52  317 	104 - Connection reset by peer
+19:32:52  318 NetworkManager::send(): Error! Return is -1.
+19:32:52  318 	32 - Broken pipe
+19:32:52  318 	socket is closed

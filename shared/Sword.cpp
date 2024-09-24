@@ -34,9 +34,7 @@ Sword::Sword(df::Color color)
   setAltitude(df::MAX_ALTITUDE); // Make Sword in foreground.
 
   registerInterest(df::STEP_EVENT);
-#ifdef CLIENT
   registerInterest(df::MSE_EVENT);
-#endif
 
   // Start sword in center of world.
   df::Vector p(WM.getBoundary().getHorizontal() / 2,
@@ -149,6 +147,7 @@ int Sword::mouse(const df::EventMouse *p_e)
   if (p_e->getMouseAction() == df::MOVED)
   {
     df::Vector position = p_e->getMousePosition();
+
     std::stringstream ss;
     position.serialize(&ss);
     std::string body = ss.str();

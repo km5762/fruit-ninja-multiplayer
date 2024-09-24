@@ -39,10 +39,9 @@ void Client::data(const df::EventNetwork *p_e)
         df::Object *object = WM.objectWithId(id);
         if (object != NULL)
         {
-            LM.writeLog("Object found");
-            if (dynamic_cast<Serializable *>(object))
+            if (Serializable *serializable = dynamic_cast<Serializable *>(object))
             {
-                object->deserialize(&bs);
+                serializable->deserialize(bs);
             }
             else
             {
@@ -51,9 +50,9 @@ void Client::data(const df::EventNetwork *p_e)
         }
         else
         {
-            LM.writeLog("Creating new object");
             Sword *sword = new Sword();
-            sword->deserialize(bs);
+            Serializable *serializable = dynamic_cast<Serializable *>(sword);
+            serializable->deserialize(bs);
         }
     }
 }
