@@ -1,2 +1,4 @@
 headless:true,
-networking:true
+networking:true,
+window_horizontal_pixels:600,
+window_vertical_pixels:450,

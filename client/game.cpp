@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 
   // Setup logging.
   LM.setFlush(true);
-  LM.setLogLevel(10);
+  LM.setLogLevel(1);
   LM.writeLog("Fruit Ninja (v%.1f)", VERSION);
 
   // Load resources.

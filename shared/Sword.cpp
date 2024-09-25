@@ -143,26 +143,38 @@ int Sword::draw()
 #ifdef CLIENT
 int Sword::mouse(const df::EventMouse *p_e)
 {
-  // when mosue moves, set position of sword to new position
-  if (p_e->getMouseAction() == df::MOVED)
+  sf::RenderWindow *p_win = DM.getWindow();
+  sf::Vector2i lp = sf::Mouse::getPosition(*p_win);
+  if (lp.x > df::Config::getInstance().getWindowHorizontalPixels() ||
+      lp.x < 0 ||
+      lp.y > df::Config::getInstance().getWindowVerticalPixels() ||
+      lp.y < 0)
   {
-    df::Vector position = p_e->getMousePosition();
+    return 0;
+  }
+  else
+  {
+    // when mosue moves, set position of sword to new position
+    if (p_e->getMouseAction() == df::MOVED)
+    {
+      df::Vector position = p_e->getMousePosition();
 
-    std::stringstream ss;
-    position.serialize(&ss);
-    std::string body = ss.str();
-    Message mouse_message(MessageType::MOUSE_MOVEMENT, body);
-    std::stringstream ms;
-    mouse_message.serialize(ms);
-    std::string message = ms.str();
+      std::stringstream ss;
+      position.serialize(&ss);
+      std::string body = ss.str();
+      Message mouse_message(MessageType::MOUSE_MOVEMENT, body);
+      std::stringstream ms;
+      mouse_message.serialize(ms);
+      std::string message = ms.str();
 
-    int size;
-    std::stringstream ts(message);
-    ts.read(reinterpret_cast<char *>(&size), sizeof(size));
+      int size;
+      std::stringstream ts(message);
+      ts.read(reinterpret_cast<char *>(&size), sizeof(size));
 
-    NM.send(message.c_str(), message.length());
+      NM.send(message.c_str(), message.length());
 
-    return 1;
+      return 1;
+    }
   }
 
   return 0;

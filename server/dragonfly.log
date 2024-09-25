@@ -1,30 +1,36 @@
-19:43:43    0 ****************************************************
-19:43:43    0 ** Dragonfly version 4.20 **
-19:43:43    0 ** Game engine started **
-19:43:43    0 ****************************************************
-19:43:43    0 LogManager::setLogLevel(): log level 10
-19:43:43    0 Server (v1.0)
-19:43:43    0 NetworkManager::setServer(): Ready for connections on port 9876.
-19:43:43    0 GameManager::run(): starting game loop
-19:43:46   85 NetworkManager::accept(): New connection.
-19:43:54  331 NetworkManager::send(): Error! Return is -1.
-19:43:54  331 	104 - Connection reset by peer
-19:43:54  332 NetworkManager::send(): Error! Return is -1.
-19:43:54  332 	32 - Broken pipe
-19:43:54  332 	socket is closed
-19:43:56  374 doShutDown(): Signal is Interrupt (2). Shutting down.
-19:43:56  374 PathManager::shutDown(): successfully stopped.
-19:43:56  374 Path manager stopped
-19:43:56  374 WorldManager::shutDown(): Successfully stopped.
-19:43:56  374 World manager stopped
-19:43:56  374 RM::shutDown(): successfully stopped.
-19:43:56  374 Resource manager stopped
-19:43:56  374 NetworkManager::shutDown(): successfully stopped.
-19:43:56  374 Network manager stopped
-19:43:56  374 InputManager::shutDown(): successfully stopped.
-19:43:56  374 Input manager stopped
-19:43:56  374 DisplayManager::shutDown(): successfully stopped.
-19:43:56  374 Display manager stopped
-19:43:56  374 ****************************************************
-19:43:56  374 ** Game engine stopped **
-19:43:56  374 LogManager::shutDown(): successfully stopped.
+20:29:32    0 ****************************************************
+20:29:32    0 ** Dragonfly version 4.20 **
+20:29:32    0 ** Game engine started **
+20:29:32    0 ****************************************************
+20:29:32    0 LogManager::setLogLevel(): log level 10
+20:29:32    0 Server (v1.0)
+20:29:32    0 NetworkManager::setServer(): Ready for connections on port 9876.
+20:29:32    0 GameManager::run(): starting game loop
+20:29:38  206 NetworkManager::accept(): New connection.
+20:29:43  348 NetworkManager::accept(): New connection.
+20:29:59  839 NetworkManager::send(): Error! Return is -1.
+20:29:59  839 	104 - Connection reset by peer
+20:29:59  840 NetworkManager::send(): Error! Return is -1.
+20:29:59  840 	32 - Broken pipe
+20:29:59  840 	socket is closed
+20:30:00  862 NetworkManager::send(): Error! Return is -1.
+20:30:00  862 	104 - Connection reset by peer
+20:30:00  863 NetworkManager::send(): Error! Return is -1.
+20:30:00  863 	32 - Broken pipe
+20:30:00  863 	socket is closed
+20:30:01  894 doShutDown(): Signal is Interrupt (2). Shutting down.
+20:30:01  894 PathManager::shutDown(): successfully stopped.
+20:30:01  894 Path manager stopped
+20:30:01  894 WorldManager::shutDown(): Successfully stopped.
+20:30:01  894 World manager stopped
+20:30:01  894 RM::shutDown(): successfully stopped.
+20:30:01  894 Resource manager stopped
+20:30:01  894 NetworkManager::shutDown(): successfully stopped.
+20:30:01  894 Network manager stopped
+20:30:01  894 InputManager::shutDown(): successfully stopped.
+20:30:01  894 Input manager stopped
+20:30:01  894 DisplayManager::shutDown(): successfully stopped.
+20:30:01  894 Display manager stopped
+20:30:01  894 ****************************************************
+20:30:01  894 ** Game engine stopped **
+20:30:01  894 LogManager::shutDown(): successfully stopped.

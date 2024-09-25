@@ -20,39 +20,50 @@ void Client::data(const df::EventNetwork *p_e)
     Message message;
     message.deserialize(ss);
 
-    LM.writeLog("Message type %d", message.type);
-
     std::stringstream bs(message.body);
 
     switch (message.type)
     {
     case MessageType::SYNCHRONIZE:
-        int id;
-        bs.read(reinterpret_cast<char *>(&id), sizeof(id));
-        LM.writeLog("ID: %d", id);
-        int object_type_len;
-        bs.read(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
-        LM.writeLog("object type len: %d", object_type_len);
-        std::string type(object_type_len, '\0');
-        bs.read(&type[0], object_type_len);
-        LM.writeLog("type: %s", type.c_str());
-        df::Object *object = WM.objectWithId(id);
-        if (object != NULL)
+        while (true)
         {
-            if (Serializable *serializable = dynamic_cast<Serializable *>(object))
+            int id;
+            if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
             {
-                serializable->deserialize(bs);
+                break;
+            }
+
+            int object_type_len;
+            if (!bs.read(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len)))
+            {
+                break;
+            }
+
+            std::string type(object_type_len, '\0');
+            if (!bs.read(&type[0], object_type_len))
+            {
+                break;
+            }
+
+            df::Object *object = WM.objectWithId(id);
+            if (object != NULL)
+            {
+                if (Serializable *serializable = dynamic_cast<Serializable *>(object))
+                {
+                    serializable->deserialize(bs);
+                }
+                else
+                {
+                    LM.writeLog("Client::data(): synch message sent with unserializable object");
+                }
             }
             else
             {
-                LM.writeLog("Client::data(): synch message sent with unserializable object");
+                Sword *sword = new Sword();
+                Serializable *serializable = dynamic_cast<Serializable *>(sword);
+                serializable->deserialize(bs);
+                sword->setId(id);
             }
-        }
-        else
-        {
-            Sword *sword = new Sword();
-            Serializable *serializable = dynamic_cast<Serializable *>(sword);
-            serializable->deserialize(bs);
         }
     }
 }
