@@ -65,13 +65,6 @@ void loadResources(void)
 }
 
 ///////////////////////////////////////////////
-// Populate the world with game objects.
-void populateWorld(void)
-{
-  new Points;
-}
-
-///////////////////////////////////////////////
 // Fruit Ninja splash screen.
 void splash(void)
 {

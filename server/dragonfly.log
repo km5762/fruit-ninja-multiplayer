@@ -1,273 +1,72 @@
-15:08:13    0 ****************************************************
-15:08:13    0 ** Dragonfly version 4.20 **
-15:08:13    0 ** Game engine started **
-15:08:13    0 ****************************************************
-15:08:13    0 Server (v1.0)
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-15:08:13    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-15:08:13    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'impact' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'beep' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-15:08:13    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-15:08:13    0 NetworkManager::setServer(): Ready for connections on port 9876.
-15:08:13    0 GameManager::run(): starting game loop
-15:08:20  220 NetworkManager::accept(): New connection.
-15:08:27  409 NetworkManager::accept(): New connection.
-15:08:29  487 slicing 104
-15:08:29  487 sending del message for 104
-15:08:29  487 sending del message for 104
-15:08:30  516 slicing 105
-15:08:30  516 sending del message for 105
-15:08:30  516 sending del message for 105
-15:08:31  527 slicing 106
-15:08:31  527 sending del message for 106
-15:08:31  527 sending del message for 106
-15:08:32  571 slicing 107
-15:08:32  571 sending del message for 107
-15:08:32  571 sending del message for 107
-15:08:33  587 slicing 108
-15:08:33  587 sending del message for 108
-15:08:33  587 sending del message for 108
-15:08:34  629 slicing 109
-15:08:34  629 sending del message for 109
-15:08:34  629 sending del message for 109
-15:08:36  683 slicing 110
-15:08:36  683 sending del message for 110
-15:08:36  683 sending del message for 110
-15:08:38  741 slicing 112
-15:08:38  741 sending del message for 112
-15:08:38  741 sending del message for 112
-15:08:38  759 slicing 111
-15:08:38  759 sending del message for 111
-15:08:38  759 sending del message for 111
-15:08:39  781 slicing 113
-15:08:39  781 sending del message for 113
-15:08:39  781 sending del message for 113
-15:08:39  785 slicing 114
-15:08:39  785 sending del message for 114
-15:08:39  785 sending del message for 114
-15:08:40  825 sending del message for 115
-15:08:40  825 sending del message for 115
-15:08:41  836 slicing 116
-15:08:41  836 sending del message for 116
-15:08:41  836 sending del message for 116
-15:08:42  861 slicing 117
-15:08:42  861 sending del message for 117
-15:08:42  861 sending del message for 117
-15:08:42  885 slicing 118
-15:08:42  885 sending del message for 118
-15:08:42  885 sending del message for 118
-15:08:43  908 slicing 119
-15:08:43  908 sending del message for 119
-15:08:43  908 sending del message for 119
-15:08:44  935 slicing 120
-15:08:44  935 sending del message for 120
-15:08:44  935 sending del message for 120
-15:08:44  949 slicing 121
-15:08:44  949 sending del message for 121
-15:08:44  949 sending del message for 121
-15:08:46  997 slicing 122
-15:08:46  997 sending del message for 122
-15:08:46  997 sending del message for 122
-15:08:47 1037 slicing 124
-15:08:47 1037 sending del message for 124
-15:08:47 1037 sending del message for 124
-15:08:48 1048 sending del message for 123
-15:08:48 1048 sending del message for 123
-15:08:48 1064 slicing 125
-15:08:48 1064 sending del message for 125
-15:08:48 1064 sending del message for 125
-15:08:49 1080 slicing 126
-15:08:49 1080 sending del message for 126
-15:08:49 1080 sending del message for 126
-15:08:50 1104 slicing 127
-15:08:50 1104 sending del message for 127
-15:08:50 1104 sending del message for 127
-15:08:50 1127 slicing 129
-15:08:50 1127 sending del message for 129
-15:08:50 1127 sending del message for 129
-15:08:52 1180 slicing 128
-15:08:52 1180 sending del message for 128
-15:08:52 1180 sending del message for 128
-15:08:53 1217 slicing 130
-15:08:53 1217 slicing 132
-15:08:53 1217 sending del message for 130
-15:08:53 1217 sending del message for 130
-15:08:53 1217 sending del message for 132
-15:08:53 1217 sending del message for 132
-15:08:54 1249 slicing 133
-15:08:54 1249 sending del message for 133
-15:08:54 1249 sending del message for 133
-15:08:55 1256 slicing 134
-15:08:55 1256 sending del message for 134
-15:08:55 1256 sending del message for 134
-15:08:55 1275 slicing 135
-15:08:55 1275 sending del message for 135
-15:08:55 1275 sending del message for 135
-15:08:56 1297 slicing 136
-15:08:56 1297 sending del message for 136
-15:08:56 1297 sending del message for 136
-15:08:56 1304 slicing 137
-15:08:56 1304 sending del message for 137
-15:08:56 1304 sending del message for 137
-15:08:57 1326 slicing 138
-15:08:57 1326 sending del message for 138
-15:08:57 1326 sending del message for 138
-15:08:58 1355 slicing 139
-15:08:58 1355 sending del message for 139
-15:08:58 1355 sending del message for 139
-15:08:58 1369 slicing 140
-15:08:58 1369 sending del message for 140
-15:08:58 1369 sending del message for 140
-15:09:00 1408 sending del message for 142
-15:09:00 1408 sending del message for 142
-15:09:00 1415 sending del message for 141
-15:09:00 1415 sending del message for 141
-15:09:01 1445 slicing 144
-15:09:01 1445 sending del message for 144
-15:09:01 1445 sending del message for 144
-15:09:01 1459 slicing 146
-15:09:01 1459 sending del message for 146
-15:09:01 1459 sending del message for 146
-15:09:01 1460 sending del message for 145
-15:09:01 1460 sending del message for 145
-15:09:01 1461 sending del message for 143
-15:09:01 1461 sending del message for 143
-15:09:02 1478 slicing 147
-15:09:02 1478 sending del message for 147
-15:09:02 1478 sending del message for 147
-15:09:02 1491 slicing 148
-15:09:02 1491 sending del message for 148
-15:09:02 1491 sending del message for 148
-15:09:03 1511 slicing 150
-15:09:03 1511 sending del message for 150
-15:09:03 1511 sending del message for 150
-15:09:04 1539 slicing 149
-15:09:04 1539 sending del message for 149
-15:09:04 1539 sending del message for 149
-15:09:04 1552 sending del message for 151
-15:09:04 1552 sending del message for 151
-15:09:05 1566 slicing 152
-15:09:05 1566 sending del message for 152
-15:09:05 1566 sending del message for 152
-15:09:06 1590 slicing 153
-15:09:06 1590 sending del message for 153
-15:09:06 1590 sending del message for 153
-15:09:06 1604 slicing 154
-15:09:06 1604 sending del message for 154
-15:09:06 1604 sending del message for 154
-15:09:07 1625 slicing 155
-15:09:07 1625 sending del message for 155
-15:09:07 1625 sending del message for 155
-15:09:07 1629 slicing 156
-15:09:07 1629 sending del message for 156
-15:09:07 1629 sending del message for 156
-15:09:08 1668 sending del message for 157
-15:09:08 1668 sending del message for 157
-15:09:09 1677 slicing 159
-15:09:09 1677 sending del message for 159
-15:09:09 1677 sending del message for 159
-15:09:09 1692 slicing 161
-15:09:09 1692 sending del message for 161
-15:09:09 1692 sending del message for 161
-15:09:09 1697 sending del message for 160
-15:09:09 1697 sending del message for 160
-15:09:09 1704 slicing 158
-15:09:09 1704 sending del message for 158
-15:09:09 1704 sending del message for 158
-15:09:10 1710 slicing 163
-15:09:10 1710 sending del message for 163
-15:09:10 1710 sending del message for 163
-15:09:10 1717 slicing 165
-15:09:10 1717 sending del message for 165
-15:09:10 1717 sending del message for 165
-15:09:11 1756 slicing 162
-15:09:11 1756 sending del message for 162
-15:09:11 1756 sending del message for 162
-15:09:11 1759 slicing 168
-15:09:11 1759 sending del message for 168
-15:09:11 1759 sending del message for 168
-15:09:11 1760 sending del message for 167
-15:09:11 1760 sending del message for 167
-15:09:11 1763 sending del message for 166
-15:09:11 1763 sending del message for 166
-15:09:12 1773 slicing 169
-15:09:12 1773 sending del message for 169
-15:09:12 1773 sending del message for 169
-15:09:12 1775 slicing 170
-15:09:12 1775 sending del message for 170
-15:09:12 1775 sending del message for 170
-15:09:12 1791 sending del message for 164
-15:09:12 1791 sending del message for 164
-15:09:13 1800 slicing 172
-15:09:13 1800 sending del message for 172
-15:09:13 1800 sending del message for 172
-15:09:14 1830 slicing 175
-15:09:14 1830 sending del message for 175
-15:09:14 1830 sending del message for 175
-15:09:14 1852 sending del message for 174
-15:09:14 1852 sending del message for 174
-15:09:15 1861 sending del message for 176
-15:09:15 1861 sending del message for 176
-15:09:15 1863 sending del message for 173
-15:09:15 1863 sending del message for 173
-15:09:15 1867 sending del message for 171
-15:09:15 1867 sending del message for 171
-15:09:15 1870 slicing 177
-15:09:15 1870 sending del message for 177
-15:09:15 1870 sending del message for 177
-15:09:16 1906 slicing 179
-15:09:16 1906 sending del message for 179
-15:09:16 1906 sending del message for 179
-15:09:16 1914 GameOver::GameOver(): created
-15:09:16 1914 sending del message for 131
-15:09:16 1914 sending del message for 131
-15:09:16 1914 sending del message for 178
-15:09:16 1914 sending del message for 178
-15:09:16 1914 sending del message for 180
-15:09:16 1914 sending del message for 180
-15:09:16 1914 sending del message for 181
-15:09:16 1914 sending del message for 181
-15:09:16 1914 sending del message for 182
-15:09:16 1914 sending del message for 182
-15:09:16 1914 sending del message for 183
-15:09:16 1914 sending del message for 183
-15:09:22 2095 GameManager::run(): end of game loop
-15:09:22 2095 Path manager stopped
-15:09:22 2095 World manager stopped
-15:09:22 2095 Resource manager stopped
-15:09:22 2095 Network manager stopped
-15:09:22 2095 Input manager stopped
-15:09:22 2095 Display manager stopped
-15:09:22 2095 ****************************************************
-15:09:22 2095 ** Game engine stopped **
+15:32:04    0 ****************************************************
+15:32:04    0 ** Dragonfly version 4.20 **
+15:32:04    0 ** Game engine started **
+15:32:04    0 ****************************************************
+15:32:04    0 Server (v1.0)
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+15:32:04    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+15:32:04    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'impact' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'beep' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+15:32:04    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+15:32:04    0 NetworkManager::setServer(): Ready for connections on port 9876.
+15:32:04    0 GameManager::run(): starting game loop
+15:32:07   91 NetworkManager::accept(): New connection.
+15:32:13  272 NetworkManager::accept(): New connection.
+15:32:16  366 slicing 106
+15:32:17  394 slicing 107
+15:32:18  427 slicing 109
+15:32:19  435 slicing 108
+15:32:19  452 slicing 110
+15:32:19  463 slicing 111
+15:32:21  522 slicing 112
+15:32:22  546 slicing 113
+15:32:26  655 NetworkManager::send(): Error! Return is -1.
+15:32:26  655 	104 - Connection reset by peer
+15:32:26  656 NetworkManager::send(): Error! Return is -1.
+15:32:26  656 	32 - Broken pipe
+15:32:26  656 	socket is closed
+15:32:27  685 NetworkManager::send(): Error! Return is -1.
+15:32:27  685 	104 - Connection reset by peer
+15:32:27  686 NetworkManager::send(): Error! Return is -1.
+15:32:27  686 	32 - Broken pipe
+15:32:27  686 	socket is closed
+15:32:28  708 doShutDown(): Signal is Interrupt (2). Shutting down.
+15:32:28  708 Path manager stopped
+15:32:28  708 World manager stopped
+15:32:28  708 Resource manager stopped
+15:32:28  708 Network manager stopped
+15:32:28  708 Input manager stopped
+15:32:28  708 Display manager stopped
+15:32:28  708 ****************************************************
+15:32:28  708 ** Game engine stopped **

@@ -6,6 +6,7 @@
 #include "../shared/Fruit.h"
 #include "../shared/game.h"
 #include "../shared/Timer.h"
+#include "../shared/Points.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -66,6 +67,10 @@ void Client::data(const df::EventNetwork *p_e)
                 else if (type == TIMER_STRING)
                 {
                     serializable = new Timer();
+                }
+                else if (type == POINTS_STRING)
+                {
+                    serializable = new Points();
                 }
 
                 serializable->deserialize(bs);

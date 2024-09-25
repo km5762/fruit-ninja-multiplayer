@@ -31,7 +31,6 @@ void ServerEntry::callback()
     // otherwise, allow them to enter a name and set up the sentry
     else
     {
-        populateWorld();
         WM.markForDelete(this);
     }
 }

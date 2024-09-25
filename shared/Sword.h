@@ -41,8 +41,8 @@ public:
   // Handle events.
   int eventHandler(const df::Event *p_e) override;
 
-// Draw.
 #ifdef CLIENT
+  // Draw.
   int draw(void) override;
 #endif
 

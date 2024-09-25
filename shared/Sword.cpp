@@ -136,8 +136,8 @@ int Sword::step(const df::EventStep *p_e)
   return 1;
 }
 
-// Draw sword on window.
 #ifdef CLIENT
+// Draw sword on window.
 int Sword::draw()
 {
   return DM.drawCh(getPosition(), SWORD_CHAR, m_color);

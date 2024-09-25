@@ -67,10 +67,10 @@ int Fruit::out(const df::EventOut *p_e)
 
   // Destroy this Fruit.
   WM.markForDelete(this);
+#endif
 
   // Handled.
   return 1;
-#endif
 }
 
 // Handle collision events.
@@ -88,10 +88,10 @@ int Fruit::collide(const df::EventCollision *p_e)
     // Destroy this Fruit.
     WM.markForDelete(this);
   }
+#endif
 
   // Handled.
   return 1;
-#endif
 }
 
 // Destructor.
@@ -121,7 +121,6 @@ Fruit::~Fruit()
   std::string message = ms.str();
   for (int i = 0; i < NM.getNumConnections(); i++)
   {
-    LM.writeLog("sending del message for %d", getId());
     NM.send(message.c_str(), message.length(), i);
   }
 #endif

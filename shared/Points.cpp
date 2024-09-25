@@ -10,15 +10,17 @@
 // Game includes.
 #include "Points.h"
 
-Points::Points() {
+Points::Points(df::ViewObjectLocation location)
+{
   setType(POINTS_STRING);
-  setLocation(df::TOP_RIGHT);
+  setLocation(location);
   setViewString(POINTS_STRING);
   setColor(df::WHITE);
   setValue(0);
 }
 
-void Points::setValue(int value) {
+void Points::setValue(int value)
+{
 
   // Call parent.
   ViewObject::setValue(value);
@@ -26,4 +28,14 @@ void Points::setValue(int value) {
   // If less than 0, set to 0.
   if (getValue() < 0)
     ViewObject::setValue(0);
+}
+
+void Points::serialize(std::stringstream &ss)
+{
+  df::ViewObject::serialize(&ss);
+}
+
+void Points::deserialize(std::stringstream &ss)
+{
+  df::ViewObject::deserialize(&ss);
 }
