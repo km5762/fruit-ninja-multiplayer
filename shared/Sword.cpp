@@ -22,12 +22,12 @@
 
 #ifdef CLIENT
 #include "../shared/util.h"
-#include "../client/Kudos.h"
 #endif
 
 #ifndef CLIENT
 #include "../shared/Points.h"
 #include "../shared/Fruit.h"
+#include "Kudos.h"
 #endif
 
 // Constructor.
@@ -81,9 +81,6 @@ int Sword::step(const df::EventStep *p_e)
 
 #ifdef CLIENT
   create_trail(getPosition(), m_old_position, m_color);
-
-  if (m_sliced > 2 && m_sliced > m_old_sliced)
-    new Kudos();
 #endif
 
 #ifndef CLIENT
@@ -103,10 +100,32 @@ int Sword::step(const df::EventStep *p_e)
     df::Box box = getWorldBox(p_o);
     if (lineIntersectsBox(line, box))
     {
-      LM.writeLog("slicing %d", ol[i]->getId());
       df::EventCollision c(this, p_o, p_o->getPosition());
       p_o->eventHandler(&c);
       m_sliced += 1;
+
+      if (m_sliced > 2 && m_sliced > m_old_sliced)
+      {
+        Kudos *kudos = new Kudos();
+
+        std::stringstream ss;
+
+        int id = kudos->getId();
+        std::string type = kudos->getType();
+
+        ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+        ss << type << "\n";
+        static_cast<Serializable *>(kudos)->serialize(ss);
+
+        std::string body = ss.str();
+        Message synch_message(MessageType::SYNCHRONIZE, body);
+        std::stringstream ms;
+        synch_message.serialize(ms);
+        std::string message = ms.str();
+
+        LM.writeLog("Sending kudos to port %d", static_cast<int>(getColor() - 1));
+        NM.send(message.c_str(), message.size(), static_cast<int>(getColor()) - 1);
+      }
 
       m_old_sliced = m_sliced;
 

@@ -7,6 +7,7 @@
 #include "../shared/game.h"
 #include "../shared/Timer.h"
 #include "../shared/Points.h"
+#include "../shared/Kudos.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -72,6 +73,10 @@ void Client::data(const df::EventNetwork *p_e)
                 {
                     serializable = new Points();
                 }
+                else if (type == KUDOS_STRING)
+                {
+                    serializable = new Kudos();
+                }
 
                 serializable->deserialize(bs);
                 df::Object *object = dynamic_cast<Object *>(serializable);
@@ -80,14 +85,11 @@ void Client::data(const df::EventNetwork *p_e)
         }
         break;
     case MessageType::DELETE:
-        LM.writeLog("recieved req to delete");
         int id;
         if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
         {
-            LM.writeLog("error reading id from req to delete");
             break;
         }
-        LM.writeLog("recieved req to delete on id %d", id);
 
         df::Object *object = WM.objectWithId(id);
         if (object != NULL)

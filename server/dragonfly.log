@@ -1,88 +1,76 @@
-16:38:31    0 ****************************************************
-16:38:31    0 ** Dragonfly version 4.20 **
-16:38:31    0 ** Game engine started **
-16:38:31    0 ****************************************************
-16:38:31    0 Server (v1.0)
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-16:38:31    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-16:38:31    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'impact' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'beep' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-16:38:31    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-16:38:31    0 NetworkManager::setServer(): Ready for connections on port 9876.
-16:38:31    0 GameManager::run(): starting game loop
-16:38:37  189 NetworkManager::accept(): New connection.
-16:38:41  289 NetworkManager::accept(): New connection.
-16:38:43  350 slicing 106
-16:38:44  374 slicing 107
-16:38:45  409 slicing 108
-16:38:46  438 slicing 109
-16:38:46  445 slicing 110
-16:38:48  506 slicing 111
-16:38:49  529 slicing 112
-16:38:50  573 slicing 113
-16:38:51  603 slicing 114
-16:38:56  747 slicing 118
-16:38:56  749 slicing 119
-16:38:57  775 slicing 120
-16:38:57  782 slicing 121
-16:38:58  807 slicing 122
-16:38:59  836 slicing 123
-16:39:00  875 slicing 125
-16:39:01  891 slicing 124
-16:39:02  918 slicing 126
-16:39:02  939 slicing 127
-16:39:03  952 slicing 128
-16:39:03  965 slicing 129
-16:39:04 1000 slicing 130
-16:39:05 1038 slicing 131
-16:39:06 1060 slicing 132
-16:39:07 1092 NetworkManager::send(): Error! Return is -1.
-16:39:07 1092 	104 - Connection reset by peer
-16:39:07 1093 NetworkManager::send(): Error! Return is -1.
-16:39:07 1093 	32 - Broken pipe
-16:39:07 1093 	socket is closed
-16:39:08 1126 NetworkManager::send(): Error! Return is -1.
-16:39:08 1126 	104 - Connection reset by peer
-16:39:08 1127 NetworkManager::send(): Error! Return is -1.
-16:39:08 1127 	32 - Broken pipe
-16:39:08 1127 	socket is closed
-16:39:09 1149 doShutDown(): Signal is Interrupt (2). Shutting down.
-16:39:09 1149 Path manager stopped
-16:39:09 1149 World manager stopped
-16:39:09 1149 Resource manager stopped
-16:39:09 1149 Network manager stopped
-16:39:09 1149 Input manager stopped
-16:39:09 1149 Display manager stopped
-16:39:09 1149 ****************************************************
-16:39:09 1149 ** Game engine stopped **
+19:43:43    0 ****************************************************
+19:43:43    0 ** Dragonfly version 4.20 **
+19:43:43    0 ** Game engine started **
+19:43:43    0 ****************************************************
+19:43:43    0 Server (v1.0)
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+19:43:43    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+19:43:43    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'impact' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'beep' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+19:43:43    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+19:43:43    0 NetworkManager::setServer(): Ready for connections on port 9876.
+19:43:43    0 GameManager::run(): starting game loop
+19:43:47  120 NetworkManager::accept(): New connection.
+19:43:52  257 NetworkManager::accept(): New connection.
+19:43:57  404 Sending kudos to port 0
+19:43:58  447 Sending kudos to port 0
+19:43:59  473 Sending kudos to port 0
+19:44:05  661 Sending kudos to port 0
+19:44:08  755 Sending kudos to port 1
+19:44:09  782 Sending kudos to port 1
+19:44:12  870 Sending kudos to port 1
+19:44:12  875 Sending kudos to port 1
+19:44:13  899 Sending kudos to port 1
+19:44:14  923 Sending kudos to port 1
+19:44:14  947 Sending kudos to port 1
+19:44:15  969 Sending kudos to port 1
+19:44:18 1047 NetworkManager::send(): Error! Return is -1.
+19:44:18 1047 	104 - Connection reset by peer
+19:44:18 1048 NetworkManager::send(): Error! Return is -1.
+19:44:18 1048 	32 - Broken pipe
+19:44:18 1048 	socket is closed
+19:44:19 1081 NetworkManager::send(): Error! Return is -1.
+19:44:19 1081 	104 - Connection reset by peer
+19:44:19 1082 NetworkManager::send(): Error! Return is -1.
+19:44:19 1082 	32 - Broken pipe
+19:44:19 1082 	socket is closed
+19:44:20 1100 doShutDown(): Signal is Interrupt (2). Shutting down.
+19:44:20 1100 Path manager stopped
+19:44:20 1100 World manager stopped
+19:44:20 1100 Resource manager stopped
+19:44:20 1100 Network manager stopped
+19:44:20 1100 Input manager stopped
+19:44:20 1100 Display manager stopped
+19:44:20 1100 ****************************************************
+19:44:20 1100 ** Game engine stopped **

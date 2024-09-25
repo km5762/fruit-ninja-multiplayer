@@ -72,6 +72,18 @@ int Kudos::eventHandler(const df::Event *p_e)
   return 0;
 }
 
+void Kudos::serialize(std::stringstream &ss)
+{
+  df::Object::serialize(&ss);
+  ss.write(reinterpret_cast<char *>(&m_time_to_live), sizeof(m_time_to_live));
+}
+
+void Kudos::deserialize(std::stringstream &ss)
+{
+  df::Object::deserialize(&ss);
+  ss.read(reinterpret_cast<char *>(&m_time_to_live), sizeof(m_time_to_live));
+}
+
 // Handle step event.
 int Kudos::step(const df::EventStep *p_e)
 {

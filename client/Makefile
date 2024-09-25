@@ -39,7 +39,7 @@ CFLAGS= -std=c++17 -DCLIENT
 
 GAMESRC= \
 	../shared/Fruit.cpp \
-	Kudos.cpp \
+	../shared/Kudos.cpp \
 	../shared/Points.cpp \
 	../shared/Splash.cpp \
 	../shared/Sword.cpp \

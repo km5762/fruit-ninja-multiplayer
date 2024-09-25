@@ -48,6 +48,7 @@ GAMESRC= \
 	../shared/util.cpp \
 	../shared/Timer.cpp \
 	../shared/Splash.cpp \
+	../shared/Kudos.cpp \
 
 GAME= main.cpp
 EXECUTABLE= server
