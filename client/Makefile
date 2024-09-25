@@ -38,14 +38,13 @@ CC= g++
 CFLAGS= -std=c++17 -DCLIENT
 
 GAMESRC= \
-	Fruit.cpp \
-	GameOver.cpp \
-	Grocer.cpp \
+	../shared/Fruit.cpp \
 	Kudos.cpp \
 	Points.cpp \
 	Splash.cpp \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
+	../shared/GameOver.cpp \
 	Timer.cpp \
 	ServerEntry.cpp \
 	util.cpp \

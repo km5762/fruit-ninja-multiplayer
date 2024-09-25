@@ -1,71 +1,59 @@
-20:29:27    0 ****************************************************
-20:29:27    0 ** Dragonfly version 4.20 **
-20:29:27    0 ** Game engine started **
-20:29:27    0 ****************************************************
-20:29:27    0 Fruit Ninja (v1.1)
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-20:29:27    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-20:29:27    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'impact' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'beep' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-20:29:27    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-20:29:27    0 GameManager::run(): starting game loop
-20:29:29   58 GameManager::run(): end of game loop
-20:29:29   58 GameManager::run(): starting game loop
-20:29:33  133 GameManager::run(): end of game loop
-20:29:33  133 GameManager::run(): starting game loop
-20:29:43  294 ServerEntry::callback(): host: 127.0.0.1
-20:29:43  294 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-20:29:43  294 NetworkManager::connect(): Connection established.
-20:29:45  328 GameManager::run(): Warning! Used all available network time.
-20:29:59  777 InputManager::getInput(): Window close event. Setting game over.
-20:29:59  778 GameManager::run(): end of game loop
-20:29:59  778 Path manager stopped
-20:29:59  778 World manager stopped
-20:29:59  778 Resource manager stopped
-20:29:59  778 Network manager stopped
-20:29:59  778 Input manager stopped
-20:29:59  778 Display manager stopped
-20:29:59  778 ****************************************************
-20:29:59  778 ** Game engine stopped **
-65 ms
-20:30:00 1004 InputManager::getInput(): Window close event. Setting game over.
-20:30:00 1005 GameManager::run(): end of game loop
-20:30:00 1005 Path manager stopped
-20:30:00 1005 World manager stopped
-20:30:00 1005 Resource manager stopped
-20:30:00 1005 Network manager stopped
-20:30:00 1005 Input manager stopped
-20:30:00 1005 Display manager stopped
-20:30:00 1005 ****************************************************
-20:30:00 1005 ** Game engine stopped **
+21:21:02    0 ****************************************************
+21:21:02    0 ** Dragonfly version 4.20 **
+21:21:02    0 ** Game engine started **
+21:21:02    0 ****************************************************
+21:21:02    0 Fruit Ninja (v1.1)
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+21:21:02    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+21:21:02    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'impact' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'beep' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+21:21:02    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+21:21:02    0 GameManager::run(): starting game loop
+21:21:02    1 GameManager::run(): end of game loop
+21:21:02    1 GameManager::run(): starting game loop
+21:21:06  136 GameManager::run(): end of game loop
+21:21:06  136 GameManager::run(): starting game loop
+21:21:13  311 ServerEntry::callback(): host: 127.0.0.1
+21:21:13  311 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+21:21:13  311 NetworkManager::connect(): Connection established.
+21:21:26  704 InputManager::getInput(): Window close event. Setting game over.
+21:21:26  705 GameManager::run(): end of game loop
+21:21:26  705 Path manager stopped
+21:21:26  705 World manager stopped
+21:21:26  705 Resource manager stopped
+21:21:26  705 Network manager stopped
+21:21:26  705 Input manager stopped
+21:21:26  705 Display manager stopped
+21:21:26  705 ****************************************************
+21:21:26  705 ** Game engine stopped **

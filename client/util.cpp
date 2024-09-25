@@ -10,8 +10,7 @@
 #include "utility.h"
 
 // Game includes.
-#include "game.h"
-#include "Grocer.h"
+#include "../shared/game.h"
 #include "Points.h"
 #include "Splash.h"
 #include "../shared/Sword.h"
@@ -69,7 +68,6 @@ void loadResources(void)
 // Populate the world with game objects.
 void populateWorld(void)
 {
-  new Grocer();
   new Points;
   new Timer();
 }

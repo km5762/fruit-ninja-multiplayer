@@ -41,6 +41,9 @@ GAMESRC= \
 	Server.cpp \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
+	Grocer.cpp \
+	../shared/GameOver.cpp \
+	../shared/Fruit.cpp \
 
 GAME= main.cpp
 EXECUTABLE= server

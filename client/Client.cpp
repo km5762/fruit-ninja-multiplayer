@@ -3,6 +3,7 @@
 #include "../shared/Message.h"
 #include "ServerEntry.h"
 #include "../shared/Sword.h"
+#include "../shared/Fruit.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -59,10 +60,21 @@ void Client::data(const df::EventNetwork *p_e)
             }
             else
             {
-                Sword *sword = new Sword();
-                Serializable *serializable = dynamic_cast<Serializable *>(sword);
+                Serializable *serializable;
+
+                if (type == SWORD_STRING)
+                {
+                    serializable = new Sword();
+                }
+                else
+                {
+                    serializable = new Fruit(type);
+                }
+
                 serializable->deserialize(bs);
-                sword->setId(id);
+
+                df::Object *object = dynamic_cast<Object *>(serializable);
+                object->setId(id);
             }
         }
     }

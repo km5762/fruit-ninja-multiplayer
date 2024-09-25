@@ -11,8 +11,8 @@
 #include "WorldManager.h"
 
 // Game includes.
-#include "Fruit.h"
-#include "game.h"
+#include "../shared/Fruit.h"
+#include "../shared/game.h"
 #include "Splash.h"
 #include "util.h"
 

@@ -10,7 +10,7 @@
 #include "utility.h"
 
 // Game includes.
-#include "game.h"
+#include "../shared/game.h"
 #include "util.h"
 #include "Client.h"
 

@@ -3,6 +3,7 @@
 #include "NetworkManager.h"
 
 #include "Server.h"
+#include "Grocer.h"
 
 int main(int argc, char *argv[])
 {
@@ -21,6 +22,7 @@ int main(int argc, char *argv[])
 
     // instantiate the server
     new Server();
+    // new Grocer();
 
     GM.run();
 

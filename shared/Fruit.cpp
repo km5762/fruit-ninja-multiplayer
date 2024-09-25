@@ -11,11 +11,13 @@
 #include "WorldManager.h"
 
 // Game includes.
-#include "game.h"
+#include "../shared/game.h"
 #include "Fruit.h"
-#include "Points.h"
+// #include "Points.h"
 #include "../shared/Sword.h"
-#include "util.h"
+#ifdef CLIENT
+#include "../client/util.h"
+#endif
 
 // Constructor - supply name of Fruit (matches Sprite).
 Fruit::Fruit(std::string name)
@@ -48,7 +50,7 @@ int Fruit::eventHandler(const df::Event *p_e)
 // Handle out events.
 int Fruit::out(const df::EventOut *p_e)
 {
-
+#ifndef CLIENT
   if (m_first_out)
   { // Ignore first out (when spawning).
     m_first_out = false;
@@ -56,27 +58,28 @@ int Fruit::out(const df::EventOut *p_e)
   }
 
   // Each out is a "miss", so lose points.
-  df::EventView ev(POINTS_STRING, -25, true);
-  WM.onEvent(&ev);
+  // df::EventView ev(POINTS_STRING, -25, true);
+  // WM.onEvent(&ev);
 
   // Destroy this Fruit.
   WM.markForDelete(this);
 
   // Handled.
   return 1;
+#endif
 }
 
 // Handle collision events.
 int Fruit::collide(const df::EventCollision *p_e)
 {
-
+#ifndef CLIENT
   // Sword collision means ninja sliced this Fruit.
   if (p_e->getObject1()->getType() == SWORD_STRING)
   {
 
     // Add points.
-    df::EventView ev(POINTS_STRING, +10, true);
-    WM.onEvent(&ev);
+    // df::EventView ev(POINTS_STRING, +10, true);
+    // WM.onEvent(&ev);
 
     // Destroy this Fruit.
     WM.markForDelete(this);
@@ -84,12 +87,13 @@ int Fruit::collide(const df::EventCollision *p_e)
 
   // Handled.
   return 1;
+#endif
 }
 
 // Destructor.
 Fruit::~Fruit()
 {
-
+#ifdef CLIENT
   // If inside the game world and engine not shutting down,
   // create explosion and play sound.
   if (df::boxContainsPosition(WM.getBoundary(), getPosition()) &&
@@ -102,6 +106,7 @@ Fruit::~Fruit()
     std::string sound = "splat-" + std::to_string(rand() % 6 + 1);
     play_sound(sound);
   }
+#endif
 }
 
 // Setup starting conditions.
@@ -159,4 +164,16 @@ void Fruit::start(float speed)
   velocity.normalize();
   setDirection(velocity);
   setSpeed(speed);
+}
+
+void Fruit::serialize(std::stringstream &ss)
+{
+  df::Object::serialize(&ss);
+  ss.write(reinterpret_cast<char *>(&m_first_out), sizeof(m_first_out));
+}
+
+void Fruit::deserialize(std::stringstream &ss)
+{
+  df::Object::deserialize(&ss);
+  ss.read(reinterpret_cast<char *>(&m_first_out), sizeof(m_first_out));
 }

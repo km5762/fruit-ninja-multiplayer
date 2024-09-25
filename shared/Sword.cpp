@@ -16,7 +16,7 @@
 #include "NetworkManager.h"
 
 // Game includes.
-// #include "Fruit.h"
+// #include "../shared/Fruit.h"
 #include "Sword.h"
 #include "Message.h"
 

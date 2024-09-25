@@ -14,29 +14,36 @@ void Server::step(const df::EventStep *p_e)
     df::ObjectList ol = WM.getAllObjects();
     for (int i = 0; i < ol.getCount(); i++)
     {
-        int id = ol[i]->getId();
-        std::string type = ol[i]->getType();
-        // if the object is serializable, serialize it to the string stream
-        if (Serializable *serializable = dynamic_cast<Serializable *>(ol[i]))
+        if (ol[i]->isModified(df::ObjectAttribute::ID))
         {
-            ss.write(reinterpret_cast<char *>(&id), sizeof(id));
-            int object_type_len = type.length();
-            ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
-            ss << type;
-            serializable->serialize(ss);
+            int id = ol[i]->getId();
+            std::string type = ol[i]->getType();
+            // if the object is serializable, serialize it to the string stream
+            if (Serializable *serializable = dynamic_cast<Serializable *>(ol[i]))
+            {
+                ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+                int object_type_len = type.length();
+                ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
+                ss << type;
+                serializable->serialize(ss);
+            }
         }
     }
 
     std::string body = ss.str();
-    Message synch_message(MessageType::SYNCHRONIZE, body);
 
-    std::stringstream ms;
-    synch_message.serialize(ms);
-    std::string message = ms.str();
-
-    for (int i = 0; i < NM.getNumConnections(); i++)
+    if (!body.empty())
     {
-        NM.send(message.c_str(), message.size(), i);
+        Message synch_message(MessageType::SYNCHRONIZE, body);
+
+        std::stringstream ms;
+        synch_message.serialize(ms);
+        std::string message = ms.str();
+
+        for (int i = 0; i < NM.getNumConnections(); i++)
+        {
+            NM.send(message.c_str(), message.size(), i);
+        }
     }
 }
 
@@ -60,7 +67,30 @@ void Server::data(const df::EventNetwork *p_e)
     case MessageType::MOUSE_MOVEMENT:
         df::Vector position;
         position.deserialize(&bs);
-        swords[p_e->getSocketIndex()]->setPosition(position);
+        Sword *sword = swords[p_e->getSocketIndex()];
+        sword->setPosition(position);
+
+        std::stringstream ss;
+
+        int id = sword->getId();
+        std::string type = sword->getType();
+
+        ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+        int object_type_len = type.length();
+        ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
+        ss << type;
+        sword->serialize(ss);
+        std::string body = ss.str();
+        Message synch_message(MessageType::SYNCHRONIZE, body);
+
+        std::stringstream ms;
+        synch_message.serialize(ms);
+        std::string message = ms.str();
+
+        for (int i = 0; i < NM.getNumConnections(); i++)
+        {
+            NM.send(message.c_str(), message.size(), i);
+        }
     }
 }
 

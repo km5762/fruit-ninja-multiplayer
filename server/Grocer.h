@@ -7,14 +7,15 @@
 #include "Object.h"
 
 // Game includes.
-#include "game.h"
-#include "Fruit.h"
+#include "../shared/game.h"
+#include "../shared/Fruit.h"
 
 const std::string GROCER_STRING = "Grocer";
 
-class Grocer : public df::Object {
+class Grocer : public df::Object
+{
 
- private:
+private:
   int m_spawn;        // countdown to next fruit, in ticks
   int m_wave;         // wave number
   int m_wave_spawn;   // current wave countdown, in ticks
@@ -25,7 +26,6 @@ class Grocer : public df::Object {
   int step(const df::EventStep *p_e);
 
 public:
-
   // Constructor.
   Grocer();
 

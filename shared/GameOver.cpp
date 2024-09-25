@@ -12,9 +12,12 @@
 
 // Game includes.
 #include "GameOver.h"
-#include "util.h"
+#ifdef CLIENT
+#include "../client/util.h"
+#endif
 
-GameOver::GameOver() {
+GameOver::GameOver()
+{
 
   setType(GAMEOVER_STRING);
   setDrawValue(false);
@@ -28,7 +31,7 @@ GameOver::GameOver() {
 
   // Put in center of window.
   setLocation(df::CENTER_CENTER);
-  
+
   // Register for step event.
   registerInterest(df::STEP_EVENT);
 
@@ -39,10 +42,12 @@ GameOver::GameOver() {
 }
 
 // Handle event.
-int GameOver::eventHandler(const df::Event *p_e) {
+int GameOver::eventHandler(const df::Event *p_e)
+{
 
   // Step event.
-  if (p_e->getType() == df::STEP_EVENT) {
+  if (p_e->getType() == df::STEP_EVENT)
+  {
     step();
     return 1;
   }
@@ -52,22 +57,27 @@ int GameOver::eventHandler(const df::Event *p_e) {
 }
 
 // Count down to end of G-A-M-E O-V-E-R message.
-int GameOver::step() {
+int GameOver::step()
+{
 
   m_time_to_live--;
 
-  if (m_time_to_live <= 0) {
+  if (m_time_to_live <= 0)
+  {
     GM.setGameOver(true);
     WM.markForDelete(this);
   }
 
+#ifdef CLIENT
   if (m_time_to_live == 175)
     play_sound("game-over");
+#endif
 
   // Handled.
   return 1;
 }
 
-int GameOver::draw() {
+int GameOver::draw()
+{
   return Object::draw();
 }

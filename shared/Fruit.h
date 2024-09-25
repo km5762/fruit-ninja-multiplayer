@@ -14,9 +14,12 @@
 #include "EventOut.h"
 #include "Object.h"
 
-class Fruit : public df::Object {
+#include "Serializable.h"
 
- private:
+class Fruit : public df::Object, public Serializable
+{
+
+private:
   bool m_first_out;
 
   // Handle out events.
@@ -26,7 +29,6 @@ class Fruit : public df::Object {
   int collide(const df::EventCollision *p_e);
 
 public:
-
   // Constructor - supply name of Fruit (matches Sprite).
   Fruit(std::string name);
 
@@ -38,6 +40,10 @@ public:
 
   // Setup starting conditions.
   void start(float speed);
+
+  void serialize(std::stringstream &p_ss) override;
+  // deserealize sword from stream
+  void deserialize(std::stringstream &p_ss) override;
 };
 
 #endif // FRUIT_H
