@@ -31,7 +31,6 @@ void Client::data(const df::EventNetwork *p_e)
         while (bs.rdbuf()->in_avail() > 0)
         {
             int id;
-            LM.writeLog("id: %d", id);
             if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
             {
                 break;
@@ -73,6 +72,22 @@ void Client::data(const df::EventNetwork *p_e)
                 df::Object *object = dynamic_cast<Object *>(serializable);
                 object->setId(id);
             }
+        }
+        break;
+    case MessageType::DELETE:
+        LM.writeLog("recieved req to delete");
+        int id;
+        if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
+        {
+            LM.writeLog("error reading id from req to delete");
+            break;
+        }
+        LM.writeLog("recieved req to delete on id %d", id);
+
+        df::Object *object = WM.objectWithId(id);
+        if (object != NULL)
+        {
+            WM.markForDelete(object);
         }
     }
 }

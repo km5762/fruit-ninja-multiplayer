@@ -18,6 +18,10 @@
 #ifdef CLIENT
 #include "../shared/util.h"
 #endif
+#ifndef CLIENT
+#include "../shared/Message.h"
+#include "NetworkManager.h"
+#endif
 
 // Constructor - supply name of Fruit (matches Sprite).
 Fruit::Fruit(std::string name)
@@ -105,6 +109,20 @@ Fruit::~Fruit()
     // Play "splat" sound.
     std::string sound = "splat-" + std::to_string(rand() % 6 + 1);
     play_sound(sound);
+  }
+#else
+  std::stringstream ss;
+  int id = getId();
+  ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+  std::string body_string = ss.str();
+  Message delete_message(MessageType::DELETE, body_string);
+  std::stringstream ms;
+  delete_message.serialize(ms);
+  std::string message = ms.str();
+  for (int i = 0; i < NM.getNumConnections(); i++)
+  {
+    LM.writeLog("sending del message for %d", getId());
+    NM.send(message.c_str(), message.length(), i);
   }
 #endif
 }

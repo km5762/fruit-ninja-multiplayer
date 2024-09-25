@@ -25,6 +25,10 @@
 #include "../client/Kudos.h"
 #endif
 
+#ifndef CLIENT
+#include "../shared/Fruit.h"
+#endif
+
 // Constructor.
 Sword::Sword(df::Color color)
 {
@@ -76,39 +80,39 @@ int Sword::step(const df::EventStep *p_e)
 
 #ifdef CLIENT
   create_trail(getPosition(), m_old_position, m_color);
+
+  if (m_sliced > 2 && m_sliced > m_old_sliced)
+    new Kudos();
 #endif
 
+#ifndef CLIENT
   // Check if line intersects any Fruit objects.
-  // df::Line line(getPosition(), m_old_position);
-  // df::ObjectList ol = WM.solidObjects();
+  df::Line line(getPosition(), m_old_position);
+  df::ObjectList ol = WM.solidObjects();
 
-  // for (int i = 0; i < ol.getCount(); i++)
-  // {
+  for (int i = 0; i < ol.getCount(); i++)
+  {
 
-  //   // Only slice Fruit.
-  //   if (!(dynamic_cast<Fruit *>(ol[i])))
-  //     continue;
+    // Only slice Fruit.
+    if (!(dynamic_cast<Fruit *>(ol[i])))
+      continue;
 
-  //   // If line from previous position intersects --> slice!
-  //   df::Object *p_o = ol[i];
-  //   df::Box box = getWorldBox(p_o);
-  //   if (lineIntersectsBox(line, box))
-  //   {
-  //     df::EventCollision c(this, p_o, p_o->getPosition());
-  //     p_o->eventHandler(&c);
-  //     m_sliced += 1;
+    // If line from previous position intersects --> slice!
+    df::Object *p_o = ol[i];
+    df::Box box = getWorldBox(p_o);
+    if (lineIntersectsBox(line, box))
+    {
+      LM.writeLog("slicing %d", ol[i]->getId());
+      df::EventCollision c(this, p_o, p_o->getPosition());
+      p_o->eventHandler(&c);
+      m_sliced += 1;
 
-  //     if (!NM.isServer())
-  //     {
-  //       // Spawn kudos for combo.
-  //       if (m_sliced > 2 && m_sliced > m_old_sliced)
-  //         new Kudos();
-  //     }
-  //     m_old_sliced = m_sliced;
+      m_old_sliced = m_sliced;
 
-  //   } // End of box-line check.
+    } // End of box-line check.
 
-  // } // End of loop through all objects.
+  } // End of loop through all objects.
+#endif
 
   float dist = df::distance(getPosition(), m_old_position);
   // If travel far enough, play "swipe" sound.
