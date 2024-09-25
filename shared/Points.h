@@ -15,7 +15,7 @@ class Points : public df::ViewObject, public Serializable
 
 public:
   // Constructor.
-  Points(df::ViewObjectLocation location = df::TOP_RIGHT);
+  Points(df::ViewObjectLocation location = df::TOP_RIGHT, df::Color color = df::WHITE);
 
   // Set value.
   void setValue(int value) override;

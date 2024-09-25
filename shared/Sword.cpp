@@ -26,6 +26,7 @@
 #endif
 
 #ifndef CLIENT
+#include "../shared/Points.h"
 #include "../shared/Fruit.h"
 #endif
 
@@ -125,10 +126,19 @@ int Sword::step(const df::EventStep *p_e)
   }
 #endif
 
-  // Lose points for distance traveled.
-  // int penalty = -1 * (int)(dist / 10.0f);
-  // df::EventView ev("Points", penalty, true);
-  // WM.onEvent(&ev);
+#ifndef CLIENT
+  int penalty = -1 * (int)(dist / 10.0f);
+  df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
+
+  for (int i = 0; i < points_displays.getCount(); i++)
+  {
+    Points *points_display = dynamic_cast<Points *>(points_displays[i]);
+    if (points_display->getColor() == getColor())
+    {
+      points_display->setValue(points_display->getValue() + penalty);
+    }
+  }
+#endif
 
   m_old_position = getPosition();
 
@@ -202,4 +212,9 @@ void Sword::deserialize(std::stringstream &ss)
   m_old_position.deserialize(&ss);
   ss.read(reinterpret_cast<char *>(&m_sliced), sizeof(m_sliced));
   ss.read(reinterpret_cast<char *>(&m_old_sliced), sizeof(m_old_sliced));
+}
+
+df::Color Sword::getColor()
+{
+  return m_color;
 }

@@ -13,12 +13,12 @@
 // Game includes.
 #include "../shared/game.h"
 #include "Fruit.h"
-// #include "Points.h"
 #include "../shared/Sword.h"
 #ifdef CLIENT
 #include "../shared/util.h"
 #endif
 #ifndef CLIENT
+#include "Points.h"
 #include "../shared/Message.h"
 #include "NetworkManager.h"
 #endif
@@ -62,8 +62,8 @@ int Fruit::out(const df::EventOut *p_e)
   }
 
   // Each out is a "miss", so lose points.
-  // df::EventView ev(POINTS_STRING, -25, true);
-  // WM.onEvent(&ev);
+  df::EventView ev(POINTS_STRING, -25, true);
+  WM.onEvent(&ev);
 
   // Destroy this Fruit.
   WM.markForDelete(this);
@@ -77,13 +77,21 @@ int Fruit::out(const df::EventOut *p_e)
 int Fruit::collide(const df::EventCollision *p_e)
 {
 #ifndef CLIENT
+
   // Sword collision means ninja sliced this Fruit.
   if (p_e->getObject1()->getType() == SWORD_STRING)
   {
+    df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
+    Sword *sword = dynamic_cast<Sword *>(p_e->getObject1());
 
-    // Add points.
-    // df::EventView ev(POINTS_STRING, +10, true);
-    // WM.onEvent(&ev);
+    for (int i = 0; i < points_displays.getCount(); i++)
+    {
+      Points *points_display = dynamic_cast<Points *>(points_displays[i]);
+      if (points_display->getColor() == sword->getColor())
+      {
+        points_display->setValue(points_display->getValue() + 10);
+      }
+    }
 
     // Destroy this Fruit.
     WM.markForDelete(this);

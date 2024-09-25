@@ -10,12 +10,12 @@
 // Game includes.
 #include "Points.h"
 
-Points::Points(df::ViewObjectLocation location)
+Points::Points(df::ViewObjectLocation location, df::Color color)
 {
   setType(POINTS_STRING);
   setLocation(location);
   setViewString(POINTS_STRING);
-  setColor(df::WHITE);
+  setColor(color);
   setValue(0);
 }
 

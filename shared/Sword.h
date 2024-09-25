@@ -49,6 +49,8 @@ public:
   void serialize(std::stringstream &ss) override;
   // deserealize sword from stream
   void deserialize(std::stringstream &ss) override;
+
+  df::Color getColor();
 };
 
 #endif // SWORD_H

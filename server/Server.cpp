@@ -17,7 +17,7 @@ void Server::step(const df::EventStep *p_e)
     df::ObjectList ol = WM.getAllObjects();
     for (int i = 0; i < ol.getCount(); i++)
     {
-        if (ol[i]->isModified(df::ObjectAttribute::ID) || ol[i]->getType() == SWORD_STRING)
+        if (ol[i]->isModified(df::ObjectAttribute::ID) || ol[i]->getType() == SWORD_STRING || ol[i]->getType() == POINTS_STRING)
         {
             int id = ol[i]->getId();
             std::string type = ol[i]->getType();
@@ -86,7 +86,7 @@ void Server::accept(const df::EventNetwork *p_e)
 
         for (int i = 0; i < NM.getNumConnections(); i++)
         {
-            new Points(static_cast<df::ViewObjectLocation>(i));
+            new Points(static_cast<df::ViewObjectLocation>(i), static_cast<df::Color>(i + 1));
         }
     }
 }

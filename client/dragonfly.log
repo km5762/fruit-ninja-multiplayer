@@ -1,75 +1,125 @@
-15:31:56    0 ****************************************************
-15:31:56    0 ** Dragonfly version 4.20 **
-15:31:56    0 ** Game engine started **
-15:31:56    0 ****************************************************
-15:31:56    0 Fruit Ninja (v1.1)
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-15:31:56    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-15:31:56    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'impact' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'beep' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-15:31:56    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-15:31:56    0 GameManager::run(): starting game loop
-15:31:59   90 GameManager::run(): end of game loop
-15:31:59   90 GameManager::run(): starting game loop
-15:32:04  136 GameManager::run(): end of game loop
-15:32:04  136 GameManager::run(): starting game loop
-15:32:13  278 ServerEntry::callback(): host: 127.0.0.1
-15:32:13  278 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-15:32:13  278 NetworkManager::connect(): Connection established.
-15:32:16  537 recieved req to delete
-15:32:16  537 recieved req to delete on id 106
-15:32:17  565 recieved req to delete
-15:32:17  565 recieved req to delete on id 107
-15:32:18  598 recieved req to delete
-15:32:18  598 recieved req to delete on id 109
-15:32:19  606 recieved req to delete
-15:32:19  606 recieved req to delete on id 108
-15:32:19  459 recieved req to delete
-15:32:19  459 recieved req to delete on id 110
-15:32:19  471 recieved req to delete
-15:32:19  471 recieved req to delete on id 111
-15:32:21  529 recieved req to delete
-15:32:21  529 recieved req to delete on id 112
-15:32:22  717 recieved req to delete
-15:32:22  553 recieved req to delete on id 113
-15:32:27  854 InputManager::getInput(): Window close event. Setting game over.
-15:32:27  855 GameManager::run(): end of game loop
-15:32:27  855 Path manager stopped
-15:32:27  855 World manager stopped
-15:32:27  855 Resource manager stopped
-15:32:27  855 Network manager stopped
-15:32:27  855 Input manager stopped
-15:32:27  855 Display manager stopped
-15:32:27  855 ****************************************************
-15:32:27  855 ** Game engine stopped **
+16:38:28    0 ****************************************************
+16:38:28    0 ** Dragonfly version 4.20 **
+16:38:28    0 ** Game engine started **
+16:38:28    0 ****************************************************
+16:38:28    0 Fruit Ninja (v1.1)
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+16:38:28    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+16:38:28    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'impact' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'beep' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+16:38:28    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+16:38:28    0 GameManager::run(): starting game loop
+16:38:31   69 GameManager::run(): end of game loop
+16:38:31   69 GameManager::run(): starting game loop
+16:38:32   58 GameManager::run(): end of game loop
+16:38:32   58 GameManager::run(): starting game loop
+16:38:41  251 ServerEntry::callback(): host: 127.0.0.1
+16:38:41  251 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+16:38:41  251 NetworkManager::connect(): Connection established.
+16:38:43  313 recieved req to delete
+16:38:43  313 recieved req to delete on id 106
+16:38:44  337 recieved req to delete
+16:38:44  337 recieved req to delete on id 107
+16:38:45  372 recieved req to delete
+16:38:45  372 recieved req to delete on id 108
+16:38:46  436 recieved req to delete
+16:38:46  436 recieved req to delete on id 109
+16:38:46  443 recieved req to delete
+16:38:46  443 recieved req to delete on id 110
+16:38:48  504 recieved req to delete
+16:38:48  504 recieved req to delete on id 111
+16:38:49  527 recieved req to delete
+16:38:49  527 recieved req to delete on id 112
+16:38:50  571 recieved req to delete
+16:38:50  571 recieved req to delete on id 113
+16:38:51  601 recieved req to delete
+16:38:51  601 recieved req to delete on id 114
+16:38:53  672 recieved req to delete
+16:38:53  672 recieved req to delete on id 116
+16:38:54  702 recieved req to delete
+16:38:54  702 recieved req to delete on id 117
+16:38:56  739 recieved req to delete
+16:38:56  739 recieved req to delete on id 115
+16:38:56  745 recieved req to delete
+16:38:56  745 recieved req to delete on id 118
+16:38:56  747 recieved req to delete
+16:38:56  747 recieved req to delete on id 119
+16:38:57  773 recieved req to delete
+16:38:57  773 recieved req to delete on id 120
+16:38:57  780 recieved req to delete
+16:38:57  780 recieved req to delete on id 121
+16:38:58  805 recieved req to delete
+16:38:58  805 recieved req to delete on id 122
+16:38:59  834 recieved req to delete
+16:38:59  834 recieved req to delete on id 123
+16:39:00  873 recieved req to delete
+16:39:00  873 recieved req to delete on id 125
+16:39:01  889 recieved req to delete
+16:39:01  889 recieved req to delete on id 124
+16:39:02  916 recieved req to delete
+16:39:02  916 recieved req to delete on id 126
+16:39:02  937 recieved req to delete
+16:39:02  937 recieved req to delete on id 127
+16:39:03  950 recieved req to delete
+16:39:03  950 recieved req to delete on id 128
+16:39:03  963 recieved req to delete
+16:39:03  963 recieved req to delete on id 129
+16:39:04  998 recieved req to delete
+16:39:04  998 recieved req to delete on id 130
+16:39:05 1036 recieved req to delete
+16:39:05 1036 recieved req to delete on id 131
+16:39:06 1058 recieved req to delete
+16:39:06 1058 recieved req to delete on id 132
+16:39:07 1088 InputManager::getInput(): Window close event. Setting game over.
+16:39:07 1089 GameManager::run(): end of game loop
+16:39:07 1089 Path manager stopped
+16:39:07 1089 World manager stopped
+16:39:07 1089 Resource manager stopped
+16:39:07 1089 Network manager stopped
+16:39:07 1089 Input manager stopped
+16:39:07 1089 Display manager stopped
+16:39:07 1089 ********************16:39:08 1073 recieved req to delete
+16:39:08 1073 recieved req to delete on id 133
+16:39:08 1077 recieved req to delete
+16:39:08 1077 recieved req to delete on id 134
+16:39:08 1087 InputManager::getInput(): Window close event. Setting game over.
+16:39:08 1088 GameManager::run(): end of game loop
+16:39:08 1088 Path manager stopped
+16:39:08 1088 World manager stopped
+16:39:08 1088 Resource manager stopped
+16:39:08 1088 Network manager stopped
+16:39:08 1088 Input manager stopped
+16:39:08 1088 Display manager stopped
+16:39:08 1088 ****************************************************
+16:39:08 1088 ** Game engine stopped **
