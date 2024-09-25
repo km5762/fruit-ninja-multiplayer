@@ -3,7 +3,7 @@
 //
 
 // System includes.
-#include <stdlib.h>  // for rand()
+#include <stdlib.h> // for rand()
 
 // Engine includes.
 #include "EventStep.h"
@@ -14,10 +14,11 @@
 
 // Game includes.
 #include "Kudos.h"
-#include "Points.h"
-#include "util.h"
+#include "../shared/Points.h"
+#include "../shared/util.h"
 
-Kudos::Kudos() {
+Kudos::Kudos()
+{
   setType(KUDOS_STRING);
   setSolidness(df::SPECTRAL);
   setAltitude(df::MAX_ALTITUDE);
@@ -26,8 +27,9 @@ Kudos::Kudos() {
   // Pick random kudos to show.
   df::Animation a = getAnimation();
   const df::Sprite *p_sprite = getAnimation().getSprite();
-  if (p_sprite) {
-    int count = p_sprite -> getFrameCount();
+  if (p_sprite)
+  {
+    int count = p_sprite->getFrameCount();
     int kudos = rand() % count;
     a.setIndex(kudos);
   }
@@ -35,7 +37,7 @@ Kudos::Kudos() {
   setAnimation(a);
 
   // Play next Kudos sound.
-  static int s_sound = 1;  // next kudos sound
+  static int s_sound = 1; // next kudos sound
   std::string sound = "kudos-" + std::to_string(s_sound);
   play_sound(sound);
   s_sound += 1;
@@ -43,10 +45,10 @@ Kudos::Kudos() {
     s_sound = 10;
 
   // Pick random location.
-  df::Vector p(WM.getBoundary().getHorizontal()/8 +
-               rand() % (3 * (int) WM.getBoundary().getHorizontal()/4),
-               WM.getBoundary().getVertical()/8 +
-               rand() % (3 * (int) WM.getBoundary().getVertical()/4));
+  df::Vector p(WM.getBoundary().getHorizontal() / 8 +
+                   rand() % (3 * (int)WM.getBoundary().getHorizontal() / 4),
+               WM.getBoundary().getVertical() / 8 +
+                   rand() % (3 * (int)WM.getBoundary().getVertical() / 4));
   setPosition(p);
 
   // Extra points.
@@ -59,18 +61,20 @@ Kudos::Kudos() {
 
 // Handle event.
 // Return 0 if ignored, else 1.
-int Kudos::eventHandler(const df::Event *p_e) {
+int Kudos::eventHandler(const df::Event *p_e)
+{
 
   // Step event.
   if (p_e->getType() == df::STEP_EVENT)
-    return step((df::EventStep *) p_e);
+    return step((df::EventStep *)p_e);
 
   // If get here, have ignored this event.
   return 0;
 }
 
 // Handle step event.
-int Kudos::step(const df::EventStep *p_e) {
+int Kudos::step(const df::EventStep *p_e)
+{
 
   m_time_to_live -= 1;
 

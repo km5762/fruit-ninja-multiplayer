@@ -14,7 +14,7 @@
 #include "../shared/Fruit.h"
 #include "../shared/game.h"
 #include "Splash.h"
-#include "util.h"
+#include "../shared/util.h"
 
 Splash::Splash()
 {

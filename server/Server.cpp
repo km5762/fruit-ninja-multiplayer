@@ -5,6 +5,7 @@
 #include "WorldManager.h"
 
 #include "../shared/Message.h"
+#include "Grocer.h"
 
 #include <vector>
 
@@ -14,7 +15,7 @@ void Server::step(const df::EventStep *p_e)
     df::ObjectList ol = WM.getAllObjects();
     for (int i = 0; i < ol.getCount(); i++)
     {
-        if (ol[i]->isModified(df::ObjectAttribute::ID))
+        if (ol[i]->isModified(df::ObjectAttribute::ID) || ol[i]->getType() == SWORD_STRING)
         {
             int id = ol[i]->getId();
             std::string type = ol[i]->getType();
@@ -22,9 +23,7 @@ void Server::step(const df::EventStep *p_e)
             if (Serializable *serializable = dynamic_cast<Serializable *>(ol[i]))
             {
                 ss.write(reinterpret_cast<char *>(&id), sizeof(id));
-                int object_type_len = type.length();
-                ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
-                ss << type;
+                ss << type << "\n";
                 serializable->serialize(ss);
             }
         }
@@ -69,28 +68,6 @@ void Server::data(const df::EventNetwork *p_e)
         position.deserialize(&bs);
         Sword *sword = swords[p_e->getSocketIndex()];
         sword->setPosition(position);
-
-        std::stringstream ss;
-
-        int id = sword->getId();
-        std::string type = sword->getType();
-
-        ss.write(reinterpret_cast<char *>(&id), sizeof(id));
-        int object_type_len = type.length();
-        ss.write(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len));
-        ss << type;
-        sword->serialize(ss);
-        std::string body = ss.str();
-        Message synch_message(MessageType::SYNCHRONIZE, body);
-
-        std::stringstream ms;
-        synch_message.serialize(ms);
-        std::string message = ms.str();
-
-        for (int i = 0; i < NM.getNumConnections(); i++)
-        {
-            NM.send(message.c_str(), message.size(), i);
-        }
     }
 }
 
@@ -99,6 +76,11 @@ void Server::accept(const df::EventNetwork *p_e)
     Sword *sword = new Sword(p_e->getSocketIndex() == 0 ? df::Color::CYAN : df::Color::RED);
     sword->setId(100 + p_e->getSocketIndex());
     this->swords.push_back(sword);
+
+    if (swords.size() == 2)
+    {
+        new Grocer();
+    }
 }
 
 Server::Server()

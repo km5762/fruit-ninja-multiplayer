@@ -4,6 +4,7 @@
 
 #include "Server.h"
 #include "Grocer.h"
+#include "../shared/util.h"
 
 int main(int argc, char *argv[])
 {
@@ -16,13 +17,14 @@ int main(int argc, char *argv[])
     }
 
     // setup logging
-    LM.setLogLevel(10);
+    LM.setLogLevel(1);
     LM.setFlush(true);
     LM.writeLog("Server (v%.1f)", 1.0);
 
+    loadResources();
+
     // instantiate the server
     new Server();
-    // new Grocer();
 
     GM.run();
 

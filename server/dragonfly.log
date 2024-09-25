@@ -1,10 +1,62 @@
-21:20:57    0 ****************************************************
-21:20:57    0 ** Dragonfly version 4.20 **
-21:20:57    0 ** Game engine started **
-21:20:57    0 ****************************************************
-21:20:57    0 LogManager::setLogLevel(): log level 10
-21:20:57    0 Server (v1.0)
-21:20:57    0 NetworkManager::setServer(): Ready for connections on port 9876.
-21:20:57    0 GameManager::run(): starting game loop
-21:21:09  356 NetworkManager::accept(): New connection.
-21:21:13  468 NetworkManager::accept(): New connection.
+14:28:51    0 ****************************************************
+14:28:51    0 ** Dragonfly version 4.20 **
+14:28:51    0 ** Game engine started **
+14:28:51    0 ****************************************************
+14:28:51    0 Server (v1.0)
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+14:28:51    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+14:28:51    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'impact' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'beep' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+14:28:51    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+14:28:51    0 NetworkManager::setServer(): Ready for connections on port 9876.
+14:28:51    0 GameManager::run(): starting game loop
+14:28:54   96 NetworkManager::accept(): New connection.
+14:29:06  444 NetworkManager::accept(): New connection.
+14:29:25 1032 NetworkManager::send(): Error! Return is -1.
+14:29:25 1032 	104 - Connection reset by peer
+14:29:25 1033 NetworkManager::send(): Error! Return is -1.
+14:29:25 1033 	32 - Broken pipe
+14:29:25 1033 	socket is closed
+14:29:26 1057 NetworkManager::send(): Error! Return is -1.
+14:29:26 1057 	32 - Broken pipe
+14:29:26 1057 	socket is closed
+14:29:27 1099 doShutDown(): Signal is Interrupt (2). Shutting down.
+14:29:27 1099 Path manager stopped
+14:29:27 1099 World manager stopped
+14:29:27 1099 Resource manager stopped
+14:29:27 1099 Network manager stopped
+14:29:27 1099 Input manager stopped
+14:29:27 1099 Display manager stopped
+14:29:27 1099 ****************************************************
+14:29:27 1099 ** Game engine stopped **

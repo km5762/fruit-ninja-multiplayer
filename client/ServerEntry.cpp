@@ -6,7 +6,7 @@
 
 #include "ServerEntry.h"
 #include "TextBox.h"
-#include "util.h"
+#include "../shared/util.h"
 
 ServerEntry::ServerEntry()
 {

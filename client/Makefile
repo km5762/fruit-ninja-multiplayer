@@ -40,14 +40,14 @@ CFLAGS= -std=c++17 -DCLIENT
 GAMESRC= \
 	../shared/Fruit.cpp \
 	Kudos.cpp \
-	Points.cpp \
-	Splash.cpp \
+	../shared/Points.cpp \
+	../shared/Splash.cpp \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
 	../shared/GameOver.cpp \
-	Timer.cpp \
+	../shared/Timer.cpp \
 	ServerEntry.cpp \
-	util.cpp \
+	../shared/util.cpp \
 	Client.cpp \
 
 GAME= game.cpp

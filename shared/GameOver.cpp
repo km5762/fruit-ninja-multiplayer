@@ -13,7 +13,7 @@
 // Game includes.
 #include "GameOver.h"
 #ifdef CLIENT
-#include "../client/util.h"
+#include "../shared/util.h"
 #endif
 
 GameOver::GameOver()

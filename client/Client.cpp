@@ -4,6 +4,7 @@
 #include "ServerEntry.h"
 #include "../shared/Sword.h"
 #include "../shared/Fruit.h"
+#include "../shared/game.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -26,25 +27,17 @@ void Client::data(const df::EventNetwork *p_e)
     switch (message.type)
     {
     case MessageType::SYNCHRONIZE:
-        while (true)
+        while (bs.rdbuf()->in_avail() > 0)
         {
             int id;
+            LM.writeLog("id: %d", id);
             if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
             {
                 break;
             }
 
-            int object_type_len;
-            if (!bs.read(reinterpret_cast<char *>(&object_type_len), sizeof(object_type_len)))
-            {
-                break;
-            }
-
-            std::string type(object_type_len, '\0');
-            if (!bs.read(&type[0], object_type_len))
-            {
-                break;
-            }
+            std::string type;
+            std::getline(bs, type);
 
             df::Object *object = WM.objectWithId(id);
             if (object != NULL)
@@ -66,13 +59,12 @@ void Client::data(const df::EventNetwork *p_e)
                 {
                     serializable = new Sword();
                 }
-                else
+                else if (std::find(std::begin(FRUIT), std::end(FRUIT), type) != std::end(FRUIT))
                 {
                     serializable = new Fruit(type);
                 }
 
                 serializable->deserialize(bs);
-
                 df::Object *object = dynamic_cast<Object *>(serializable);
                 object->setId(id);
             }

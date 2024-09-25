@@ -11,7 +11,7 @@
 
 // Game includes.
 #include "../shared/game.h"
-#include "util.h"
+#include "../shared/util.h"
 #include "Client.h"
 
 ///////////////////////////////////////////////

@@ -21,7 +21,7 @@
 #include "Message.h"
 
 #ifdef CLIENT
-#include "../client/util.h"
+#include "../shared/util.h"
 #include "../client/Kudos.h"
 #endif
 

@@ -16,7 +16,7 @@
 // #include "Points.h"
 #include "../shared/Sword.h"
 #ifdef CLIENT
-#include "../client/util.h"
+#include "../shared/util.h"
 #endif
 
 // Constructor - supply name of Fruit (matches Sprite).
