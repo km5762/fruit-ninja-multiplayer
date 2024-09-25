@@ -6,6 +6,7 @@
 
 #include "../shared/Message.h"
 #include "Grocer.h"
+#include "../shared/Timer.h"
 
 #include <vector>
 
@@ -80,6 +81,7 @@ void Server::accept(const df::EventNetwork *p_e)
     if (swords.size() == 2)
     {
         new Grocer();
+        new Timer();
     }
 }
 

@@ -46,9 +46,9 @@ public:
   int draw(void) override;
 #endif
 
-  void serialize(std::stringstream &p_ss) override;
+  void serialize(std::stringstream &ss) override;
   // deserealize sword from stream
-  void deserialize(std::stringstream &p_ss) override;
+  void deserialize(std::stringstream &ss) override;
 };
 
 #endif // SWORD_H

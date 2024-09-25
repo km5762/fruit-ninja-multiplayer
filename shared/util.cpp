@@ -69,7 +69,6 @@ void loadResources(void)
 void populateWorld(void)
 {
   new Points;
-  new Timer();
 }
 
 ///////////////////////////////////////////////

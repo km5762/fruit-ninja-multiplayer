@@ -5,6 +5,7 @@
 #include "../shared/Sword.h"
 #include "../shared/Fruit.h"
 #include "../shared/game.h"
+#include "../shared/Timer.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -62,6 +63,10 @@ void Client::data(const df::EventNetwork *p_e)
                 else if (std::find(std::begin(FRUIT), std::end(FRUIT), type) != std::end(FRUIT))
                 {
                     serializable = new Fruit(type);
+                }
+                else if (type == TIMER_STRING)
+                {
+                    serializable = new Timer();
                 }
 
                 serializable->deserialize(bs);

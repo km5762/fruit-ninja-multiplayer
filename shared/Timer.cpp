@@ -10,7 +10,8 @@
 #include "Timer.h"
 #include "util.h"
 
-Timer::Timer() {
+Timer::Timer()
+{
   setType(TIMER_STRING);
   setLocation(df::TOP_LEFT);
   setViewString(TIMER_STRING);
@@ -21,7 +22,8 @@ Timer::Timer() {
 
 // Handle event.
 // Return 0 if ignored, else 1.
-int Timer::eventHandler(const df::Event *p_e) {
+int Timer::eventHandler(const df::Event *p_e)
+{
 
   // Parent handles event if score update.
   if (df::ViewObject::eventHandler(p_e))
@@ -29,17 +31,18 @@ int Timer::eventHandler(const df::Event *p_e) {
 
   // Step events.
   if (p_e->getType() == df::STEP_EVENT)
-    return step((df::EventStep *) p_e);
+    return step((df::EventStep *)p_e);
 
   // If get here, have ignored this event.
   return 0;
 }
 
 // Handle step events.
-int Timer::step(const df::EventStep *p_e) {
+int Timer::step(const df::EventStep *p_e)
+{
 
   // Countdown the seconds.
-  if (p_e -> getStepCount() % 30 == 0 && getValue() > 0)
+  if (p_e->getStepCount() % 30 == 0 && getValue() > 0)
     setValue(getValue() - 1);
   else
     return 1;
@@ -59,4 +62,14 @@ int Timer::step(const df::EventStep *p_e) {
 
   // Handled.
   return 1;
+}
+
+void Timer::serialize(std::stringstream &ss)
+{
+  df::ViewObject::serialize(&ss);
+}
+
+void Timer::deserialize(std::stringstream &ss)
+{
+  df::ViewObject::deserialize(&ss);
 }
