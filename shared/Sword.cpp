@@ -134,7 +134,7 @@ int Sword::step(const df::EventStep *p_e)
           }
         }
 
-        NM.send(message.c_str(), message.size(), static_cast<int>(getColor()) - 1);
+        NM.send(message.c_str(), message.size(), m_sock_index);
       }
 
       m_old_sliced = m_sliced;
@@ -243,7 +243,19 @@ void Sword::deserialize(std::stringstream &ss)
   ss.read(reinterpret_cast<char *>(&m_old_sliced), sizeof(m_old_sliced));
 }
 
+#ifndef CLIENT
 df::Color Sword::getColor()
 {
   return m_color;
 }
+
+int Sword::getSockIndex()
+{
+  return m_sock_index;
+}
+
+void Sword::setSockIndex(int sock_index)
+{
+  m_sock_index = sock_index;
+}
+#endif

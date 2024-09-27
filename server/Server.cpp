@@ -66,10 +66,67 @@ void Server::data(const df::EventNetwork *p_e)
     switch (message.type)
     {
     case MessageType::MOUSE_MOVEMENT:
+    {
         df::Vector position;
         position.deserialize(&bs);
         Sword *sword = swords[p_e->getSocketIndex()];
         sword->setPosition(position);
+        break;
+    }
+    case MessageType::EXIT:
+    {
+        df::Color color = static_cast<df::Color>(p_e->getSocketIndex() + 1);
+        df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
+
+        for (int i = 0; i < points_displays.getCount(); i++)
+        {
+            Points *points_display = dynamic_cast<Points *>(points_displays[i]);
+            if (points_display->getColor() == color)
+            {
+                WM.markForDelete(points_display);
+
+                std::stringstream ss;
+                int id = points_display->getId();
+                ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+                std::string body_string = ss.str();
+                Message delete_message(MessageType::DELETE, body_string);
+                std::stringstream ms;
+                delete_message.serialize(ms);
+                std::string message = ms.str();
+                for (int i = 0; i < NM.getNumConnections(); i++)
+                {
+                    NM.send(message.c_str(), message.length(), i);
+                }
+            }
+        }
+
+        for (int i = p_e->getSocketIndex() + 1; i < swords.size(); i++)
+        {
+            swords[i]->setSockIndex(swords[i]->getSockIndex() - 1);
+        }
+
+        std::stringstream ss;
+        int id = swords[p_e->getSocketIndex()]->getId();
+        ss.write(reinterpret_cast<char *>(&id), sizeof(id));
+        std::string body_string = ss.str();
+        Message delete_message(MessageType::DELETE, body_string);
+        std::stringstream ms;
+        delete_message.serialize(ms);
+        std::string message = ms.str();
+        for (int i = 0; i < NM.getNumConnections(); i++)
+        {
+            if (i != p_e->getSocketIndex())
+            {
+                LM.writeLog("Sending request to delete sword %d", id);
+                NM.send(message.c_str(), message.length(), i);
+            }
+        }
+
+        WM.markForDelete(swords[p_e->getSocketIndex()]);
+        WM.removeObject(swords[p_e->getSocketIndex()]);
+        swords.erase(swords.begin() + p_e->getSocketIndex());
+        break;
+    }
     }
 }
 
@@ -77,6 +134,7 @@ void Server::accept(const df::EventNetwork *p_e)
 {
     Sword *sword = new Sword(static_cast<df::Color>(p_e->getSocketIndex() + 1));
     sword->setId(100 + p_e->getSocketIndex());
+    sword->setSockIndex(p_e->getSocketIndex());
     this->swords.push_back(sword);
 
     if (swords.size() == 2)

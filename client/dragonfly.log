@@ -1,65 +1,224 @@
-14:13:40    0 ****************************************************
-14:13:40    0 ** Dragonfly version 4.20 **
-14:13:40    0 ** Game engine started **
-14:13:40    0 ****************************************************
-14:13:41    0 Fruit Ninja (v1.1)
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
-14:13:41    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
-14:13:41    0 RM::loadSound(): Sound 'game-start' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'game-over' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'impact' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'beep' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
-14:13:41    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
-14:13:41    0 GameManager::run(): starting game loop
-14:13:41    1 GameManager::run(): end of game loop
-14:13:41    1 GameManager::run(): starting game loop
-14:13:45  136 GameManager::run(): end of game loop
-14:13:45  136 GameManager::run(): starting game loop
-14:13:51  311 ServerEntry::callback(): host: 127.0.0.1
-14:13:51  311 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
-14:13:51  311 NetworkManager::connect(): Connection established.
-14:14:41 1703 GameOver::GameOver(): created
-14:14:47 1884 GameManager::run(): end of game loop
-14:14:47 1884 Path manager stopped
-14:14:47 1884 World manager stopped
-14:14:47 1884 Resource manager stopped
-14:14:47 1884 Network manager stopped
-14:14:47 1884 Input manager stopped
-14:14:47 1884 Display manager stopped
-14:14:47 1884 ****************************************************
-14:14:47 1884 ** Game engine stopped **
- stopped
-14:14:47 1998 Network manager stopped
-14:14:47 1998 Input manager stopped
-14:14:47 1998 Display manager stopped
-14:14:47 1998 ****************************************************
-14:14:47 1998 ** Game engine stopped **
+17:03:34    0 ****************************************************
+17:03:34    0 ** Dragonfly version 4.20 **
+17:03:34    0 ** Game engine started **
+17:03:34    0 ****************************************************
+17:03:34    0 Fruit Ninja (v1.1)
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/fruit-splash.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/ninja-splash.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/pear.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/grapes.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/apple.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/banana.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/blueberries.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/kudos.txt'.
+17:03:34    0 RM::loadSprite(): Loading sprite 'sprites/gameover.txt'.
+17:03:34    0 RM::loadSound(): Sound 'game-start' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'game-over' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'impact' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'beep' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-1' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-2' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-3' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-4' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-5' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'splat-6' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-1' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-2' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-3' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-4' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-5' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-6' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'swipe-7' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-1' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-2' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-3' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-4' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-5' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-6' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-7' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-8' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-9' successfully loaded.
+17:03:34    0 RM::loadSound(): Sound 'kudos-10' successfully loaded.
+17:03:34    0 GameManager::run(): starting game loop
+17:03:34    7 GameManager::run(): end of game loop
+17:03:34    7 GameManager::run(): starting game loop
+17:03:39  136 GameManager::run(): end of game loop
+17:03:39  136 GameManager::run(): starting game loop
+17:03:43  134 ServerEntry::callback(): host: 127.0.0.1
+17:03:43  134 NetworkManager::connect(): Connecting to 127.0.0.1, port 9876.
+17:03:43  134 NetworkManager::connect(): Connection established.
+17:03:45  373 request to delete object with ID 106
+17:03:45  373 request to delete object with ID 106 not null
+17:03:46  399 request to delete object with ID 107
+17:03:46  399 request to delete object with ID 107 not null
+17:03:47  437 request to delete object with ID 108
+17:03:47  437 request to delete object with ID 108 not null
+17:03:48  461 request to delete object with ID 109
+17:03:48  461 request to delete object with ID 109 not null
+17:03:49  472 request to delete object with ID 110
+17:03:49  472 request to delete object with ID 110 not null
+17:03:50  530 request to delete object with ID 111
+17:03:50  530 request to delete object with ID 111 not null
+17:03:51  555 request to delete object with ID 112
+17:03:51  555 request to delete object with ID 112 not null
+17:03:53  595 GameManager::run(): end of game loop
+17:03:53  595 Path manager stopped
+17:03:53  595 World manager stopped
+17:03:53  595 Resource manager stopped
+17:03:53  595 Network manager stopped
+17:03:53  595 Input man17:03:54  468 request to delete object with ID 113
+17:03:54  468 request to delete object with ID 113 not null
+17:03:54  481 request to delete object with ID 115
+17:03:54  481 request to delete object with ID 115 not null
+17:03:55  489 request to delete object with ID 114
+17:03:55  489 request to delete object with ID 114 not null
+17:03:55  501 request to delete object with ID 116
+17:03:55  501 request to delete object with ID 116 not null
+17:03:56  521 request to delete object with ID 118
+17:03:56  521 request to delete object with ID 118 not null
+17:03:57  545 request to delete object with ID 121
+17:03:57  545 request to delete object with ID 121 not null
+17:03:57  571 request to delete object with ID 123
+17:03:57  571 request to delete object with ID 123 not null
+17:03:59  609 request to delete object with ID 124
+17:03:59  609 request to delete object with ID 124 not null
+17:03:59  630 request to delete object with ID 125
+17:03:59  630 request to delete object with ID 125 not null
+17:04:00  662 request to delete object with ID 126
+17:04:00  662 request to delete object with ID 126 not null
+17:04:02  701 request to delete object with ID 127
+17:04:02  701 request to delete object with ID 127 not null
+17:04:02  706 request to delete object with ID 128
+17:04:02  706 request to delete object with ID 128 not null
+17:04:03  734 request to delete object with ID 129
+17:04:03  734 request to delete object with ID 129 not null
+17:04:04  760 request to delete object with ID 130
+17:04:04  760 request to delete object with ID 130 not null
+17:04:05  785 request to delete object with ID 132
+17:04:05  785 request to delete object with ID 132 not null
+17:04:05  805 request to delete object with ID 134
+17:04:05  805 request to delete object with ID 134 not null
+17:04:06  823 request to delete object with ID 136
+17:04:06  823 request to delete object with ID 136 not null
+17:04:07  851 request to delete object with ID 138
+17:04:07  851 request to delete object with ID 138 not null
+17:04:08  876 request to delete object with ID 140
+17:04:08  876 request to delete object with ID 140 not null
+17:04:08  903 request to delete object with ID 142
+17:04:08  903 request to delete object with ID 142 not null
+17:04:09  908 request to delete object with ID 144
+17:04:09  908 request to delete object with ID 144 not null
+17:04:09  925 request to delete object with ID 145
+17:04:09  925 request to delete object with ID 145 not null
+17:04:10  956 request to delete object with ID 148
+17:04:10  956 request to delete object with ID 148 not null
+17:04:10  960 request to delete object with ID 149
+17:04:10  960 request to delete object with ID 149 not null
+17:04:11  989 request to delete object with ID 152
+17:04:11  989 request to delete object with ID 152 not null
+17:04:12 1012 request to delete object with ID 153
+17:04:12 1012 request to delete object with ID 153 not null
+17:04:13 1046 request to delete object with ID 154
+17:04:13 1046 request to delete object with ID 154 not null
+17:04:14 1064 request to delete object with ID 155
+17:04:14 1064 request to delete object with ID 155 not null
+17:04:14 1081 request to delete object with ID 156
+17:04:14 1081 request to delete object with ID 156 not null
+17:04:15 1091 request to delete object with ID 157
+17:04:15 1091 request to delete object with ID 157 not null
+17:04:16 1118 request to delete object with ID 159
+17:04:16 1118 request to delete object with ID 159 not null
+17:04:16 1124 request to delete object with ID 161
+17:04:16 1124 request to delete object with ID 161 not null
+17:04:16 1146 request to delete object with ID 162
+17:04:16 1146 request to delete object with ID 162 not null
+17:04:17 1177 request to delete object with ID 163
+17:04:17 1177 request to delete object with ID 163 not null
+17:04:18 1179 request to delete object with ID 165
+17:04:18 1179 request to delete object with ID 165 not null
+17:04:19 1224 request to delete object with ID 167
+17:04:19 1224 request to delete object with ID 167 not null
+17:04:20 1257 request to delete object with ID 168
+17:04:20 1257 request to delete object with ID 168 not null
+17:04:22 1328 request to delete object with ID 174
+17:04:22 1328 request to delete object with ID 174 not null
+17:04:23 1333 request to delete object with ID 170
+17:04:23 1333 request to delete object with ID 170 not null
+17:04:23 1344 request to delete object with ID 175
+17:04:23 1344 request to delete object with ID 175 not null
+17:04:23 1353 request to delete object with ID 171
+17:04:23 1353 request to delete object with ID 171 not null
+17:04:24 1366 request to delete object with ID 172
+17:04:24 1366 request to delete object with ID 172 not null
+17:04:24 1385 request to delete object with ID 177
+17:04:24 1385 request to delete object with ID 177 not null
+17:04:25 1393 request to delete object with ID 178
+17:04:25 1393 request to delete object with ID 178 not null
+17:04:25 1399 request to delete object with ID 179
+17:04:25 1399 request to delete object with ID 179 not null
+17:04:27 1474 request to delete object with ID 186
+17:04:27 1474 request to delete object with ID 186 not null
+17:04:27 1475 request to delete object with ID 185
+17:04:27 1475 request to delete object with ID 185 not null
+17:04:28 1482 request to delete object with ID 184
+17:04:28 1482 request to delete object with ID 184 not null
+17:04:28 1492 request to delete object with ID 187
+17:04:28 1492 request to delete object with ID 187 not null
+17:04:28 1494 request to delete object with ID 182
+17:04:28 1494 request to delete object with ID 182 not null
+17:04:28 1506 request to delete object with ID 183
+17:04:28 1506 request to delete object with ID 183 not null
+17:04:28 1508 request to delete object with ID 188
+17:04:28 1508 request to delete object with ID 188 not null
+17:04:29 1517 request to delete object with ID 189
+17:04:29 1517 request to delete object with ID 189 not null
+17:04:32 1604 request to delete object with ID 192
+17:04:32 1604 request to delete object with ID 192 not null
+17:04:32 1609 request to delete object with ID 194
+17:04:32 1609 request to delete object with ID 194 not null
+17:04:32 1619 request to delete object with ID 198
+17:04:32 1619 request to delete object with ID 198 not null
+17:04:33 1637 request to delete object with ID 195
+17:04:33 1637 request to delete object with ID 195 not null
+17:04:33 1637 request to delete object with ID 199
+17:04:33 1637 request to delete object with ID 199 not null
+17:04:33 1637 request to delete object with ID 200
+17:04:33 1637 request to delete object with ID 200 not null
+17:04:33 1640 GameOver::GameOver(): created
+17:04:33 1640 request to delete object with ID 166
+17:04:33 1640 request to delete object with ID 166 not null
+17:04:33 1640 request to delete object with ID 169
+17:04:33 1640 request to delete object with ID 169 not null
+17:04:33 1640 request to delete object with ID 173
+17:04:33 1640 request to delete object with ID 173 not null
+17:04:33 1640 request to delete object with ID 176
+17:04:33 1640 request to delete object with ID 176 not null
+17:04:33 1640 request to delete object with ID 180
+17:04:33 1640 request to delete object with ID 180 not null
+17:04:33 1640 request to delete object with ID 181
+17:04:33 1640 request to delete object with ID 181 not null
+17:04:33 1640 request to delete object with ID 190
+17:04:33 1640 request to delete object with ID 190 not null
+17:04:33 1640 request to delete object with ID 191
+17:04:33 1640 request to delete object with ID 191 not null
+17:04:33 1640 request to delete object with ID 193
+17:04:33 1640 request to delete object with ID 193 not null
+17:04:33 1640 request to delete object with ID 196
+17:04:33 1640 request to delete object with ID 196 not null
+17:04:33 1640 request to delete object with ID 197
+17:04:33 1640 request to delete object with ID 197 not null
+17:04:33 1640 request to delete object with ID 201
+17:04:33 1640 request to delete object with ID 201 not null
+17:04:33 1640 request to delete object with ID 202
+17:04:33 1640 request to delete object with ID 202 not null
+17:04:33 1640 request to delete object with ID 203
+17:04:33 1640 request to delete object with ID 203 not null
+17:04:39 1821 GameManager::run(): end of game loop
+17:04:39 1821 Path manager stopped
+17:04:39 1821 World manager stopped
+17:04:39 1821 Resource manager stopped
+17:04:39 1821 Network manager stopped
+17:04:39 1821 Input manager stopped
+17:04:39 1821 Display manager stopped
+17:04:39 1821 ****************************************************
+17:04:39 1821 ** Game engine stopped **

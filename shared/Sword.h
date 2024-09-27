@@ -26,6 +26,10 @@ private:
   int m_sliced;              // fruits sliced this move
   int m_old_sliced;          // previous sliced
 
+#ifndef CLIENT
+  int m_sock_index;
+#endif
+
   // Handle step event.
   int step(const df::EventStep *p_e);
 
@@ -50,7 +54,11 @@ public:
   // deserealize sword from stream
   void deserialize(std::stringstream &ss) override;
 
+#ifndef CLIENT
   df::Color getColor();
+  int getSockIndex();
+  void setSockIndex(int sock_index);
+#endif
 };
 
 #endif // SWORD_H

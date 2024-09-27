@@ -14,6 +14,10 @@
 #include "Event.h"
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "GameManager.h"
+#include <SFML/Graphics/RenderWindow.hpp>
+#include "DisplayManager.h"
+#include <SFML/Window/Mouse.hpp>
 
 void Client::data(const df::EventNetwork *p_e)
 {
@@ -93,9 +97,12 @@ void Client::data(const df::EventNetwork *p_e)
             break;
         }
 
+        LM.writeLog("request to delete object with ID %d", id);
+
         df::Object *object_to_delete = WM.objectWithId(id);
         if (object_to_delete != NULL)
         {
+            LM.writeLog("request to delete object with ID %d not null", id);
             WM.markForDelete(object_to_delete);
         }
         break;
@@ -113,6 +120,7 @@ Client::Client()
     setVisible(false);
     registerInterest(df::NETWORK_EVENT);
     registerInterest(df::STEP_EVENT);
+    registerInterest(df::KEYBOARD_EVENT);
     NM.setServer(false);
     new ServerEntry();
 }
@@ -130,6 +138,34 @@ int Client::eventHandler(const df::Event *p_e)
             return 1;
         }
     }
+    else if (p_e->getType() == df::KEYBOARD_EVENT)
+    {
+        this->keyboard((df::EventKeyboard *)p_e);
+        return 1;
+    }
 
     return 0;
+}
+
+void Client::keyboard(const df::EventKeyboard *p_e)
+{
+    sf::RenderWindow *p_win = DM.getWindow();
+    sf::Vector2i lp = sf::Mouse::getPosition(*p_win);
+    if (!(lp.x > df::Config::getInstance().getWindowHorizontalPixels() ||
+          lp.x < 0 ||
+          lp.y > df::Config::getInstance().getWindowVerticalPixels() ||
+          lp.y < 0))
+    {
+        // when q key pressed, end game
+        if (p_e->getKey() == df::Keyboard::Q &&
+            p_e->getKeyboardAction() == df::KEY_PRESSED)
+        {
+            Message exit_message(MessageType::EXIT);
+            std::stringstream ss;
+            exit_message.serialize(ss);
+            std::string message = ss.str();
+            NM.send(message.c_str(), message.length());
+            GM.setGameOver(true);
+        }
+    }
 }
