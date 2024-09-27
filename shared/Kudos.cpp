@@ -51,10 +51,6 @@ Kudos::Kudos()
                    rand() % (3 * (int)WM.getBoundary().getVertical() / 4));
   setPosition(p);
 
-  // Extra points.
-  df::EventView ev(POINTS_STRING, 50, true);
-  WM.onEvent(&ev);
-
   m_time_to_live = 30; // Stays on the screen for 1 second.
   registerInterest(df::STEP_EVENT);
 }

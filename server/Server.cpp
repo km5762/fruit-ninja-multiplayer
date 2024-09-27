@@ -17,7 +17,7 @@ void Server::step(const df::EventStep *p_e)
     df::ObjectList ol = WM.getAllObjects();
     for (int i = 0; i < ol.getCount(); i++)
     {
-        if (ol[i]->isModified(df::ObjectAttribute::ID) || ol[i]->getType() == SWORD_STRING || ol[i]->getType() == POINTS_STRING)
+        if (ol[i]->isModified(df::ObjectAttribute::ID) || (ol[i]->getType() == SWORD_STRING) || (ol[i]->getType() == POINTS_STRING && ol[i]->isModified()))
         {
             int id = ol[i]->getId();
             std::string type = ol[i]->getType();

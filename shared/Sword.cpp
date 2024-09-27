@@ -123,7 +123,17 @@ int Sword::step(const df::EventStep *p_e)
         synch_message.serialize(ms);
         std::string message = ms.str();
 
-        LM.writeLog("Sending kudos to port %d", static_cast<int>(getColor() - 1));
+        df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
+
+        for (int i = 0; i < points_displays.getCount(); i++)
+        {
+          Points *points_display = dynamic_cast<Points *>(points_displays[i]);
+          if (points_display->getColor() == getColor())
+          {
+            points_display->setValue(points_display->getValue() + 50);
+          }
+        }
+
         NM.send(message.c_str(), message.size(), static_cast<int>(getColor()) - 1);
       }
 
