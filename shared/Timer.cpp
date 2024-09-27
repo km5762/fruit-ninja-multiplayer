@@ -13,7 +13,7 @@
 Timer::Timer()
 {
   setType(TIMER_STRING);
-  setLocation(df::TOP_LEFT);
+  setLocation(df::BOTTOM_RIGHT);
   setViewString(TIMER_STRING);
   setColor(df::WHITE);
   registerInterest(df::STEP_EVENT); // Count ticks as seconds.
