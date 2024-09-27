@@ -10,6 +10,11 @@ Message::Message(MessageType type, std::string &body)
     this->body = body;
 }
 
+Message::Message(MessageType type)
+{
+    this->type = type;
+}
+
 Message::Message()
 {
     type = MessageType::UNDEFINED;

@@ -10,10 +10,11 @@
 #include "GameManager.h"
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "NetworkManager.h"
 
 // Game includes.
 #include "../shared/Fruit.h"
-#include "../shared/GameOver.h"
+#include "../shared/Message.h"
 #include "Grocer.h"
 
 Grocer::Grocer()
@@ -83,14 +84,22 @@ int Grocer::step(const df::EventStep *p_e)
 // Do game over actions.
 void Grocer::gameOver()
 {
-  // Create G-A-M-E O-V-E-R object.
-  new GameOver();
-
   // Destroy all remaining Fruit (no points).
   df::ObjectList ol = WM.solidObjects();
   for (int i = 0; i < ol.getCount(); i++)
     if (dynamic_cast<Fruit *>(ol[i]))
       WM.markForDelete(ol[i]);
 
+  Message game_over(MessageType::GAME_OVER);
+  std::stringstream ss;
+  game_over.serialize(ss);
+  std::string message = ss.str();
+
+  for (int i = 0; i < NM.getNumConnections(); i++)
+  {
+    NM.send(message.c_str(), message.length(), i);
+  }
+
+  GM.setGameOver(true);
   WM.markForDelete(this);
 }

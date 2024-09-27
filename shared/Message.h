@@ -11,7 +11,8 @@ enum class MessageType
     SYNCHRONIZE,
     DELETE,
     EXIT,
-    MOUSE_MOVEMENT
+    MOUSE_MOVEMENT,
+    GAME_OVER
 };
 
 // A utility struct for serializing/deserializing messages in yak
@@ -21,6 +22,7 @@ struct Message : public Serializable
     std::string body; // the actual message contents
 
     Message(MessageType type, std::string &body);
+    Message(MessageType type);
     Message(); // default construction (used in deserialization)
     void serialize(std::stringstream &ss) override;
     void deserialize(std::stringstream &ss) override;

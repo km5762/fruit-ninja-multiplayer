@@ -44,7 +44,7 @@ GAMESRC= \
 	../shared/Splash.cpp \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
-	../shared/GameOver.cpp \
+	GameOver.cpp \
 	../shared/Timer.cpp \
 	ServerEntry.cpp \
 	../shared/util.cpp \

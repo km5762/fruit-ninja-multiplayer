@@ -42,7 +42,6 @@ GAMESRC= \
 	../shared/Sword.cpp \
 	../shared/Message.cpp \
 	Grocer.cpp \
-	../shared/GameOver.cpp \
 	../shared/Fruit.cpp \
 	../shared/Points.cpp \
 	../shared/util.cpp \

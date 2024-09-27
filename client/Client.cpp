@@ -8,6 +8,7 @@
 #include "../shared/Timer.h"
 #include "../shared/Points.h"
 #include "../shared/Kudos.h"
+#include "GameOver.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -85,17 +86,23 @@ void Client::data(const df::EventNetwork *p_e)
         }
         break;
     case MessageType::DELETE:
+    {
         int id;
         if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
         {
             break;
         }
 
-        df::Object *object = WM.objectWithId(id);
-        if (object != NULL)
+        df::Object *object_to_delete = WM.objectWithId(id);
+        if (object_to_delete != NULL)
         {
-            WM.markForDelete(object);
+            WM.markForDelete(object_to_delete);
         }
+        break;
+    }
+    case MessageType::GAME_OVER:
+        new GameOver();
+        break;
     }
 }
 
