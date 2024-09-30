@@ -9,6 +9,7 @@
 #include "../shared/Points.h"
 #include "../shared/Kudos.h"
 #include "GameOver.h"
+#include "Ping.h"
 
 #include "NetworkManager.h"
 #include "Event.h"
@@ -118,6 +119,25 @@ void Client::data(const df::EventNetwork *p_e)
     case MessageType::GAME_OVER:
         new GameOver();
         break;
+    case MessageType::PING:
+    {
+        int start_time;
+        if (!bs.read(reinterpret_cast<char *>(&start_time), sizeof(start_time)))
+        {
+            break;
+        }
+
+        int latency_ticks = GM.getStepCount() - start_time;
+        int latency_ms = latency_ticks * GM.getFrameTime();
+
+        df::ObjectList ol = WM.objectsOfType(PING_STRING);
+
+        for (int i = 0; i < ol.getCount(); i++)
+        {
+            Ping *ping = dynamic_cast<Ping *>(ol[i]);
+            ping->setValue(latency_ms);
+        }
+    }
     }
 }
 

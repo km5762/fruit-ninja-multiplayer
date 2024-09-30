@@ -7,6 +7,7 @@
 #include "ServerEntry.h"
 #include "TextBox.h"
 #include "../shared/util.h"
+#include "Ping.h"
 
 ServerEntry::ServerEntry()
 {
@@ -28,9 +29,11 @@ void ServerEntry::callback()
     {
         setText("");
     }
-    // otherwise, delete this
+    // otherwise, delete this and set up the delay
     else
     {
+        NM.setDelay(4, 0);
+        new Ping();
         WM.markForDelete(this);
     }
 }

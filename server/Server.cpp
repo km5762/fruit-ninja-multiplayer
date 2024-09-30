@@ -3,6 +3,7 @@
 #include "NetworkManager.h"
 #include "LogManager.h"
 #include "WorldManager.h"
+#include "GameManager.h"
 
 #include "../shared/Message.h"
 #include "Grocer.h"
@@ -145,6 +146,11 @@ void Server::data(const df::EventNetwork *p_e)
         swords.erase(swords.begin() + p_e->getSocketIndex());
         break;
     }
+    case MessageType::PING:
+    {
+        NM.send(buffer.data(), buffer.size(), p_e->getSocketIndex());
+        break;
+    }
     }
 }
 
@@ -159,7 +165,7 @@ void Server::accept(const df::EventNetwork *p_e)
     this->swords.push_back(sword);
 
     // if we have enough people, we can start the game
-    if (swords.size() == 3)
+    if (swords.size() == 2)
     {
         new Grocer();
         new Timer();
@@ -180,7 +186,7 @@ Server::Server()
     registerInterest(df::NETWORK_EVENT);
     registerInterest(df::STEP_EVENT);
     NM.setServer(true);
-    NM.setMaxConnections(3); // only 3 people allowed
+    NM.setMaxConnections(2); // only 3 people allowed
 }
 
 int Server::eventHandler(const df::Event *p_e)

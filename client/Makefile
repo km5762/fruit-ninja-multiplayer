@@ -49,6 +49,7 @@ GAMESRC= \
 	ServerEntry.cpp \
 	../shared/util.cpp \
 	Client.cpp \
+	Ping.cpp \
 
 GAME= game.cpp
 EXECUTABLE= fruit-ninja

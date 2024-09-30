@@ -12,7 +12,8 @@ enum class MessageType
     DELETE,         // delete an object
     EXIT,           // a client has exited
     MOUSE_MOVEMENT, // a client has moved their mouse
-    GAME_OVER       // notify clients the game is over
+    GAME_OVER,      // notify clients the game is over
+    PING            // get ping
 };
 
 // A utility struct for serializing/deserializing messages
