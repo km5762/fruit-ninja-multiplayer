@@ -26,7 +26,9 @@ public:
   // Handle events.
   int eventHandler(const df::Event *p_e) override;
 
+  // serialize timer to string stream
   void serialize(std::stringstream &ss) override;
+  // desserialize timer from string stream
   void deserialize(std::stringstream &ss) override;
 };
 

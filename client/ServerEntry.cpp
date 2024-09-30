@@ -28,7 +28,7 @@ void ServerEntry::callback()
     {
         setText("");
     }
-    // otherwise, allow them to enter a name and set up the sentry
+    // otherwise, delete this
     else
     {
         WM.markForDelete(this);

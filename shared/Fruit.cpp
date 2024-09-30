@@ -84,11 +84,13 @@ int Fruit::collide(const df::EventCollision *p_e)
     df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
     Sword *sword = dynamic_cast<Sword *>(p_e->getObject1());
 
+    // search for the corresponding points display for the sword that made the collision
     for (int i = 0; i < points_displays.getCount(); i++)
     {
       Points *points_display = dynamic_cast<Points *>(points_displays[i]);
       if (points_display->getColor() == sword->getColor())
       {
+        // update that points display's value by 10
         points_display->setValue(points_display->getValue() + 10);
       }
     }
@@ -119,6 +121,8 @@ Fruit::~Fruit()
     play_sound(sound);
   }
 #else
+  // on the server, we are not playing any animations for the fruit - however, we need to send a message to all clients to
+  // delete the corresponding fruit
   std::stringstream ss;
   int id = getId();
   ss.write(reinterpret_cast<char *>(&id), sizeof(id));

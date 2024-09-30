@@ -12,9 +12,7 @@
 
 // Game includes.
 #include "GameOver.h"
-#ifdef CLIENT
 #include "../shared/util.h"
-#endif
 
 GameOver::GameOver()
 {
@@ -68,10 +66,8 @@ int GameOver::step()
     WM.markForDelete(this);
   }
 
-#ifdef CLIENT
   if (m_time_to_live == 175)
     play_sound("game-over");
-#endif
 
   // Handled.
   return 1;

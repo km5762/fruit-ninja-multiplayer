@@ -7,10 +7,10 @@
 class Serializable
 {
 public:
-    // serialize projectile to stream
+    // serialize object to stream
     virtual void serialize(std::stringstream &p_ss) = 0;
 
-    // deserealize projectile from stream
+    // deserealize object from stream
     virtual void deserialize(std::stringstream &p_ss) = 0;
 };
 

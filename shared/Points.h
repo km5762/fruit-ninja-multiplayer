@@ -20,6 +20,8 @@ public:
   // Set value.
   void setValue(int value) override;
 
+  // serialize points to a string stream
   void serialize(std::stringstream &ss) override;
+  // deserialize points from a string stream
   void deserialize(std::stringstream &ss) override;
 };

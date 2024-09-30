@@ -40,6 +40,7 @@ int main(int argc, char *argv[])
   // Fruit Ninja splash screen.
   splash();
 
+  // spawn the client
   new Client();
 
   GM.run();

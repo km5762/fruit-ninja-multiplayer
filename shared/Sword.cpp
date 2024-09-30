@@ -59,6 +59,7 @@ int Sword::eventHandler(const df::Event *p_e)
   // Step event.
   if (p_e->getType() == df::STEP_EVENT)
     return step((df::EventStep *)p_e);
+    // if we are on the server, ignore mouse events
 #ifdef CLIENT
   else if (p_e->getType() == df::MSE_EVENT)
     return mouse((df::EventMouse *)p_e);
@@ -77,12 +78,12 @@ int Sword::step(const df::EventStep *p_e)
     return 1;
   }
 
-  // Make a trail from last position to current.
-
+  // Make a trail from last position to current on the client
 #ifdef CLIENT
   create_trail(getPosition(), m_old_position, m_color);
 #endif
 
+// handle intersection/slicing logic only on the server
 #ifndef CLIENT
   // Check if line intersects any Fruit objects.
   df::Line line(getPosition(), m_old_position);
@@ -104,12 +105,14 @@ int Sword::step(const df::EventStep *p_e)
       p_o->eventHandler(&c);
       m_sliced += 1;
 
+      // spawn kudos on combo
       if (m_sliced > 2 && m_sliced > m_old_sliced)
       {
         Kudos *kudos = new Kudos();
 
         std::stringstream ss;
 
+        // construct a synch message just for this kudos
         int id = kudos->getId();
         std::string type = kudos->getType();
 
@@ -125,6 +128,7 @@ int Sword::step(const df::EventStep *p_e)
 
         df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
 
+        // find and update only the corresponding points display
         for (int i = 0; i < points_displays.getCount(); i++)
         {
           Points *points_display = dynamic_cast<Points *>(points_displays[i]);
@@ -134,6 +138,7 @@ int Sword::step(const df::EventStep *p_e)
           }
         }
 
+        // send the bonus points only to the corresponding client
         NM.send(message.c_str(), message.size(), m_sock_index);
       }
 
@@ -155,6 +160,7 @@ int Sword::step(const df::EventStep *p_e)
   }
 #endif
 
+// handle point deduction penalty on server for spamming sword slices
 #ifndef CLIENT
   int penalty = -1 * (int)(dist / 10.0f);
   df::ObjectList points_displays = WM.objectsOfType(POINTS_STRING);
@@ -186,6 +192,7 @@ int Sword::draw()
 #ifdef CLIENT
 int Sword::mouse(const df::EventMouse *p_e)
 {
+  // SFML code to only handle mosue movements if the current window is being focused
   sf::RenderWindow *p_win = DM.getWindow();
   sf::Vector2i lp = sf::Mouse::getPosition(*p_win);
   if (lp.x > df::Config::getInstance().getWindowHorizontalPixels() ||
@@ -197,7 +204,7 @@ int Sword::mouse(const df::EventMouse *p_e)
   }
   else
   {
-    // when mosue moves, set position of sword to new position
+    // when mosue moves, send a message to the server with the updated position
     if (p_e->getMouseAction() == df::MOVED)
     {
       df::Vector position = p_e->getMousePosition();

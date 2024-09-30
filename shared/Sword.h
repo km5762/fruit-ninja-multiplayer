@@ -27,7 +27,7 @@ private:
   int m_old_sliced;          // previous sliced
 
 #ifndef CLIENT
-  int m_sock_index;
+  int m_sock_index; // which sock index (client) this sword is for
 #endif
 
   // Handle step event.
@@ -50,12 +50,15 @@ public:
   int draw(void) override;
 #endif
 
+  // serialize sword to stream
   void serialize(std::stringstream &ss) override;
   // deserealize sword from stream
   void deserialize(std::stringstream &ss) override;
 
 #ifndef CLIENT
+  // get the color of the sword (used to find corresponding points instance)
   df::Color getColor();
+  // get/set sock index
   int getSockIndex();
   void setSockIndex(int sock_index);
 #endif

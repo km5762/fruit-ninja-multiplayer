@@ -41,8 +41,9 @@ public:
   // Setup starting conditions.
   void start(float speed);
 
+  // serialize fruit to stream
   void serialize(std::stringstream &p_ss) override;
-  // deserealize sword from stream
+  // deserealize fruit from stream
   void deserialize(std::stringstream &p_ss) override;
 };
 

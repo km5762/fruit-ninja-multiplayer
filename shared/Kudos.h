@@ -30,7 +30,9 @@ public:
   // Handle events.
   int eventHandler(const df::Event *p_e) override;
 
+  // serialize kudos to stream
   void serialize(std::stringstream &ss) override;
+  // deserialize kudos from stream
   void deserialize(std::stringstream &ss) override;
 };
 

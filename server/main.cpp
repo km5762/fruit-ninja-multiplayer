@@ -21,6 +21,7 @@ int main(int argc, char *argv[])
     LM.setFlush(true);
     LM.writeLog("Server (v%.1f)", 1.0);
 
+    // load sprites/sounds
     loadResources();
 
     // instantiate the server

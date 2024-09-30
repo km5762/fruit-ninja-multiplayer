@@ -21,34 +21,42 @@
 
 void Client::data(const df::EventNetwork *p_e)
 {
+    // read bytes out of socket
     int bytes = p_e->getBytes();
     std::vector<char> buffer(bytes);
     NM.receive(buffer.data(), bytes, false, p_e->getSocketIndex());
 
     std::stringstream ss(std::string(buffer.begin(), buffer.end()));
 
+    // deserialize a message on the buffer
     Message message;
     message.deserialize(ss);
 
+    // prepare a stringstream on the message's body
     std::stringstream bs(message.body);
 
     switch (message.type)
     {
     case MessageType::SYNCHRONIZE:
+        // in case multiple objects have been sent, we read until the buffer is empty
         while (bs.rdbuf()->in_avail() > 0)
         {
+            // read out the id
             int id;
             if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
             {
                 break;
             }
 
+            // read out the type (newline delimiter)
             std::string type;
             std::getline(bs, type);
 
+            // try to find the specified object
             df::Object *object = WM.objectWithId(id);
             if (object != NULL)
             {
+                // if it exists, deserialize it on the buffer
                 if (Serializable *serializable = dynamic_cast<Serializable *>(object))
                 {
                     serializable->deserialize(bs);
@@ -60,6 +68,7 @@ void Client::data(const df::EventNetwork *p_e)
             }
             else
             {
+                // otherwise, create a new object based on the type and deserialize it on that
                 Serializable *serializable;
 
                 if (type == SWORD_STRING)
@@ -91,18 +100,17 @@ void Client::data(const df::EventNetwork *p_e)
         break;
     case MessageType::DELETE:
     {
+        // read the id
         int id;
         if (!bs.read(reinterpret_cast<char *>(&id), sizeof(id)))
         {
             break;
         }
 
-        LM.writeLog("request to delete object with ID %d", id);
-
         df::Object *object_to_delete = WM.objectWithId(id);
+        // if the object with the id exists, delete it
         if (object_to_delete != NULL)
         {
-            LM.writeLog("request to delete object with ID %d not null", id);
             WM.markForDelete(object_to_delete);
         }
         break;
@@ -122,6 +130,7 @@ Client::Client()
     registerInterest(df::STEP_EVENT);
     registerInterest(df::KEYBOARD_EVENT);
     NM.setServer(false);
+    // setup serverentry for user to enter the host
     new ServerEntry();
 }
 
@@ -138,6 +147,7 @@ int Client::eventHandler(const df::Event *p_e)
             return 1;
         }
     }
+    // handle keyboard events
     else if (p_e->getType() == df::KEYBOARD_EVENT)
     {
         this->keyboard((df::EventKeyboard *)p_e);
@@ -149,6 +159,7 @@ int Client::eventHandler(const df::Event *p_e)
 
 void Client::keyboard(const df::EventKeyboard *p_e)
 {
+    // SFML code to make sure we only handle keyboard events when the current window is in focus
     sf::RenderWindow *p_win = DM.getWindow();
     sf::Vector2i lp = sf::Mouse::getPosition(*p_win);
     if (!(lp.x > df::Config::getInstance().getWindowHorizontalPixels() ||
@@ -160,6 +171,7 @@ void Client::keyboard(const df::EventKeyboard *p_e)
         if (p_e->getKey() == df::Keyboard::Q &&
             p_e->getKeyboardAction() == df::KEY_PRESSED)
         {
+            // send a message to the server to let it know to close it's connection with this client
             Message exit_message(MessageType::EXIT);
             std::stringstream ss;
             exit_message.serialize(ss);
