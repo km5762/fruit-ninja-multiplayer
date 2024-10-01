@@ -14,6 +14,8 @@ private:
     // handle keyboard events
     void keyboard(const df::EventKeyboard *p_e);
 
+    int m_latency;
+
 public:
     Client();
     // handle all events

@@ -32,7 +32,7 @@ void ServerEntry::callback()
     // otherwise, delete this and set up the delay
     else
     {
-        NM.setDelay(4, 0);
+        NM.setDelay(8, 0);
         new Ping();
         WM.markForDelete(this);
     }

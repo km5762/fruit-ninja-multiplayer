@@ -96,6 +96,15 @@ void Client::data(const df::EventNetwork *p_e)
                 serializable->deserialize(bs);
                 df::Object *object = dynamic_cast<Object *>(serializable);
                 object->setId(id);
+
+                if (std::find(std::begin(FRUIT), std::end(FRUIT), type) != std::end(FRUIT))
+                {
+                    for (int i = 0; i < m_latency; i++)
+                    {
+                        df::Vector new_pos = object->predictPosition();
+                        WM.moveObject(object, new_pos);
+                    }
+                }
             }
         }
         break;
@@ -128,6 +137,7 @@ void Client::data(const df::EventNetwork *p_e)
         }
 
         int latency_ticks = GM.getStepCount() - start_time;
+        m_latency = latency_ticks;
         int latency_ms = latency_ticks * GM.getFrameTime();
 
         df::ObjectList ol = WM.objectsOfType(PING_STRING);
