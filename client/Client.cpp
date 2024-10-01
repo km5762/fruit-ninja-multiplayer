@@ -210,7 +210,7 @@ void Client::keyboard(const df::EventKeyboard *p_e)
             exit_message.serialize(ss);
             std::string message = ss.str();
             NM.send(message.c_str(), message.length());
-            GM.setGameOver(true);
+            new GameOver();
         }
     }
 }
