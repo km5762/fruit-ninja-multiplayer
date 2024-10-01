@@ -137,6 +137,19 @@ void Client::data(const df::EventNetwork *p_e)
             Ping *ping = dynamic_cast<Ping *>(ol[i]);
             ping->setValue(latency_ms);
         }
+        break;
+    }
+    case MessageType::PLAYER_COLOR:
+    {
+        int color_int;
+        if (!bs.read(reinterpret_cast<char *>(&color_int), sizeof(color_int)))
+        {
+            break;
+        }
+
+        m_color = static_cast<df::Color>(color_int);
+        new Sword(m_color);
+        break;
     }
     }
 }
@@ -200,4 +213,9 @@ void Client::keyboard(const df::EventKeyboard *p_e)
             GM.setGameOver(true);
         }
     }
+}
+
+df::Color Client::getColor()
+{
+    return m_color;
 }

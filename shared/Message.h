@@ -13,7 +13,8 @@ enum class MessageType
     EXIT,           // a client has exited
     MOUSE_MOVEMENT, // a client has moved their mouse
     GAME_OVER,      // notify clients the game is over
-    PING            // get ping
+    PING,           // get ping
+    PLAYER_COLOR,   // notify player of their sword/points color
 };
 
 // A utility struct for serializing/deserializing messages

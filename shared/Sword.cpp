@@ -22,6 +22,7 @@
 
 #ifdef CLIENT
 #include "../shared/util.h"
+#include "../client/Client.h"
 #endif
 
 #ifndef CLIENT
@@ -207,6 +208,19 @@ int Sword::mouse(const df::EventMouse *p_e)
     // when mosue moves, send a message to the server with the updated position
     if (p_e->getMouseAction() == df::MOVED)
     {
+      df::ObjectList ol = WM.objectsOfType("Client");
+
+      df::Color client_color;
+      for (int i = 0; i < ol.getCount(); i++)
+      {
+        Client *client = dynamic_cast<Client *>(ol[i]);
+        client_color = client->getColor();
+      }
+
+      if (m_color == client_color)
+      {
+        setPosition(p_e->getMousePosition());
+      }
       df::Vector position = p_e->getMousePosition();
 
       std::stringstream ss;

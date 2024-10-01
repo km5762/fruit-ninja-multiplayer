@@ -8,6 +8,7 @@
 class Client : public df::Object
 {
 private:
+    df::Color m_color;
     // handle network data events
     void data(const df::EventNetwork *p_e);
     // handle keyboard events
@@ -17,4 +18,6 @@ public:
     Client();
     // handle all events
     int eventHandler(const df::Event *p_e) override;
+
+    df::Color getColor();
 };

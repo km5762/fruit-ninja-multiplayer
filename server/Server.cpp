@@ -14,7 +14,6 @@
 
 void Server::step(const df::EventStep *p_e)
 {
-    std::stringstream ss;
     df::ObjectList ol = WM.getAllObjects();
     // for each game object in the world
     for (int i = 0; i < ol.getCount(); i++)
@@ -22,6 +21,7 @@ void Server::step(const df::EventStep *p_e)
         // if the ID is modified (newly created), or it is a sword, or it is a points and the value has been modified, synch
         if (ol[i]->isModified(df::ObjectAttribute::ID) || (ol[i]->getType() == SWORD_STRING) || (ol[i]->getType() == POINTS_STRING && ol[i]->isModified()))
         {
+            std::stringstream ss;
             int id = ol[i]->getId();
             std::string type = ol[i]->getType();
             // if the object is serializable, serialize it to the string stream
@@ -31,26 +31,34 @@ void Server::step(const df::EventStep *p_e)
                 // newline delimiter after the type
                 ss << type << "\n";
                 serializable->serialize(ss);
+
+                std::string body = ss.str();
+
+                // wrap the body in a message, and serialize that message to a new string stream
+                Message synch_message(MessageType::SYNCHRONIZE, body);
+
+                std::stringstream ms;
+                synch_message.serialize(ms);
+                std::string message = ms.str();
+
+                // send the synch to all clients
+                for (int j = 0; j < NM.getNumConnections(); j++)
+                {
+                    if (type == SWORD_STRING)
+                    {
+                        if (Sword *sword = dynamic_cast<Sword *>(ol[i]))
+                        {
+                            LM.writeLog("FOUND SWORD WITH SOCK INDEX %d", sword->getSockIndex());
+                            if (sword->getSockIndex() == j)
+                            {
+                                LM.writeLog("NOT SENDING SWORD TO SOCK INDEX %d", sword->getSockIndex());
+                                continue;
+                            }
+                        }
+                    }
+                    NM.send(message.c_str(), message.size(), j);
+                }
             }
-        }
-    }
-
-    std::string body = ss.str();
-
-    // dont sent just the headers if there is no object to synch
-    if (!body.empty())
-    {
-        // wrap the body in a message, and serialize that message to a new string stream
-        Message synch_message(MessageType::SYNCHRONIZE, body);
-
-        std::stringstream ms;
-        synch_message.serialize(ms);
-        std::string message = ms.str();
-
-        // send the synch to all clients
-        for (int i = 0; i < NM.getNumConnections(); i++)
-        {
-            NM.send(message.c_str(), message.size(), i);
         }
     }
 }
@@ -156,13 +164,26 @@ void Server::data(const df::EventNetwork *p_e)
 
 void Server::accept(const df::EventNetwork *p_e)
 {
+    df::Color color = static_cast<df::Color>(p_e->getSocketIndex() + 1);
     // make a sword with a color corresponding to their socket index
-    Sword *sword = new Sword(static_cast<df::Color>(p_e->getSocketIndex() + 1));
+    Sword *sword = new Sword(color);
     // set the id high to avoid collisions
     sword->setId(100 + p_e->getSocketIndex());
     // set the sock index so we know who to send updates to
     sword->setSockIndex(p_e->getSocketIndex());
     this->swords.push_back(sword);
+
+    std::stringstream ss;
+    int color_int = static_cast<int>(color);
+    ss.write(reinterpret_cast<const char *>(&color_int), sizeof(color_int));
+    std::string body = ss.str();
+
+    Message player_color(MessageType::PLAYER_COLOR, body);
+    std::stringstream ms;
+    player_color.serialize(ms);
+    std::string message = ms.str();
+
+    NM.send(message.c_str(), message.length(), p_e->getSocketIndex());
 
     // if we have enough people, we can start the game
     if (swords.size() == 2)
@@ -186,7 +207,7 @@ Server::Server()
     registerInterest(df::NETWORK_EVENT);
     registerInterest(df::STEP_EVENT);
     NM.setServer(true);
-    NM.setMaxConnections(2); // only 3 people allowed
+    NM.setMaxConnections(2); // only 2 people allowed
 }
 
 int Server::eventHandler(const df::Event *p_e)
