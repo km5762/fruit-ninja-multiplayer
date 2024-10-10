@@ -97,6 +97,7 @@ void Client::data(const df::EventNetwork *p_e)
                 df::Object *object = dynamic_cast<Object *>(serializable);
                 object->setId(id);
 
+                // if it is a fruit object, adjust its initial position based on latency
                 if (std::find(std::begin(FRUIT), std::end(FRUIT), type) != std::end(FRUIT))
                 {
                     for (int i = 0; i < m_latency; i++)
@@ -130,18 +131,20 @@ void Client::data(const df::EventNetwork *p_e)
         break;
     case MessageType::PING:
     {
+        // read out the start time back from the server
         int start_time;
         if (!bs.read(reinterpret_cast<char *>(&start_time), sizeof(start_time)))
         {
             break;
         }
 
+        // calculate latency in ms
         int latency_ticks = GM.getStepCount() - start_time;
         m_latency = latency_ticks;
         int latency_ms = latency_ticks * GM.getFrameTime();
 
+        // find ping object and set it to the latency
         df::ObjectList ol = WM.objectsOfType(PING_STRING);
-
         for (int i = 0; i < ol.getCount(); i++)
         {
             Ping *ping = dynamic_cast<Ping *>(ol[i]);
@@ -151,12 +154,14 @@ void Client::data(const df::EventNetwork *p_e)
     }
     case MessageType::PLAYER_COLOR:
     {
+        // we use this to figure out this client's color from the server
         int color_int;
         if (!bs.read(reinterpret_cast<char *>(&color_int), sizeof(color_int)))
         {
             break;
         }
 
+        // create sword based on that color
         m_color = static_cast<df::Color>(color_int);
         new Sword(m_color);
         break;

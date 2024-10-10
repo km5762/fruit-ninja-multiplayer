@@ -26,9 +26,9 @@ int Ping::eventHandler(const df::Event *p_e)
     return 0;
 }
 
-// Handle step events.
 int Ping::step(const df::EventStep *p_e)
 {
+    // every 15 steps, update the ping
     if (p_e->getStepCount() % 15 == 0)
     {
         int start_time = GM.getStepCount();
@@ -44,6 +44,7 @@ int Ping::step(const df::EventStep *p_e)
 
         std::string message = ms.str();
 
+        // send a ping message to the server with the start time of the ping message
         NM.send(message.c_str(), message.length());
     }
 
@@ -54,6 +55,7 @@ void Ping::setValue(int value)
 {
     ViewObject::setValue(value);
 
+    // set color of ping based on its value
     if (value < 100)
     {
         setColor(df::GREEN);

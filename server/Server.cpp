@@ -46,6 +46,7 @@ void Server::step(const df::EventStep *p_e)
                 {
                     if (type == SWORD_STRING)
                     {
+                        // if we have a sword, skip synching with the client who owns that sword
                         if (Sword *sword = dynamic_cast<Sword *>(ol[i]))
                         {
                             LM.writeLog("FOUND SWORD WITH SOCK INDEX %d", sword->getSockIndex());

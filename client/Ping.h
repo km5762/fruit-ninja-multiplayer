@@ -19,5 +19,6 @@ public:
     // Handle events.
     int eventHandler(const df::Event *p_e) override;
 
+    // only set the value through this, otherwise colors wont update
     void setValue(int value) override;
 };
