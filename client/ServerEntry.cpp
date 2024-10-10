@@ -33,7 +33,7 @@ void ServerEntry::callback()
     else
     {
         // set delay here!
-        NM.setDelay(12, 0);
+        NM.setDelay(10, 0);
         // initialize ping after we have connected
         new Ping();
         WM.markForDelete(this);

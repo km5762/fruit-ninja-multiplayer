@@ -8,12 +8,18 @@ The project was built on Linux Mint, so all special compilation instructions for
 
 Run Instructions:
 
-First, the server must be run by running the server executable in /server. Then, the client can be run by running the fruit-ninja executable in /client. A prompt will allow clients to enter the hostname (127.0.0.1 for testing purposes), and will simply clear if an invalid address is entered. After 3 players connect, the server will start the game.
+First, the server must be run by running the server executable in /server. Then, the client can be run by running the fruit-ninja executable in /client. A prompt will allow clients to enter the hostname (127.0.0.1 for testing purposes), and will simply clear if an invalid address is entered. After 2 players connect, the server will start the game.
 
 Other Notes:
 
 The game window has been configured to be really small to allow for testing. Also note that the networked version of the game engine must be used, and the df-config.txt also accounts for this.
 
-The game is built to start when 3 players connect, if someone tries joining mid game they will not be able to connect.
+The game is built to start when 2 players connect, if someone tries joining mid game they will not be able to connect.
 
-Clients can also disconnect mid game by pressing q. This is shown in the video.
+Latency can be set in ServerEntry.cpp, the line has been commented
+
+This project was built using git version control, so previous settings may be reverted to by checking out a particular commit.
+
+git checkout main -> all done
+git checkout cb4d6c53e75ada7d1b546c658ed8a36271bc060d -> sword synchronization and ping
+git checkout 6aec7f11861a6fe312f551a761a845c54d0f0b07 -> ping done
